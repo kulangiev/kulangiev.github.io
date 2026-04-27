@@ -1,0 +1,665 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1.8cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{bm,xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{float}
+
+\newcommand{\Geff}{G_{\mathrm{eff}}}
+\newcommand{\cs}{c_s}
+\newcommand{\meff}{m_{\mathrm{eff}}}
+\newcommand{\heff}{\hbar_{\mathrm{eff}}}
+\newcommand{\rhob}{\bar{\rho}}
+\newcommand{\lP}{\ell_{\mathrm{P}}}
+
+\begin{document}
+
+\title{Emergent Inertia, Mass-Energy Equivalence, and the Helmholtz Decomposition of Charge and Spin\\
+in the Logarithmic Superfluid Vacuum}
+
+\author{B. B. Kulangiev\\\small{Haifa, Israel}}
+\date{April 2026}
+\maketitle
+
+\begin{abstract}
+\noindent
+In companion papers, we established that macroscopic
+gravity emerges as the Painlev\'{e}-Gullstrand
+acoustic metric of a logarithmic superfluid vacuum,
+with the gravitational constant
+$\Geff = \eta c^2/(4\pi\rho_0)$ derived from the
+collective dynamics of $N$ vortex-Gausson solitons.
+Here we turn to the microscopic properties of the
+individual soliton and show that inertia, mass-energy
+equivalence, electric charge, and quantum spin are
+emergent hydrodynamic properties of the condensate
+flow field. Inertia arises as the hydrodynamic added
+mass of the vacuum displaced by an accelerating
+soliton: Newton's second law $F = ma$ is the
+equation of motion for a singularity-free wave packet
+in a compressible fluid, where $m$ is the
+energy-weighted volume integral of the displaced
+condensate. The mass-energy relation $E = mc^2$
+follows from equating the hydrodynamic momentum flux
+of the soliton ($P = E/c^2 \cdot v_g$) with the
+mechanical momentum ($P = mv_g$). We then apply the
+Helmholtz decomposition to the vacuum flow field
+surrounding the soliton:
+$\mathbf{v} = -\nabla\Phi + \nabla\times\mathbf{A}$.
+The irrotational (divergence) component corresponds
+to electric charge---sinks and sources in the
+condensate flow---with charge quantization following
+from the topological winding number as derived in the
+companion paper on emergent
+electromagnetism~\cite{kulangiev_maxwell}. The
+solenoidal (curl) component corresponds to quantum
+spin, with the antisymmetric part of the velocity
+gradient tensor generating the Lie algebra
+$\mathfrak{su}(2)$ isomorphic to the Pauli matrices.
+The half-integer spin of fermions is identified with
+the $4\pi$ periodicity of a vortex line tethered to
+the condensate background---the topological double
+cover $SU(2) \to SO(3)$ realized as fluid geometry.
+\end{abstract}
+
+
+% ====================================================================
+\section{Introduction}
+\label{sec:intro}
+% ====================================================================
+
+The standard model of particle physics treats mass,
+charge, and spin as intrinsic properties of
+point-like entities. General relativity postulates
+inertia and the equivalence principle without
+providing a mechanical origin for the resistance to
+acceleration. Neither framework explains \emph{why}
+particles have the masses, charges, and spins they do.
+
+In the logarithmic superfluid vacuum
+framework~\cite{kulangiev_gravity,kulangiev_planck},
+macroscopic gravity emerges from the collective
+acoustic metric of $N$ vortex-Gausson solitons, with
+the Painlev\'{e}-Gullstrand flow
+$v = \sqrt{2GM/r}$ as the unique self-consistent
+weak-field solution. The fundamental particles
+sourcing this flow are Gaussons---localized,
+non-dispersive topological defects of the logarithmic
+condensate~\cite{bialynicki_birula_1979,avdeenkov_2011},
+stabilized by the quantum potential
+$Q = \Box\sqrt{\rho}/\sqrt{\rho}$ at the healing
+length $\xi \sim \lP$~\cite{kulangiev_planck}.
+
+In a companion paper~\cite{kulangiev_maxwell}, we
+showed that gauging the $U(1)$ phase symmetry of the
+condensate produces Maxwell's equations, with
+electric charge quantized by the vortex winding
+number ($Q = ne$). Here we complete the microscopic
+picture by deriving the remaining particle properties
+---inertia, mass, and spin---from the hydrodynamics
+of the individual soliton.
+
+The physical picture is that of a classical fluid
+mechanics problem: a localized, self-sustaining wave
+packet (the Gausson) moves through a compressible
+medium (the vacuum condensate). The medium's response
+to the packet's motion constitutes inertia; the
+packet's internal energy constitutes mass; the
+packet's radial flow constitutes charge; and the
+packet's circulation constitutes spin.
+
+
+% ====================================================================
+\section{Inertia as Hydrodynamic Added Mass}
+\label{sec:inertia}
+% ====================================================================
+
+\subsection{The added mass concept}
+
+When a rigid body accelerates through an
+incompressible fluid, the fluid must rearrange to
+accommodate the motion. The kinetic energy of this
+rearranged fluid acts as an additional inertia---the
+``added mass'' or ``virtual mass'' of classical
+hydrodynamics~\cite{lamb_1932,landau_fluid}. For a
+sphere of radius $R$ in a fluid of density $\rho_f$,
+the added mass is $m_{\mathrm{add}} =
+\frac{2}{3}\pi R^3 \rho_f$, equal to half the
+displaced fluid mass.
+
+A Gausson soliton is not a rigid body but a
+self-sustaining density perturbation in the
+condensate. However, the same principle applies: when
+the soliton accelerates, the surrounding condensate
+must rearrange, and the energy of this rearrangement
+constitutes the soliton's inertia.
+
+\subsection{Derivation from the field momentum}
+
+The condensate momentum density is
+$\mathbf{g} = \rho\,\mathbf{v}/c^2$, where
+$\mathbf{v} = \nabla S/\meff$ is the Madelung flow
+velocity. The total field momentum associated with a
+soliton moving at velocity $\mathbf{v}_p$ is:
+\begin{equation}
+    \mathbf{P}_{\mathrm{field}}
+    = \int \frac{\rho(\mathbf{x})\,
+    \mathbf{v}(\mathbf{x})}{c^2}\,d^3x\,.
+\label{eq:P_field}
+\end{equation}
+For a Gausson with density profile
+$\rho_s(\mathbf{x} - \mathbf{x}_p)$ moving
+quasi-rigidly at velocity $\mathbf{v}_p$, the
+far-field flow is determined by the continuity
+equation and scales as
+$\mathbf{v} \sim \mathbf{v}_p\,(\sigma/r)^3$ for
+$r \gg \sigma$, where $\sigma \sim \xi$ is the
+Gausson width~\cite{kulangiev_planck}. The momentum
+integral converges and yields:
+\begin{equation}
+    \mathbf{P}_{\mathrm{field}}
+    = \frac{E_v}{c^2}\,\mathbf{v}_p\,,
+\label{eq:P_Ev}
+\end{equation}
+where $E_v = \int T_{00}\,d^3x$ is the total soliton
+energy (kinetic + potential + interaction). The
+reaction force on the soliton is:
+\begin{equation}
+    \mathbf{F}_{\mathrm{reaction}}
+    = -\frac{d\mathbf{P}_{\mathrm{field}}}{dt}
+    = -\frac{E_v}{c^2}\,\ddot{\mathbf{x}}_p\,.
+\label{eq:F_reaction}
+\end{equation}
+Balancing against an external force
+$\mathbf{F}_{\mathrm{ext}}$:
+\begin{equation}
+    \boxed{\;\mathbf{F}_{\mathrm{ext}}
+    = \frac{E_v}{c^2}\,\ddot{\mathbf{x}}_p
+    \equiv m\,\mathbf{a}\;}
+\label{eq:newton}
+\end{equation}
+Newton's second law emerges with the inertial mass
+identified as:
+\begin{equation}
+    m = \frac{E_v}{c^2}\,.
+\label{eq:m_Ev}
+\end{equation}
+The soliton has no ``bare'' mass ($m_0 = 0$); its
+entire inertia is the hydrodynamic added mass of the
+vacuum condensate displaced by its internal structure.
+This constitutes a concrete realization of Mach's
+principle: the local inertia of a body is determined
+by its coupling to the global vacuum
+medium~\cite{volovik_2003}.
+
+\subsection{The equivalence principle}
+
+The gravitational mass entering
+$\Geff$~\cite{kulangiev_gravity} is also $E_v/c^2$
+(the soliton energy determines its gravitational
+source strength). Therefore:
+\begin{equation}
+    m_{\mathrm{inertial}} = m_{\mathrm{gravitational}}
+    = \frac{E_v}{c^2}\,.
+\label{eq:equivalence}
+\end{equation}
+The equivalence principle is not a postulate but a
+consequence of the fact that both inertia and gravity
+originate from the same quantity: the soliton's
+interaction energy with the condensate.
+
+
+% ====================================================================
+\section{Mass-Energy Equivalence}
+\label{sec:mass_energy}
+% ====================================================================
+
+The identification $m = E_v/c^2$
+(Eq.~\ref{eq:m_Ev}) is equivalent to $E = mc^2$.
+We derive it independently from the momentum flux
+of the soliton.
+
+The energy-momentum tensor of the logarithmic
+condensate in the macroscopic limit gives a momentum
+density $\mathbf{g} = T_{0i}/c^2$. For a localized
+soliton transporting energy $E_v$ at group velocity
+$\mathbf{v}_g$, the total momentum is:
+\begin{equation}
+    \mathbf{P} = \frac{E_v}{c^2}\,\mathbf{v}_g\,.
+\label{eq:P_wave}
+\end{equation}
+This is a general result for any localized wave
+packet in a relativistic field theory: the momentum
+is the energy flux divided by
+$c^2$~\cite{jackson_1999}. Comparing with the
+mechanical definition
+$\mathbf{P} = m\,\mathbf{v}_g$:
+\begin{equation}
+    \boxed{\;E_v = mc^2\;}
+\label{eq:emc2}
+\end{equation}
+In the superfluid framework, this is not an
+abstract energy-mass relation but has a concrete
+physical meaning: $mc^2$ is the total energy
+(kinetic + potential + quantum pressure) required to
+maintain the Gausson's topological structure against
+the restoring forces of the vacuum condensate. If
+the soliton is annihilated (e.g., vortex-antivortex
+recombination), this energy is released as phonons
+(photons) propagating at $c = c_s$---the condensate's
+sound speed.
+
+
+% ====================================================================
+\section{The Helmholtz Decomposition: Charge and Spin}
+\label{sec:helmholtz}
+% ====================================================================
+
+The Helmholtz theorem guarantees that any
+sufficiently smooth, rapidly decaying vector field
+decomposes uniquely into irrotational and solenoidal
+components~\cite{griffiths_1999}:
+\begin{equation}
+    \mathbf{v} = \underbrace{-\nabla\Phi}_{
+    \text{irrotational}}
+    + \underbrace{\nabla\times\mathbf{A}}_{
+    \text{solenoidal}}\,,
+    \qquad \nabla\cdot\mathbf{A} = 0\,.
+\label{eq:helmholtz}
+\end{equation}
+Applied to the condensate flow field surrounding a
+vortex-Gausson, this decomposition separates the
+radial (charge-generating) and circulatory
+(spin-generating) degrees of freedom.
+
+\subsection{Electric charge as irrotational flow}
+
+The irrotational component
+$\mathbf{v}_\parallel = -\nabla\Phi$ satisfies
+$\nabla\times\mathbf{v}_\parallel = 0$ and has
+nonzero divergence:
+\begin{equation}
+    \nabla\cdot\mathbf{v}_\parallel = -\nabla^2\Phi
+    = \frac{q}{\rho_0}\,\delta^3(\mathbf{x})\,,
+\label{eq:div_charge}
+\end{equation}
+where $q$ is the source strength. This is exactly
+the structure of the Coulomb field: a radial $1/r^2$
+flow from a point source or sink.
+
+In the companion paper on emergent
+electromagnetism~\cite{kulangiev_maxwell}, we showed
+that gauging the $U(1)$ phase symmetry of the
+condensate produces Maxwell's equations with the
+current $J^\nu = (e\meff/\heff^2)\rho\,u^\nu$, and
+that charge is quantized by the vortex winding
+number: $Q = ne$, $n \in \mathbb{Z}$. The Helmholtz
+decomposition provides the complementary fluid-mechanical
+identification:
+\begin{itemize}
+\item A vortex-Gausson with winding $n = +1$ has a
+  net radial inflow ($\nabla\cdot\mathbf{v} < 0$):
+  a \emph{sink} in the condensate. This corresponds
+  to positive charge.
+\item An anti-vortex with $n = -1$ has net radial
+  outflow ($\nabla\cdot\mathbf{v} > 0$): a
+  \emph{source}. This corresponds to negative charge.
+\item A pure Gausson with $n = 0$ has no net radial
+  flow: electrically neutral.
+\end{itemize}
+The Coulomb interaction between two charges is the
+hydrodynamic interaction between two sinks (or
+sources, or sink-source pairs) in the condensate:
+like signs repel (competing for the same inflow),
+opposite signs attract (establishing a complementary
+flow circuit).
+
+\subsection{Quantum spin as solenoidal flow}
+
+The solenoidal component
+$\mathbf{v}_\perp = \nabla\times\mathbf{A}$ is
+divergence-free and carries the circulation of the
+flow. The intrinsic angular momentum (spin) of the
+soliton is the volume integral of the circulation
+momentum density:
+\begin{equation}
+    \mathbf{S} = \int_{V_{\mathrm{core}}}
+    \rho\,(\mathbf{x}\times\mathbf{v}_\perp)\,d^3x\,.
+\label{eq:spin}
+\end{equation}
+For a quantized vortex with winding number $n$, the
+circulation is $\Gamma = \oint\mathbf{v}\cdot
+d\boldsymbol{\ell} = 2\pi n\heff/\meff$, and the
+angular momentum per unit length scales as
+$\rho_0\,\Gamma\,\sigma^2$, where $\sigma \sim \xi$
+is the core size. The total spin quantum number is
+determined by the vortex topology, not by a
+continuous parameter.
+
+\subsection{The \texorpdfstring{$\mathfrak{su}(2)$}{su(2)}
+algebra from the velocity gradient tensor}
+
+The velocity gradient tensor
+$J_{ij} = \partial_j v_i$ decomposes into symmetric
+(strain rate) and antisymmetric (vorticity) parts:
+\begin{equation}
+    J_{ij} = \underbrace{\frac{1}{2}(\partial_j v_i
+    + \partial_i v_j)}_{S_{ij}\;\text{(strain)}}
+    + \underbrace{\frac{1}{2}(\partial_j v_i
+    - \partial_i v_j)}_{\Omega_{ij}\;\text{(vorticity)}}\,.
+\label{eq:J_decomp}
+\end{equation}
+The antisymmetric tensor $\Omega_{ij}$ has three
+independent components in three dimensions:
+$\Omega_{23}$, $\Omega_{31}$, $\Omega_{12}$. These
+are isomorphic to the generators of the Lie algebra
+$\mathfrak{so}(3)$, which is in turn isomorphic to
+$\mathfrak{su}(2)$. The identification is:
+\begin{equation}
+    \Omega_{23} \leftrightarrow \frac{i}{2}\sigma_x\,,
+    \qquad
+    \Omega_{31} \leftrightarrow \frac{i}{2}\sigma_y\,,
+    \qquad
+    \Omega_{12} \leftrightarrow \frac{i}{2}\sigma_z\,,
+\label{eq:pauli_map}
+\end{equation}
+where $\sigma_{x,y,z}$ are the Pauli matrices. The
+spin operators of quantum mechanics are thus
+identified with the vorticity components of the
+condensate flow.
+
+\subsection{Half-integer spin and the double cover}
+
+A spin-1/2 particle requires a $4\pi$ rotation (not
+$2\pi$) to return to its original state---the
+signature of the double cover
+$SU(2) \to SO(3)$~\cite{weinberg_1995}. In the
+condensate picture, this arises from the topology of
+a vortex line tethered to the background.
+
+Consider a vortex line extending from the soliton
+core to spatial infinity (or to an anti-vortex). A
+$2\pi$ rotation of the soliton about any axis
+introduces a full twist in the tether. This twist
+changes the sign of the order parameter
+$\psi \to -\psi$ (since $e^{i\pi} = -1$ per half
+winding), while leaving $|\psi|^2 = \rho$ unchanged.
+A second $2\pi$ rotation (total $4\pi$) unwinds the
+twist, restoring $\psi \to +\psi$.
+
+This is the Dirac belt trick realized in the
+condensate: the fermionic sign change under $2\pi$
+rotation is not a mysterious quantum property but the
+geometrical consequence of a vortex line connecting
+the soliton to the topological boundary conditions of
+the vacuum. Fermions are topologically tethered
+excitations of the condensate; bosons (integer spin)
+are untethered~\cite{volovik_2003}.
+
+
+% ====================================================================
+\section{The Orthogonality of Charge and Spin}
+\label{sec:orthogonality}
+% ====================================================================
+
+The Helmholtz decomposition~(\ref{eq:helmholtz}) is
+not merely a mathematical convenience; it encodes
+a physical orthogonality. The irrotational and
+solenoidal components are $L^2$-orthogonal:
+\begin{equation}
+    \int \mathbf{v}_\parallel \cdot
+    \mathbf{v}_\perp\,d^3x = 0\,,
+\label{eq:orthogonal}
+\end{equation}
+which follows from $\nabla\cdot\mathbf{v}_\perp = 0$
+and integration by parts. Physically, this means:
+
+(i) The charge of a particle (irrotational flow) and
+its spin (solenoidal flow) are independent degrees of
+freedom. Changing the charge does not affect the spin,
+and vice versa.
+
+(ii) The energy of the soliton decomposes additively:
+$E_v = E_{\mathrm{charge}} + E_{\mathrm{spin}}
++ E_{\mathrm{core}}$, with no cross-terms between
+the irrotational and solenoidal contributions.
+
+(iii) The gravitational mass (total energy) includes
+both contributions:
+$m = (E_{\mathrm{charge}} + E_{\mathrm{spin}}
++ E_{\mathrm{core}})/c^2$, explaining why both
+charged and neutral particles gravitate.
+
+This orthogonality is the hydrodynamic origin of the
+empirical independence of electromagnetic and
+gravitational interactions at the particle level.
+
+
+% ====================================================================
+\section{The Proton-Electron Mass Ratio}
+\label{sec:mass_ratio}
+% ====================================================================
+
+The framework provides a qualitative explanation for
+the proton-electron mass ratio $m_p/m_e \approx 1836$.
+
+The proton (a deep vortex sink, $n = +1$) displaces
+the condensate to the core, creating a large
+$E_{\mathrm{charge}}$ contribution from the radial
+inflow extending to $r \sim \xi$. The electron (a
+shallow vortex source, $n = -1$) sits at the surface
+of the condensate perturbation, with most of its
+energy in the solenoidal (spin) component.
+
+The ratio scales as the volume ratio of the
+irrotational to solenoidal energy densities. For a
+vortex sink of core size $\sigma_p$ and a surface
+mode of extent $\sigma_e$:
+\begin{equation}
+    \frac{m_p}{m_e} \sim
+    \frac{E_{\mathrm{irrot}}}{E_{\mathrm{sol}}}
+    \sim \frac{\int_0^{\sigma_p}
+    (\nabla\Phi)^2 r^2\,dr}
+    {\int_0^{\sigma_e}
+    (\nabla\times\mathbf{A})^2 r^2\,dr}\,.
+\label{eq:mass_ratio}
+\end{equation}
+A detailed calculation requires the full nonlinear
+Gausson profile and is deferred to future work. The
+qualitative prediction is that the mass ratio is
+determined by the ratio of irrotational to solenoidal
+energies of the two vortex topologies---a geometric
+quantity, not a free parameter.
+
+
+% ====================================================================
+\section{Discussion}
+\label{sec:discussion}
+% ====================================================================
+
+\subsection{What is derived and what is assumed}
+
+The derivation rests on three inputs:
+
+(i) The logarithmic condensate equation and its
+Madelung decomposition (established in companion
+papers~\cite{kulangiev_gravity}).
+
+(ii) The Helmholtz decomposition theorem (a
+mathematical identity).
+
+(iii) The identification of the antisymmetric velocity
+gradient tensor with $\mathfrak{su}(2)$ (an algebraic
+isomorphism).
+
+Of these, (i) is the physical foundation, (ii) is
+exact, and (iii) is an identification that requires
+further justification---specifically, showing that
+the condensate dynamics generate the correct
+commutation relations for spin operators, not just
+the correct algebra.
+
+\subsection{Relation to prior work}
+
+The hydrodynamic origin of inertia has been explored
+in the context of the Abraham-Lorentz force for
+electromagnetic self-energy and by Haisch, Rueda, and
+Puthoff~\cite{haisch_1994} for zero-point field
+interactions. The present derivation differs in
+using the logarithmic condensate's soliton structure
+rather than the electromagnetic vacuum.
+
+The identification of spin with fluid vorticity has
+precedents in Volovik's analysis of $^3$He-A, where
+fermionic quasiparticles emerge from the superfluid
+order parameter~\cite{volovik_2003}. Our contribution
+is to connect this explicitly to the Gausson soliton
+of the logarithmic equation of state and to the
+emergent gravity program.
+
+\subsection{Limitations}
+
+The proton-electron mass ratio is not computed
+quantitatively. The half-integer spin argument is
+topological but does not derive the value $s = 1/2$
+from the condensate parameters. The connection
+between the Helmholtz decomposition and Maxwell's
+equations (established
+in~\cite{kulangiev_maxwell}) requires the gauging
+step, which is assumed rather than derived.
+
+These limitations define the boundary between what
+the framework explains (the \emph{structure} of
+particle properties) and what remains open (the
+\emph{values} of particle properties).
+
+
+% ====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+% ====================================================================
+
+We have shown that the fundamental properties of
+matter emerge from the hydrodynamics of a single
+Gausson soliton in the logarithmic vacuum condensate:
+
+(1) \emph{Inertia} is the hydrodynamic added mass of
+the condensate displaced by the accelerating soliton.
+Newton's second law $F = ma$ is the equation of
+motion for a wave packet in a compressible medium,
+with $m = E_v/c^2$.
+
+(2) \emph{Mass-energy equivalence} $E = mc^2$ is the
+dispersion relation equating the soliton's
+hydrodynamic momentum flux with its mechanical
+momentum.
+
+(3) \emph{The equivalence principle} follows from the
+identity of inertial and gravitational mass: both are
+$E_v/c^2$, the soliton's total interaction energy
+with the condensate.
+
+(4) \emph{Electric charge} is the irrotational
+(divergence) component of the condensate flow,
+quantized by the vortex winding number $Q = ne$.
+
+(5) \emph{Quantum spin} is the solenoidal (curl)
+component, with the vorticity tensor generating
+$\mathfrak{su}(2)$. The fermionic $4\pi$ periodicity
+is the topological double cover of a tethered vortex
+line.
+
+(6) Charge and spin are \emph{orthogonal}:
+$\int\mathbf{v}_\parallel\cdot\mathbf{v}_\perp\,
+d^3x = 0$, explaining the empirical independence of
+electromagnetic and gravitational interactions.
+
+Together with the emergent gravity
+program~\cite{kulangiev_gravity}, the emergent
+electromagnetism~\cite{kulangiev_maxwell}, and the
+Planck scale derivation~\cite{kulangiev_planck},
+this completes the identification of the fundamental
+forces and particle properties as hydrodynamic
+features of a single vacuum condensate.
+
+
+% ====================================================================
+\section*{Acknowledgments}
+% ====================================================================
+
+The author thanks K.~G.~Zloshchastiev for foundational
+work on the logarithmic superfluid vacuum.
+Claude (Anthropic, claude-opus-4-6) and Gemini (Google, Gemini 3.1 Pro) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and
+interpretations are the author's own.
+
+
+\begin{thebibliography}{20}
+
+\bibitem{kulangiev_gravity}
+B.~B.~Kulangiev,
+Emergent Newtonian Gravity and the Gravitational Feynman-Onsager Relation in the Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#combined}
+
+\bibitem{kulangiev_planck}
+B.~B.~Kulangiev,
+Singularity Regularization and the Emergent Planck Scale in the Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper5}
+
+\bibitem{kulangiev_maxwell}
+B.~B.~Kulangiev,
+Emergent Electromagnetism from the Gauged Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper8}
+
+\bibitem{bialynicki_birula_1979}
+I.~Bia{\l}ynicki-Birula and J.~Mycielski,
+Gaussons: Solitons of the logarithmic Schr\"{o}dinger
+equation,
+Phys.\ Scr.\ \textbf{20}, 539 (1979).
+
+\bibitem{avdeenkov_2011}
+A.~V.~Avdeenkov and K.~G.~Zloshchastiev,
+Quantum Bose liquids with logarithmic nonlinearity:
+Self-sustainability and emergence of spatial extent,
+J.\ Phys.\ B \textbf{44}, 195303 (2011).
+
+\bibitem{lamb_1932}
+H.~Lamb,
+\emph{Hydrodynamics}, 6th ed.\ (Cambridge, 1932).
+
+\bibitem{landau_fluid}
+L.~D.~Landau and E.~M.~Lifshitz,
+\emph{Fluid Mechanics}, 2nd ed.\
+(Butterworth-Heinemann, 1987).
+
+\bibitem{volovik_2003}
+G.~E.~Volovik,
+\emph{The Universe in a Helium Droplet} (Oxford, 2003).
+
+\bibitem{jackson_1999}
+J.~D.~Jackson,
+\emph{Classical Electrodynamics}, 3rd ed.\ (Wiley, 1999).
+
+\bibitem{griffiths_1999}
+D.~J.~Griffiths,
+\emph{Introduction to Electrodynamics}, 3rd ed.\
+(Prentice Hall, 1999).
+
+\bibitem{weinberg_1995}
+S.~Weinberg,
+\emph{The Quantum Theory of Fields}, Vol.~1
+(Cambridge, 1995).
+
+\bibitem{haisch_1994}
+B.~Haisch, A.~Rueda, and H.~E.~Puthoff,
+Inertia as a zero-point-field Lorentz force,
+Phys.\ Rev.\ A \textbf{49}, 678 (1994).
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,928 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1.8cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{bm,xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{float}
+
+\newcommand{\Geff}{G_{\mathrm{eff}}}
+\newcommand{\cs}{c_s}
+\newcommand{\meff}{m_{\mathrm{eff}}}
+\newcommand{\heff}{\hbar_{\mathrm{eff}}}
+\newcommand{\rhob}{\bar{\rho}}
+\newcommand{\lP}{\ell_{\mathrm{P}}}
+\newcommand{\mP}{m_{\mathrm{P}}}
+\newcommand{\tP}{t_{\mathrm{P}}}
+
+\begin{document}
+
+\title{Singularity Regularization and the Emergent Planck Scale\\
+in the Logarithmic Superfluid Vacuum}
+
+\author{B. B. Kulangiev\\\small{Haifa, Israel}}
+\date{April 2026}
+\maketitle
+
+\begin{abstract}
+\noindent
+General relativity predicts spacetime singularities where curvature invariants diverge. We show that the logarithmic superfluid vacuum framework provides a natural regularization mechanism through the quantum potential (Bohm potential) $Q = \Box\sqrt{\rho}/\sqrt{\rho}$, which was neglected at macroscopic scales in the companion paper but dominates at the soliton coherence scale. The healing length $\xi = \heff/(\meff c)$ of the condensate sets a minimum spatial resolution below which the hydrodynamic description breaks down and quantum pressure prevents gravitational collapse to a
+point. We derive $\xi$ from the dimensional structure of the framework's gravitational coupling and show that
+self-consistency---combining
+$G \sim c^2/(\xi^2\rho_0)$ with the
+healing-length identification
+$\xi = \heff/(\meff c)$ and the natural
+packing density $n_0 \sim 1/\xi^3$---uniquely
+determines $\xi \sim \sqrt{\hbar G/c^3} = \lP$,
+the Planck length, and identifies the condensate
+particle mass as $\meff \sim \mP$ and the vacuum
+mass density as $\rho_0 \sim \mP/\lP^3$, the
+Planck density. The Planck scale thus emerges as the healing length of the vacuum condensate, not as a fundamental discreteness of spacetime. The temporal singularity is simultaneously resolved: the chemical potential $\mu(x) = \meff c_s^2/\heff$, which governs the local clock rate, is bounded by the same mechanism,
+ensuring that gravitational time dilation is always
+finite and the phase of the condensate remains
+well-defined everywhere. The corresponding cutoffs
+$\Delta x_{\min} \sim \lP$ and
+$\Delta t_{\min} \sim \tP$ are related by $c$,
+respecting the emergent Lorentz invariance they
+regularize. These identifications unify $\hbar$,
+$c$, and $G$ as properties of a single physical
+substrate: the speed of sound, the quantum coherence
+scale, and the emergent coupling of the vacuum
+condensate.
+\end{abstract}
+
+
+% ====================================================================
+\section{Introduction}
+\label{sec:intro}
+% ====================================================================
+
+The Penrose-Hawking singularity theorems~\cite{penrose_1965,hawking_1970}
+establish that geodesic incompleteness is a generic
+feature of general relativity under physically
+reasonable energy conditions. At a singularity, the
+curvature invariants diverge, the metric ceases to be
+defined, and the predictive power of the theory breaks
+down. This is widely regarded as a signal that GR must
+be replaced by a more fundamental theory at sufficiently
+small scales~\cite{dewitt_1967}.
+
+In quantum gravity approaches, the Planck length
+$\lP = \sqrt{\hbar G/c^3} \approx 1.616 \times 10^{-35}$~m
+is typically introduced as a fundamental
+discreteness scale or minimum length, either through
+dimensional analysis or through specific mechanisms
+such as loop quantization~\cite{rovelli_2004, ashtekar_2006} or string theory~\cite{polchinski_1998}. However, the
+physical origin of $\lP$ as a minimum length
+remains unclear: why should spacetime have a minimum
+resolution, and why at precisely this scale~\cite{garay_1995}?
+
+In a companion paper~\cite{kulangiev_2026a}, we developed a superfluid vacuum model based on the relativistic logarithmic Klein-Gordon equation, deriving emergent gravitational light bending with PPN parameter $\gamma = 1$. The framework treats the vacuum as a complex order parameter $\psi(x,t)$ whose Madelung decomposition $\psi = \sqrt{\rho}\,e^{iS/\heff}$ produces hydrodynamic equations with a density-dependent sound speed and a macroscopic flow velocity. Throughout that paper, the quantum potential (Bohm potential)~\cite{bohm_1952}
+$Q = \Box\sqrt{\rho}/\sqrt{\rho}$ was neglected
+in the macroscopic limit, valid at length scales much
+larger than the condensate's coherence scale.
+
+In this paper, we restore $Q$ and show that it
+provides a natural singularity regularization
+mechanism. The healing length $\xi = \heff/(\meff c)$
+of the condensate---the scale at which $Q$ balances
+the logarithmic interaction---sets a minimum spatial
+resolution. We then show that self-consistency of the
+framework, requiring the dimensionally-correct gravitational
+coupling $G \sim c^2/(\xi^2 \rho_0)$ to match the
+observed Newton's constant when combined with the
+healing-length structure of the soliton and the natural
+condensate packing density $n_0 \sim 1/\xi^3$, uniquely
+fixes $\xi = \lP$, the Planck length.
+
+
+% ====================================================================
+\section{The Quantum Potential at Short Distances}
+\label{sec:bohm}
+% ====================================================================
+
+The Madelung decomposition~\cite{madelung_1927} of the logarithmic Klein-Gordon equation~\cite{kulangiev_2026a} yields the Hamilton-Jacobi equation (in energy units, so that both sides have dimensions of energy):
+\begin{equation}
+    \frac{1}{2\meff}\,\partial_\mu S\,\partial^\mu S
+    = \meff c^2 - b\,\ln\!\left(\frac{\rho}{\rho_0}\right)
+    + Q[\rho]\,,
+\label{eq:hj}
+\end{equation}
+where $b$ is the logarithmic coupling with units of
+energy, and the quantum potential (Bohm potential) is
+\begin{equation}
+    Q[\rho] = -\frac{\heff^2}{2\meff}\,\frac{\Box\sqrt{\rho}}{\sqrt{\rho}}\,.
+\label{eq:bohm}
+\end{equation}
+$Q$ has units of energy, consistent with the other terms.
+In the companion paper, $Q$ was neglected at macroscopic
+scales ($r \gg \xi$), where the density varies slowly.
+We now examine the regime $r \sim \xi$ where $Q$
+becomes dominant.
+
+\subsection{Scaling analysis}
+
+For a density profile varying on a length scale $L$,
+the quantum potential (Eq.~\ref{eq:bohm}) scales as:
+\begin{equation}
+    Q \sim \frac{\heff^2}{\meff\,L^2}\,.
+\label{eq:Q_scaling}
+\end{equation}
+The gravitational interaction term (from the logarithmic nonlinearity) scales as:
+\begin{equation}
+    b\,\ln\!\left(\frac{\rho}{\rho_0}\right)
+    \sim b\,\frac{\delta\rho}{\rho_0}\,,
+\label{eq:grav_scaling}
+\end{equation}
+which for a weak-field gravitating source becomes
+$b\,\delta\rho/\rho_0 \sim b\,GM/(c^2 r)$, using the
+Bernoulli relation~\cite{kulangiev_2026a}.
+
+The quantum potential dominates over the logarithmic
+interaction when $Q \sim b$, i.e., when
+$\heff^2/(\meff\,L^2) \sim b$. This defines a crossover
+length scale:
+\begin{equation}
+    L_* = \sqrt{\frac{\heff^2}{\meff\,b}}\,.
+\end{equation}
+Identifying $b = \meff c^2$ at the relativistic
+background (so that the logarithmic term has magnitude
+comparable to the rest energy), we obtain the healing
+length:
+\begin{equation}
+    \boxed{\;\xi \equiv \frac{\heff}{\meff\,c}\;}
+\label{eq:healing}
+\end{equation}
+consistent with~\cite{kulangiev_2026a}. At
+$r \lesssim \xi$, the quantum pressure from $Q$
+overwhelms the interaction term, preventing the density
+from diverging.
+
+\subsection{The repulsive core}
+
+The physical mechanism is identical to that which
+stabilizes vortex cores in laboratory
+superfluids~\cite{volovik_2003}: the quantum pressure
+creates a repulsive force that increases faster than
+the attractive force as the core is compressed.
+Quantitatively, for a radially symmetric density
+profile $\rho(r)$:
+\begin{equation}
+    Q = \frac{1}{\sqrt{\rho}}\left(
+    \frac{d^2\sqrt{\rho}}{dr^2}
+    + \frac{2}{r}\frac{d\sqrt{\rho}}{dr}\right)\,.
+\end{equation}
+If $\rho \to \rho_{\max}$ as $r \to 0$ (a regularized
+core), then $Q \to Q_0 = \text{const}$ at the center.
+If instead $\rho \to \infty$ (a singularity), then
+$Q \to -\infty$, providing an arbitrarily strong
+repulsive force. The singularity is self-regulating:
+any attempt to compress the density beyond $\rho_{\max}$
+generates a quantum pressure that exceeds the
+gravitational compression.
+
+
+% ====================================================================
+\section{The Gausson Ground State}
+\label{sec:gausson}
+% ====================================================================
+
+The ground-state soliton of the logarithmic wave
+equation is the Gausson---a Gaussian-localized
+solution discovered by Bia{\l}ynicki-Birula and
+Mycielski~\cite{bialynicki_birula_1979}. For the
+three-dimensional stationary equation with the
+logarithmic potential, the density profile is:
+\begin{equation}
+    \rho(r) = \rho_{\max}\,
+    \exp\!\left(-\frac{r^2}{2\sigma^2}\right)\,,
+\label{eq:gausson}
+\end{equation}
+where $\sigma$ is the Gausson width. Substituting
+into the stationary Hamilton-Jacobi equation with
+$Q$ retained yields the width:
+\begin{equation}
+    \sigma = \frac{\heff}{\sqrt{2\,\meff\,b}}\,.
+\label{eq:sigma}
+\end{equation}
+With the relativistic identification $b \sim \meff c^2$
+from the balance between the logarithmic potential and
+the rest energy in Eq.~(\ref{eq:hj}):
+\begin{equation}
+    \sigma \sim \frac{\heff}{\meff\,c} = \xi\,.
+\label{eq:sigma_xi}
+\end{equation}
+The Gausson width equals the healing length: the
+soliton core size IS the minimum spatial resolution
+of the condensate.
+
+The quantum potential at the Gausson center evaluates to:
+\begin{equation}
+    Q(0) = \frac{3\,\heff^2}{2\,\meff\,\sigma^2}
+    = \frac{3\,\meff\,c^2}{2}\,,
+\label{eq:Q_center}
+\end{equation}
+which is of order the rest energy $\meff c^2$. The
+associated curvature scale is $Q(0)/\heff^2 \sim 1/\xi^2$. This is the maximum curvature the acoustic metric can sustain: the Kretschmann scalar~\cite{kretschmann_1917} of the acoustic metric
+is bounded by $K \lesssim 1/\xi^4$.
+
+% ====================================================================
+\newpage
+\section{Derivation of the Healing Length from Known Parameters}
+\label{sec:derivation}
+% ====================================================================
+
+We now show that $\xi$ is determined by the parameters
+derived in this paper from dimensional analysis. The chain of constraints is:
+
+\subsection{Dimensional structure of the gravitational coupling}
+
+For an emergent gravity sourced by perturbations of a
+condensate of mass density $\rho_0$, dimensional analysis fixes the form of Newton's constant. The available parameters are the sound speed $c$, the condensate mass density $\rho_0$, and a length scale $\xi$ characterizing the response of the condensate to a localized perturbation. The unique combination with the dimensions
+of $G = [\mathrm{m}^3/(\mathrm{kg\,s}^2)]$ is:
+\begin{equation}
+    G \;\sim\; \frac{c^2}{\xi^2\,\rho_0}\,,
+\label{eq:G}
+\end{equation}
+up to a dimensionless prefactor of order unity. The
+length scale $\xi$ in the denominator must enter
+squared by inversion of the Laplacian in the linearized
+condensate response; we will identify this with the
+healing length below.
+
+\subsection{The Gausson energy}
+
+The Gausson rest energy is given by the
+Bia{\l}ynicki-Birula--Mycielski energy
+functional~\cite{bialynicki_birula_1979} of the
+logarithmic Schr\"{o}dinger equation. For a Gaussian
+density profile $\rho(r) = n_0\,e^{-r^2/(2\sigma^2)}$
+of width $\sigma = \xi = \heff/(\meff c)$, the
+quantum-pressure contribution to the energy is, at
+the order of magnitude,
+\begin{equation}
+    E_v \sim \int Q\,\rho\,d^3x
+    \sim \frac{\heff^2}{\meff\,\xi^2}\cdot\xi^3\,n_0
+    = \frac{\heff^2\,n_0\,\xi}{\meff}\,,
+\label{eq:Ev}
+\end{equation}
+where $n_0$ is the central condensate number density
+(units $\mathrm{m}^{-3}$) and $Q\sim\heff^2/(\meff\,\xi^2)$
+is the quantum potential evaluated on the
+Gausson~(Eq.~\ref{eq:Q_center}). Substituting
+$\xi = \heff/(\meff c)$:
+\begin{equation}
+    E_v \sim \frac{\heff^3\,n_0}{\meff^2\,c}\,.
+\label{eq:Ev2}
+\end{equation}
+Dimensional check: $[\heff^3 n_0/(\meff^2 c)] =
+(\mathrm{J\cdot s})^3 \cdot \mathrm{m}^{-3} /
+(\mathrm{kg}^2 \cdot \mathrm{m/s}) = \mathrm{J}$ \checkmark.
+
+\subsection{Self-consistency}
+\label{sec:self_consistency}
+
+We combine three relations:
+\begin{itemize}
+\item the gravitational coupling
+  Eq.~(\ref{eq:G}): $G \sim c^2/(\xi^2 \rho_0)$\,,
+\item the healing-length structure of the soliton
+  Eq.~(\ref{eq:healing}): $\xi = \heff/(\meff c)$\,,
+\item the relation between mass density and number
+  density: $\rho_0 = \meff\,n_0$\,.
+\end{itemize}
+Substituting $\xi$ and $\rho_0$ into Eq.~(\ref{eq:G}):
+\begin{equation}
+    G \;\sim\;
+    \frac{c^2}{\xi^2\,\meff\,n_0}
+    \;=\;\frac{c^2 \cdot \meff^2 c^2}{\heff^2\,\meff\,n_0}
+    \;=\;\frac{\meff\,c^4}{\heff^2\,n_0}\,,
+\label{eq:G_chain}
+\end{equation}
+which can be solved for $\meff$ in terms of $n_0$:
+\begin{equation}
+    \meff \;\sim\; \frac{G\,\heff^2\,n_0}{c^4}\,.
+\label{eq:meff}
+\end{equation}
+Dimensional check: $[G\heff^2 n_0/c^4] =
+(\mathrm{m}^3/(\mathrm{kg\,s}^2))(\mathrm{J\,s})^2(\mathrm{m}^{-3})/(\mathrm{m/s})^4
+= \mathrm{kg}$ \checkmark.
+
+\subsection{Closure: \texorpdfstring{$\heff = \hbar$ and $n_0 \sim 1/\xi^3$}{heff = hbar and n0 ~ 1/xi cubed}}
+
+Equation~(\ref{eq:meff}) contains three unknowns:
+$\heff$, $\meff$, and $n_0$. We fix them by two
+natural identifications.
+
+First, $\heff = \hbar$: the condensate's quantum
+mechanics reduces to standard quantum mechanics for
+its excitations (phonons identified with photons,
+solitons with particles).
+
+Second, $n_0 \sim 1/\xi^3$: the condensate has one
+particle per healing volume. This is the natural
+packing density for a self-interacting relativistic
+condensate whose healing length equals the minimum
+spatial resolution. With $\xi = \hbar/(\meff c)$:
+\begin{equation}
+    n_0 \;\sim\; \frac{1}{\xi^3}
+    \;=\;\frac{\meff^3 c^3}{\hbar^3}\,.
+\label{eq:n0}
+\end{equation}
+Substituting~(\ref{eq:n0}) into~(\ref{eq:meff}):
+\begin{equation}
+    \meff \;\sim\; \frac{G\,\hbar^2}{c^4}
+    \cdot \frac{\meff^3 c^3}{\hbar^3}
+    \;=\;\frac{G\,\meff^3}{\hbar\,c}\,,
+\end{equation}
+which simplifies to:
+\begin{equation}
+    \meff^2 \;\sim\; \frac{\hbar\,c}{G}\,.
+\label{eq:meff_closure}
+\end{equation}
+The right-hand side is precisely $\mP^2$, where
+$\mP = \sqrt{\hbar c/G}$ is the Planck mass.
+Therefore:
+\begin{equation}
+    \boxed{\;\meff \sim \mP\;,\qquad
+    \xi \sim \lP\;,\qquad
+    n_0 \sim 1/\lP^3\;}
+\label{eq:planck_identifications}
+\end{equation}
+The condensate particle mass is the Planck mass, the
+healing length is the Planck length, and the vacuum
+number density is one particle per Planck volume.
+The $O(1)$ prefactors depend on the detailed Gausson
+energy integral; the essential result is that all
+three scales are fixed at the Planck scale by
+self-consistency.
+
+\subsection{The healing length IS the Planck length}
+
+Substituting the Planck-mass identification~(\ref{eq:planck_identifications})
+into $\xi = \hbar/(\meff c)$:
+\begin{equation}
+    \boxed{\;\xi\sim\frac{\hbar}{\mP\,c}=\lP\;}
+\label{eq:xi_planck}
+\end{equation}
+where $\lP = \sqrt{\hbar G/c^3} \approx 1.616 \times
+10^{-35}$~m. The Planck length emerges as the healing
+length of the vacuum condensate, determined by
+self-consistency of the framework---not assumed. An
+equivalent statement is that the vacuum condensate has
+one particle per Planck volume, giving a Planck-density
+reservoir.
+
+% ====================================================================
+\section{The Spacetime UV Cutoff}
+\label{sec:uv}
+% ====================================================================
+
+\subsection{Minimum spatial resolution}
+
+Below the healing length $\xi \approx \lP$, the
+hydrodynamic (Madelung) description breaks down:
+the quantum potential $Q$ dominates all other terms,
+and the system is governed by the full wave equation
+rather than the emergent acoustic metric. The acoustic
+metric---and with it, the emergent spacetime
+geometry---ceases to be well-defined at scales
+$\Delta x \lesssim \xi$.
+
+This is not a discretization of spacetime. The
+condensate wave function $\psi(x,t)$ remains
+continuous and well-defined at all scales. What has
+a minimum resolution is the \emph{emergent} spacetime
+geometry experienced by collective excitations
+(phonons/photons). The underlying substrate is
+continuous; the emergent geometry is coarse-grained.
+
+\subsection{Minimum temporal resolution}
+
+The phase of the condensate oscillates as
+$S(t) = -\meff c^2 t/\heff$ in the rest
+frame~\cite{kulangiev_2026a}. The minimum temporal
+interval resolvable by the acoustic metric is the
+time for a phase oscillation to cross the healing
+length:
+\begin{equation}
+    \Delta t_{\min} = \frac{\xi}{c}
+    = \frac{\hbar}{\meff\,c^2}
+    \sim \frac{\lP}{c} = \tP\,,
+\label{eq:dt_min}
+\end{equation}
+where $\tP = \sqrt{\hbar G/c^5} \approx 5.39 \times
+10^{-44}$~s is the Planck time.
+
+\subsection{Unified UV cutoff}
+
+The spatial and temporal cutoffs are related by the
+sound speed:
+\begin{equation}
+    \frac{\Delta x_{\min}}{\Delta t_{\min}} = c\,.
+\label{eq:uv_ratio}
+\end{equation}
+This is a consequence of the Lorentz invariance of
+the acoustic metric at scales $\gg \xi$. The UV
+cutoff respects the emergent symmetry that it
+regularizes.
+
+\subsection{Maximum curvature}
+
+The Kretschmann scalar of the acoustic metric is
+bounded:
+\begin{equation}
+    K = R_{\mu\nu\alpha\beta}\,R^{\mu\nu\alpha\beta}
+    \lesssim \frac{1}{\xi^4} \approx \frac{1}{\lP^4}\,.
+\label{eq:Kretschmann}
+\end{equation}
+This is the same bound obtained in loop quantum
+gravity~\cite{rovelli_2004}, but here it arises from
+the condensate microphysics rather than from a
+quantization of geometry.
+
+
+% ====================================================================
+\section{Temporal Regularization: The Phase Counter}
+\label{sec:temporal}
+% ====================================================================
+
+\subsection{Time as phase accumulation}
+
+In the Madelung representation, the condensate phase
+$S(x,t)$ satisfies the Hamilton-Jacobi
+equation~(\ref{eq:hj}). In the rest frame of the
+condensate, $S(t) = -\mu\,t$, where the chemical
+potential
+\begin{equation}
+    \mu(x) = \frac{\meff\,c_s^2(x)}{\heff}
+\label{eq:mu}
+\end{equation}
+sets the local oscillation rate of the order parameter
+$\psi \propto e^{-i\mu t}$. This phase accumulation IS
+the local clock: two events separated by $\Delta t$
+accumulate a phase difference $\Delta\phi = \mu\,\Delta t$.
+A clock measures time by counting phase cycles of a
+physical oscillator; here, the oscillator is the vacuum
+itself.
+
+Gravitational time dilation is the spatial variation
+of $\mu(x)$. In the weak-field limit, the acoustic
+metric gives $g_{00} \propto -c_s^2(x) \propto
+-\rho(x)$, so:
+\begin{equation}
+    \frac{d\tau}{dt} = \sqrt{-g_{00}}
+    \propto c_s(x) \propto \sqrt{\rho(x)}\,.
+\label{eq:time_dilation}
+\end{equation}
+Deeper in a gravitational well (lower $\rho$), the
+sound speed is lower, the phase accumulates more
+slowly, and clocks run slower---exactly the
+gravitational redshift.
+
+\subsection{The temporal singularity in GR}
+
+In general relativity, the singularity at $r = 0$
+inside a black hole is not merely a point of
+infinite density; it is a boundary where time itself
+ceases to exist. The Kretschmann scalar diverges,
+the metric is undefined, and no further time
+evolution is possible. At the event horizon ($r = r_H$),
+an external observer sees clocks approach infinite
+redshift: $g_{00} \to 0$, so $d\tau/dt \to 0$.
+
+Both pathologies involve the metric component $g_{00}$
+reaching extreme values: zero at the horizon
+(for external coordinates) and undefined at the
+singularity.
+
+\subsection{Regularization by the bounded chemical potential}
+
+In the superfluid framework, $g_{00} \propto
+-\rho\,c_s \propto -\rho^{3/2}$. Since the Bohm
+potential bounds the density:
+\begin{equation}
+    0 < \rho_{\min} \leq \rho(x)
+    \leq \rho_{\max} \sim e\,\rho_0\,,
+\label{eq:rho_bounds}
+\end{equation}
+the chemical potential is bounded from both sides:
+\begin{equation}
+    0 < \mu_{\min} \leq \mu(x) \leq \mu_{\max}\,.
+\label{eq:mu_bounds}
+\end{equation}
+The clock never stops ($\mu > 0$ everywhere) and
+never runs infinitely fast ($\mu < \mu_{\max}$).
+
+The period of the fastest possible phase
+oscillation of the condensate is set by the maximum
+chemical potential:
+\begin{equation}
+    T_{\mathrm{phase}} = \frac{2\pi}{\mu_{\max}}
+    = \frac{2\pi\,\heff}{\meff\,c^2}
+    \;\sim\; 2\pi\,\tP\,.
+\label{eq:dt_phase}
+\end{equation}
+This is consistent with the resolution limit
+$\Delta t_{\min} \sim \tP$ derived from the
+sound-crossing time of the healing length
+(Eq.~\ref{eq:dt_min}); the two definitions differ
+by a factor of $2\pi$ corresponding to one full
+phase cycle versus a half-period crossing. No
+physical process within the emergent spacetime can
+resolve time intervals shorter than $\sim \tP$.
+
+The maximum resolvable time dilation ratio
+(the gravitational redshift between the deepest
+well and the cosmological background) is:
+\begin{equation}
+    \frac{\mu_{\max}}{\mu_{\min}}
+    = \frac{c_{s,\max}^2}{c_{s,\min}^2}
+    = \frac{\rho_{\max}}{\rho_{\min}}
+    \leq \frac{e\,\rho_0}{\rho_{\min}}\,.
+\label{eq:max_redshift}
+\end{equation}
+This is finite. There is no infinite redshift
+surface---the horizon is replaced by a region of
+large but finite time dilation, across which the
+condensate phase remains well-defined and
+continuous.
+
+\subsection{The arrow of time}
+
+The phase of the condensate advances monotonically:
+$S(t+\Delta t) = S(t) - \mu\,\Delta t$ with
+$\mu > 0$. This provides a microscopic arrow of
+time that is absent in the classical wave equation
+(which is time-reversal symmetric). The phase winds
+monotonically in one direction because $\mu$ is
+positive-definite throughout the condensate, and
+this directional phase accumulation defines the
+forward direction of time.
+
+This connects the thermodynamic arrow (entropy
+increases toward equilibrium with the Bulk) to
+the cosmological arrow (the Universe expands as
+the condensate evolves) and to the quantum-mechanical
+arrow (the phase accumulates monotonically).
+
+% ====================================================================
+\newpage
+\section{Singularity Regularization}
+\label{sec:singularity}
+% ====================================================================
+
+\subsection{Black holes as phase boundaries}
+
+In the acoustic metric framework, the event horizon
+occurs where the inflow velocity equals the sound
+speed: $v(r_H) = c$. The Schwarzschild radius is:
+\begin{equation}
+    r_H = \frac{2GM}{c^2}\,.
+\end{equation}
+For a solar-mass object, $r_H \approx 3$~km $\gg \xi$.
+The acoustic metric description is valid at and
+outside the horizon.
+
+Inside the horizon, the inflow velocity exceeds $c$,
+and the acoustic metric describes a trapped region.
+However, as $r \to 0$, the density profile of the
+infalling condensate steepens until the gradient
+reaches the healing-length scale. At $r \sim \xi$,
+the quantum potential~(\ref{eq:Q_center}) becomes
+comparable to the gravitational term, and the
+density is regularized to a finite maximum:
+\begin{equation}
+    \rho_{\max} \sim \rho_0\,
+    \exp\!\left(\frac{\meff c^2}{\heff^2/(\meff\xi^2)}\right)
+    = \rho_0\,e^{\,\meff^2 c^2\xi^2/\heff^2}
+    = \rho_0\,e\,,
+\label{eq:rho_max}
+\end{equation}
+where the last equality uses $\xi = \heff/(\meff c)$
+so that the exponent equals $1$. The singularity is replaced by a Planck-scale core of radius $\sim \xi \sim \lP$ operating at the maximum vacuum density $e\,\rho_0$, where the hydrodynamic description gives way to the full quantum dynamics of the condensate.
+
+\subsection{Comparison with other approaches}
+
+The regularization mechanism is physically distinct
+from other quantum gravity proposals:
+
+In \emph{loop quantum gravity}~\cite{rovelli_2004},
+the singularity is resolved by quantum geometry:
+area and volume operators have discrete spectra with
+minimum eigenvalues of order $\lP^2$ and $\lP^3$.
+
+In \emph{string theory}~\cite{polchinski_1998}, the
+finite size of the string ($\ell_s \sim \lP$) prevents
+localization below the string scale.
+
+In the \emph{superfluid vacuum}, the singularity is
+resolved by the Bohm potential of the condensate:
+the quantum pressure of the vacuum fluid prevents
+gravitational collapse below the healing length. The
+mechanism is hydrodynamic, not geometric or
+string-theoretic, but produces the same minimum
+length $\xi \sim \lP$.
+
+The key distinction is that $\lP$ is \emph{derived}
+from the condensate parameters, not introduced as a
+fundamental scale. The ``quantization of geometry''
+is an emergent consequence of the quantum coherence
+of the vacuum condensate.
+
+
+% ====================================================================
+\section{Unification of Fundamental Constants}
+\label{sec:unification}
+% ====================================================================
+
+The identification $\xi = \lP$ provides a unified
+interpretation of the three fundamental constants
+$\hbar$, $c$, and $G$ as properties of a single
+physical substrate---the vacuum condensate:
+
+\begin{itemize}
+\item $c = c_s$: the speed of light is the sound speed
+  of the condensate at the cosmological background
+  density~\cite{kulangiev_2026a}. It is determined by
+  the logarithmic equation of state.
+
+\item $G \sim c^2/(\xi^2\rho_0)$: Newton's constant
+  is the emergent gravitational coupling, fixed by
+  the healing length $\xi = \lP$ and the vacuum mass
+  density $\rho_0 \sim \mP/\lP^3$ through the
+  dimensional structure of the linearized condensate
+  response (Sec.~\ref{sec:derivation}).
+
+\item $\hbar = \heff$: Planck's constant governs the
+  quantum coherence of the condensate. It sets the
+  healing length $\xi = \hbar/(\meff c)$ and the
+  Gausson width. The de Broglie relation~\cite{de_broglie_1927}
+  $p = \hbar k$ is the dispersion relation of
+  condensate excitations.
+\end{itemize}
+
+The Planck units are then:
+\begin{align}
+    \lP &= \xi = \text{healing length of the vacuum}\,,
+    \label{eq:lP}\\
+    \tP &= \xi/c = \text{phase crossing time}\,,
+    \label{eq:tP}\\
+    \mP &\sim \meff = \text{constituent mass of the vacuum}\,,
+    \label{eq:mP}\\
+    E_{\mathrm{P}} &= \mP c^2 = \text{rest energy of one constituent}\,.
+    \label{eq:EP}
+\end{align}
+The Planck scale is not a fundamental discreteness
+of spacetime but the scale at which the emergent
+spacetime description (acoustic metric) gives way
+to the underlying quantum dynamics of the vacuum
+condensate.
+
+
+% ====================================================================
+\section{Discussion}
+\label{sec:discussion}
+% ====================================================================
+
+\subsection{What is derived and what is assumed}
+
+The derivation of $\xi = \lP$ rests on four inputs:
+
+(i) The dimensional form of the gravitational
+coupling, $G \sim c^2/(\xi^2\rho_0)$
+(Eq.~\ref{eq:G}), which follows from dimensional
+analysis once the available parameters of the
+emergent-gravity sector are fixed
+($c$, $\rho_0$, and a length scale).
+
+(ii) The healing-length structure of the soliton,
+$\xi = \heff/(\meff c)$ (Eq.~\ref{eq:healing}),
+which arises from balancing the quantum potential
+against the logarithmic interaction at the soliton
+core.
+
+(iii) The natural packing density $n_0 \sim 1/\xi^3$
+(Eq.~\ref{eq:n0}), reflecting one condensate
+particle per healing volume.
+
+(iv) The identification $\heff = \hbar$, the
+simplest assumption consistent with the condensate's
+excitations being identified with standard quantum
+particles.
+
+Of these, (i) and (ii) follow from dimensional
+analysis once the framework's structure is fixed,
+while (iii) and (iv) are physical assumptions. The
+result $\meff \sim \mP$, $\xi \sim \lP$,
+$\rho_0 \sim \mP/\lP^3$ is robust to $O(1)$ factors
+throughout the chain.
+
+\subsection{The vacuum density}
+
+From the self-consistent
+identifications~(\ref{eq:planck_identifications}),
+the condensate has one particle of mass $\meff \sim \mP$ per Planck volume, giving a mass density at the
+Planck scale:
+\begin{equation}
+    \rho_0 \;=\; \meff\,n_0 \;\sim\; \frac{\mP}{\lP^3}
+    \;\approx\; 5.2 \times 10^{96}\;\mathrm{kg/m^3}\,.
+\label{eq:rho0}
+\end{equation}
+This is the Planck density---the natural maximum
+density for any relativistic quantum field. It is,
+however, the density of the \emph{vacuum condensate}
+itself, not of ordinary matter. A useful intuition:
+the condensate has bulk modulus $K \sim \rho_0 c^2
+\sim 10^{113}\;\mathrm{Pa}$, larger than that of
+diamond by $\sim 10^{101}$ orders of magnitude.
+Gravity is weak because the vacuum is stiff: a
+massive source produces only a tiny fractional
+density perturbation in the condensate, and this
+small perturbation is what drives gravitational
+acceleration. The energy density of the background
+itself, $\rho_0 c^2 \sim 10^{113}\;\mathrm{J/m^3}$,
+is comparable to the QFT zero-point estimate of
+the cosmological constant; in the present framework
+this is not directly observable, since gravitational
+effects are sourced by perturbations
+$\delta\rho$ rather than by the background density
+$\rho_0$.
+
+\newpage
+\subsection{Testable consequences}
+
+The healing-length regularization makes two
+predictions that distinguish it from classical GR:
+
+(i) \emph{No singularity at $r = 0$}: The density
+inside a black hole is bounded by
+$\rho_{\max} \sim e\,\rho_0$. This affects the
+information paradox: if no singularity forms, the
+interior is a finite-density condensate core, and
+unitarity may be preserved.
+
+(ii) \emph{Modified dispersion at high energies}:
+At energies approaching $E_{\mathrm{P}} = \mP c^2$,
+the phonon dispersion relation deviates from
+$\omega = c k$ due to the Bohm potential
+corrections. This is analogous to the
+roton-maxon spectrum in superfluid
+helium~\cite{zloshchastiev_2012} and is in
+principle testable through gamma-ray burst
+time-of-flight measurements~\cite{amelino_2013}.
+
+\subsection{Limitations}
+
+The derivation assumes a single species of condensate
+particle with mass $\meff \sim \mP$. If the condensate
+has a more complex structure (e.g., multiple species
+or a composite fundamental unit), the healing length
+could differ from $\lP$ by numerical factors. The $O(1)$ uncertainty in the Gausson energy integral
+propagates to an $O(1)$ factor in $\xi/\lP$,
+which is within the expected precision of the
+order-of-magnitude analysis.
+
+The interior structure of black holes in the
+superfluid framework requires solving the full
+nonlinear wave equation~(\ref{eq:hj}) with $Q$
+retained, which is beyond the scope of this paper.
+The regularization argument establishes the existence
+of a maximum density and minimum length, but not the
+detailed density profile inside the horizon.
+
+
+% ====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have shown that the logarithmic superfluid vacuum
+framework provides a complete UV regularization of
+the two singular limits of general relativity:
+
+(1) \emph{Spatial singularity.} The quantum potential
+$Q = \Box\sqrt{\rho}/\sqrt{\rho}$ prevents
+gravitational collapse below the healing length
+$\xi \sim \lP$. The density is bounded by
+$\rho_{\max} \sim e\,\rho_0$, and the Kretschmann
+scalar is bounded by $K \lesssim 1/\lP^4$.
+
+(2) \emph{Temporal singularity.} The chemical
+potential $\mu(x) = \meff c_s^2/\heff$, which sets
+the local clock rate, is bounded from both sides
+by the bounded density. The clock never stops
+($\mu > 0$), time dilation is always finite, and
+the minimum resolvable time interval is
+$\Delta t_{\min} \sim \tP$.
+
+Both regularizations arise from the same physical
+mechanism---the Bohm potential of the vacuum
+condensate---and produce the same characteristic
+scale---the Planck scale---which emerges as the
+healing length $\xi = \hbar/(\meff c) \sim \lP$,
+not as an assumed discreteness.
+
+The framework unifies $\hbar$, $c$, and $G$ as
+properties of a single substrate: the speed of
+sound, the quantum coherence scale, and the
+emergent gravitational coupling of the vacuum
+condensate. The Planck mass $\mP \sim \meff$ is
+the constituent mass, and the Planck length is the
+coherence length at which the emergent spacetime
+gives way to the underlying quantum dynamics.
+
+
+% ====================================================================
+\section*{Acknowledgments}
+% ====================================================================
+
+Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
+
+
+\begin{thebibliography}{25}
+
+\bibitem{kretschmann_1917}
+E.~Kretschmann,
+\"Uber den physikalischen Sinn der Relativit\"{a}tspostulate, A.\ Einsteins neue und seine urspr\"{u}ngliche Relativit\"{a}tstheorie,
+Ann.\ Phys.\ (Leipzig) \textbf{358}, 575 (1917).
+
+\bibitem{madelung_1927}
+E.~Madelung,
+Quantentheorie in hydrodynamischer Form,
+Z.\ Phys.\ \textbf{40}, 322 (1927).
+
+\bibitem{bohm_1952}
+D.~Bohm,
+A suggested interpretation of the quantum theory in terms of ``hidden'' variables. I,
+Phys.\ Rev.\ \textbf{85}, 166 (1952).
+
+\bibitem{de_broglie_1927}
+L.~de~Broglie,
+La m\'{e}canique ondulatoire et la structure atomique de la mati\`{e}re et du rayonnement,
+J.\ Phys.\ Radium \textbf{8}, 225 (1927).
+
+\bibitem{ashtekar_2006}
+A.~Ashtekar, T.~Pawlowski, and P.~Singh,
+Quantum nature of the big bang: Improved dynamics,
+Phys.\ Rev.\ D \textbf{74}, 084003 (2006).
+
+\bibitem{garay_1995}
+L.~J.~Garay,
+Quantum gravity and minimum length,
+Int.\ J.\ Mod.\ Phys.\ A \textbf{10}, 145 (1995).
+
+\bibitem{penrose_1965}
+R.~Penrose,
+Gravitational collapse and space-time singularities,
+Phys.\ Rev.\ Lett.\ \textbf{14}, 57 (1965).
+
+\bibitem{hawking_1970}
+S.~W.~Hawking and R.~Penrose,
+The singularities of gravitational collapse and cosmology,
+Proc.\ Roy.\ Soc.\ Lond.\ A \textbf{314}, 529 (1970).
+
+\bibitem{dewitt_1967}
+B.~S.~DeWitt,
+Quantum theory of gravity. I. The canonical theory,
+Phys.\ Rev.\ \textbf{160}, 1113 (1967).
+
+\bibitem{rovelli_2004}
+C.~Rovelli,
+\emph{Quantum Gravity} (Cambridge, 2004).
+
+\bibitem{polchinski_1998}
+J.~Polchinski,
+\emph{String Theory} (Cambridge, 1998).
+
+\bibitem{kulangiev_2026a}
+B.~B.~Kulangiev,
+Conditions for emergent gravitational light bending
+from a logarithmic superfluid vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper1}
+
+\bibitem{volovik_2003}
+G.~E.~Volovik,
+\emph{The Universe in a Helium Droplet} (Oxford, 2003).
+
+\bibitem{bialynicki_birula_1979}
+I.~Bia{\l}ynicki-Birula and J.~Mycielski,
+Gaussons: Solitons of the logarithmic Schr\"{o}dinger
+equation,
+Phys.\ Scr.\ \textbf{20}, 539 (1979).
+
+\bibitem{zloshchastiev_2012}
+K.~G.~Zloshchastiev,
+Volume element structure and roton-maxon-phonon excitations in superfluid helium beyond the Gross-Pitaevskii approximation,
+Eur.\ Phys.\ J.\ B \textbf{85}, 273 (2012).
+
+\bibitem{amelino_2013}
+G.~Amelino-Camelia,
+Quantum-spacetime phenomenology,
+Living Rev.\ Rel.\ \textbf{16}, 5 (2013).
+
+\end{thebibliography}
+
+\end{document}

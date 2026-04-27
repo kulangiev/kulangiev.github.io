@@ -1,0 +1,651 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1.8cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{bm,xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{float}
+
+\newcommand{\Geff}{G_{\mathrm{eff}}}
+\newcommand{\cs}{c_s}
+\newcommand{\meff}{m_{\mathrm{eff}}}
+\newcommand{\heff}{\hbar_{\mathrm{eff}}}
+\newcommand{\lP}{\ell_{\mathrm{P}}}
+\newcommand{\mP}{m_{\mathrm{P}}}
+
+\begin{document}
+
+\title{The Gravitational Feynman-Onsager Relation:\\
+Collective Painlev\'{e}-Gullstrand Flow from\\
+$N$ Solitons in the Logarithmic Superfluid Vacuum}
+
+\author{B. B. Kulangiev\\\small{Haifa, Israel}}
+\date{April 2026}
+\maketitle
+
+\begin{abstract}
+\noindent
+In companion papers, we showed that the
+Painlev\'{e}-Gullstrand (PG) inflow
+$v = \sqrt{2GM/r}$ is the unique self-consistent
+weak-field solution of the acoustic metric equations
+in a superfluid vacuum, yielding the PPN parameter
+$\gamma = 1$. However, a single soliton produces
+Bondi flow $v \propto r^{-2}$ in the far field, not
+the required $r^{-1/2}$ profile. We resolve this
+discrepancy by showing that the PG flow is a
+collective mean-field effect of $N$ microscopic
+vortex-Gausson solitons, not a superposition of
+individual flows. The derivation is four steps:
+(i)~$N$ solitons with number density $n(r)$ create a
+collective gravitational potential
+$\Phi = -GM(r)/r$ via the Poisson equation;
+(ii)~the vacuum condensate responds through the
+Bernoulli relation $\tfrac{1}{2}v^2 + \Phi = 0$,
+yielding $v = \sqrt{2GM/r}$ automatically;
+(iii)~the acoustic metric of this flow is the
+Schwarzschild metric in PG coordinates, giving
+$\gamma = 1$;
+(iv)~the effective potential inferred from the
+acoustic metric equals the potential from step~(i),
+closing the self-consistency loop. A Monte Carlo
+simulation with $N = 5000$ randomly placed solitons
+confirms: the Bernoulli velocity matches the PG
+profile to $0.02\%$ accuracy with slope
+$-0.500 \pm 0.001$, while the direct sum of
+individual Bondi flows gives slope $-2.000$
+(wrong power law). This is the gravitational
+analogue of the Feynman-Onsager relation in rotating
+superfluids, where $N$ quantized vortices with
+$1/r$ velocity fields coarse-grain to solid-body
+rotation. The continuity constraint is resolved by
+axial outflow along the rotation axis: every
+rotating gravitating body must produce polar
+outflows as a hydrodynamic necessity. The observed
+ubiquity of astrophysical jets is a natural
+consequence.
+\end{abstract}
+
+
+% ====================================================================
+\section{Introduction}
+\label{sec:intro}
+% ====================================================================
+
+In a companion paper~\cite{kulangiev_2026a}, we proved
+that any real scalar field yields the PPN parameter
+$\gamma = 0$ regardless of the self-interaction
+potential---the ``kinematic trap.'' The Madelung
+decomposition of a complex logarithmic superfluid
+overcomes this constraint through a density-dependent
+sound speed and a macroscopic flow velocity, but
+$\gamma = 1$ requires the flow to satisfy the
+Painlev\'{e}-Gullstrand (PG) profile
+$v(r) = \sqrt{2\Geff M/r}$. We further showed that
+this profile is the \emph{unique} self-consistent
+weak-field solution: the static acoustic metric fails
+the self-consistency test, while the PG flow closes
+the loop exactly for any barotropic equation of state.
+
+A self-consistent Bondi accretion
+calculation~\cite{kulangiev_2026a} demonstrated that a
+\emph{single} soliton does not produce the PG profile
+in the far field. Continuity enforces
+$v \propto r^{-2}$ for steady incompressible flow,
+while $\gamma = 1$ requires $v \propto r^{-1/2}$.
+At the solar limb, the discrepancy is seven orders of
+magnitude. This left the derivation of the PG flow
+from the microscopic soliton dynamics as the central
+open problem of the framework.
+
+In a second companion paper~\cite{kulangiev_2026b},
+we derived the emergent gravitational constant
+$\Geff = \eta c^2/(4\pi\rho_0)$ from the collective
+acoustic metric of $N$ vortex-Gausson solitons, where
+$\eta = E_v/(\meff c^2)$ is the soliton energy-to-mass
+ratio and $\rho_0$ is the vacuum condensate density.
+However, the explicit derivation of the macroscopic
+flow velocity was deferred.
+
+In this paper, we close the loop. We show that the PG
+flow emerges automatically from the collective
+gravitational potential of $N$ solitons through the
+Bernoulli relation of the condensate. The individual
+Bondi flows ($v \propto r^{-2}$) are irrelevant at
+macroscopic distances; the macroscopic velocity is
+determined by the mean-field potential, not by the
+superposition of individual flows. We verify this
+analytically and numerically, and identify the
+mechanism as the gravitational analogue of the
+Feynman-Onsager relation in rotating
+superfluids~\cite{feynman_1955,volovik_2003}.
+
+
+% ====================================================================
+\section{Single Soliton: The Bondi Limit}
+\label{sec:single}
+% ====================================================================
+
+A single Gausson soliton of mass $\meff$ at the
+origin creates a Newtonian potential
+$\Phi_1(r) = -G\meff/r$ for $r \gg \xi$, where
+$\xi = \heff/(\meff c)$ is the healing
+length~\cite{kulangiev_2026e}. The vacuum condensate
+responds through the Bernoulli relation (the
+macroscopic limit of the Hamilton-Jacobi
+equation~\cite{kulangiev_2026a}):
+\begin{equation}
+    \frac{1}{2}v_1^2 + \Phi_1 = 0
+    \qquad\Longrightarrow\qquad
+    v_1 = \sqrt{\frac{2G\meff}{r}}\,.
+\label{eq:v_single_bernoulli}
+\end{equation}
+This is formally the PG profile for a single Planck-mass
+soliton. However, steady-state continuity
+$\nabla\cdot(\rho\,\mathbf{v}) = 0$ with
+$\rho \approx \rho_0$ requires:
+\begin{equation}
+    4\pi r^2 v(r) = \text{const}
+    \qquad\Longrightarrow\qquad
+    v \propto r^{-2}\,.
+\label{eq:bondi}
+\end{equation}
+The Bernoulli and continuity conditions are
+incompatible for a single source with
+$\rho \approx \text{const}$: the former gives
+$v \propto r^{-1/2}$, the latter gives
+$v \propto r^{-2}$. The Bondi accretion solution
+interpolates between the two regimes, with
+$v \propto r^{-2}$ dominating in the far
+field~\cite{bondi_1952,kulangiev_2026a}.
+
+The resolution is that the single-soliton Bondi
+flow is \emph{irrelevant} at macroscopic distances.
+The gravitational radius of a single soliton is
+$r_g = G\meff/c^2 \sim \lP \sim 10^{-35}$~m. At
+any astrophysical distance $r \gg \lP$, the
+Bondi flow of a single soliton is negligible:
+$v_{\mathrm{Bondi}} \sim G\meff/(c\,r^2) \ll c$.
+
+
+% ====================================================================
+\section{\texorpdfstring{$N$}{N} Solitons: The Collective Potential}
+\label{sec:collective}
+% ====================================================================
+
+\subsection{The mean-field potential}
+
+Consider $N$ solitons with positions
+$\{\mathbf{r}_i\}$ and masses $\meff$ each, distributed
+with number density $n(\mathbf{x})$. The collective
+gravitational potential at a field point $\mathbf{x}$
+is:
+\begin{equation}
+    \Phi(\mathbf{x}) = -G\meff
+    \sum_{i=1}^{N} \frac{1}{|\mathbf{x}-\mathbf{r}_i|}
+    \;\xrightarrow{\text{continuum}}\;
+    -G \int \frac{n(\mathbf{x}')\,\meff}
+    {|\mathbf{x}-\mathbf{x}'|}\,d^3x'\,.
+\label{eq:Phi_collective}
+\end{equation}
+For a spherically symmetric distribution with total
+enclosed mass $M(r) = \int_0^r 4\pi r'^2\,
+n(r')\,\meff\,dr'$, the shell theorem gives:
+\begin{equation}
+    \Phi(r) = -\frac{GM(r)}{r}\,.
+\label{eq:Phi_shell}
+\end{equation}
+Outside the mass distribution ($r > R_\star$),
+$M(r) = M = N\meff$ and
+$\Phi = -GM/r$---identical to a point mass.
+
+\subsection{The Bernoulli velocity}
+
+The vacuum condensate responds to the collective
+potential through the same Bernoulli relation as for a
+single soliton:
+\begin{equation}
+    \frac{1}{2}v^2 + \Phi = 0
+    \qquad\Longrightarrow\qquad
+    \boxed{\;v(r) = \sqrt{\frac{2GM(r)}{r}}\;}
+\label{eq:v_PG}
+\end{equation}
+Outside the mass distribution, this is exactly the
+Painlev\'{e}-Gullstrand profile. The key point is
+that this is NOT the sum of $N$ individual Bondi
+flows---it is the condensate's coherent response to
+the total gravitational potential.
+
+The individual Bondi flows $v_i \sim G\meff/(c\,
+|\mathbf{x}-\mathbf{r}_i|^2)$ do superpose vectorially,
+but their sum has the wrong power law ($r^{-2}$) and
+the wrong magnitude (suppressed by $1/c$). The
+Bernoulli velocity~(\ref{eq:v_PG}) is $O(v^2/c^2)$
+larger than the Bondi sum and has the correct $r^{-1/2}$
+scaling.
+
+\subsection{Self-consistency}
+
+The acoustic metric of the PG flow~(\ref{eq:v_PG}) is
+the Schwarzschild metric in Painlev\'{e}-Gullstrand
+coordinates~\cite{visser_1998,volovik_2003}:
+\begin{equation}
+    ds^2 = -c^2 dt^2 + \left(dr + v(r)\,dt\right)^2
+    + r^2 d\Omega^2\,,
+\end{equation}
+giving $\gamma = 1$~\cite{kulangiev_2026a}. The
+effective Newtonian potential inferred from the
+acoustic metric is:
+\begin{equation}
+    \Phi_{\mathrm{eff}} = -\frac{1}{2}v^2 = -\frac{GM}{r}
+    = \Phi\,.
+\label{eq:self_consistent}
+\end{equation}
+The loop closes: the potential from the solitons
+produces the PG flow, whose acoustic metric reproduces
+the same potential. No fine-tuning is required---the
+self-consistency is automatic for any mass distribution.
+
+
+% ====================================================================
+\section{The Feynman-Onsager Analogy}
+\label{sec:feynman_onsager}
+% ====================================================================
+
+The relationship between microscopic and macroscopic
+flow is analogous to the Feynman-Onsager relation in
+rotating superfluids~\cite{feynman_1955,volovik_2003}.
+
+In superfluid helium rotating at angular velocity
+$\Omega$, each quantized vortex carries circulation
+$\kappa = h/m_4$ and generates a velocity field
+$v(r) \propto 1/r$ (azimuthal). The coarse-grained
+flow of $N$ vortices distributed with areal density
+$n_v = 2m_4\Omega/h$ is:
+\begin{equation}
+    \langle \mathbf{v} \rangle = \mathbf{\Omega}
+    \times \mathbf{r}\,,
+\label{eq:feynman_onsager}
+\end{equation}
+i.e., solid-body rotation. The microscopic $1/r$
+fields average to a macroscopic linear-in-$r$ flow.
+This is the Feynman-Onsager relation.
+
+In the superfluid vacuum, each Gausson soliton of mass
+$\meff$ generates a Bondi inflow
+$v(r) \propto r^{-2}$. The coarse-grained flow of $N$
+solitons with mass density
+$\rho_m(r) = n(r)\,\meff$ is determined not by
+summing the individual flows but by the Bernoulli
+response to the collective potential:
+\begin{equation}
+    v(r) = \sqrt{\frac{2GM(r)}{r}} \propto r^{-1/2}
+    \qquad\text{(outside the source)}\,.
+\label{eq:grav_FO}
+\end{equation}
+The microscopic $r^{-2}$ fields are irrelevant at
+macroscopic distances; the macroscopic $r^{-1/2}$ flow
+is the condensate's coherent response to the
+mean-field potential. This is the gravitational
+Feynman-Onsager relation.
+
+\begin{table}[H]
+\centering
+\caption{The Feynman-Onsager analogy between rotating
+superfluid helium and the gravitating superfluid
+vacuum.}
+\begin{tabular}{lcc}
+\hline
+& \textbf{Superfluid helium} & \textbf{Superfluid vacuum} \\
+\hline
+Defect & Quantized vortex & Gausson soliton \\
+Quantum & $\kappa = h/m_4$ & $\xi = \heff/(\meff c)$ \\
+Micro flow & $v \propto 1/r$ & $v \propto r^{-2}$ (Bondi) \\
+Macro flow & $v = \Omega \times r$ & $v = \sqrt{2GM/r}$ (PG) \\
+Relation & Feynman-Onsager & Gravitational F-O \\
+Emergent geometry & Solid-body rotation & Schwarzschild metric \\
+\hline
+\end{tabular}
+\label{tab:analogy}
+\end{table}
+
+The coarse-graining is valid across an enormous range
+of scales. The healing length is
+$\xi \sim \lP \sim 10^{-35}$~m
+(Paper~5~\cite{kulangiev_2026e}), while astrophysical
+objects have radii $R_\star \sim 10^{6}$--$10^{9}$~m.
+The mean-field regime spans over 40 orders of
+magnitude, making the Thomas-Fermi approximation
+exceptionally well justified.
+
+
+% ====================================================================
+\section{Numerical Verification}
+\label{sec:numerical}
+% ====================================================================
+
+We verify the analytical result with a Monte Carlo
+simulation. $N = 5000$ solitons of equal mass
+$m_i = M/N$ are placed randomly (uniform density)
+inside a sphere of radius $R_\star$. At each
+measurement point $\mathbf{x}$ outside the sphere,
+we compute:
+
+(A) The \emph{collective Bernoulli velocity}: the
+gravitational potential is summed over all solitons,
+$\Phi(\mathbf{x}) = -G\sum_i m_i/
+|\mathbf{x}-\mathbf{r}_i|$, and the Bernoulli
+relation gives $v = \sqrt{-2\Phi}$.
+
+(B) The \emph{direct Bondi sum}: the individual
+Bondi inflow vectors
+$\mathbf{v}_i = (Gm_i/c|\mathbf{x}-
+\mathbf{r}_i|^2)\,\hat{\mathbf{r}}_i$ are summed
+vectorially.
+
+Both are compared with the PG profile
+$v_{\mathrm{PG}} = \sqrt{2GM/r}$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{collective_pg_simulation.pdf}
+\caption{Monte Carlo verification with $N = 5000$
+solitons. \emph{(a)}~Soliton positions (z-slice).
+\emph{(b)}~Collective potential vs.\ point-mass
+prediction. \emph{(c)}~The Bernoulli velocity (red)
+matches the PG profile (black dotted) with slope
+$-0.500$, while the direct Bondi sum (blue dashed)
+has slope $-2.000$. \emph{(d)}~Bernoulli vs.\ PG
+residual: $< 0.04\%$ outside the source.
+\emph{(e)}~Velocity ratio converges to 1.000.}
+\label{fig:simulation}
+\end{figure}
+
+The results (Fig.~\ref{fig:simulation}) are
+definitive:
+
+(i) The Bernoulli velocity matches the PG profile
+with slope $-0.500 \pm 0.001$ and mean residual
+$0.02\%$ outside the source.
+
+(ii) The direct Bondi sum has slope $-2.000$---the
+wrong power law by a factor of four in the exponent.
+
+(iii) Inside the source ($r < R_\star$), the
+Bernoulli velocity follows the extended profile
+$v = \sqrt{2GM(r)/r}$, confirming that the shell
+theorem applies to the soliton distribution.
+
+The PG flow is not a superposition of individual
+soliton flows. It is the vacuum's collective Bernoulli
+response to the mean-field potential. This result holds
+for any soliton distribution---uniform, isothermal, or
+otherwise---because it depends only on the shell
+theorem and the Bernoulli relation, both of which are
+exact.
+
+
+% ====================================================================
+\section{The Continuity Constraint}
+\label{sec:continuity}
+% ====================================================================
+
+\subsection{The problem}
+
+The PG flow $v(r) = \sqrt{2GM/r}$ has nonzero
+divergence:
+\begin{equation}
+    \nabla\cdot\mathbf{v}
+    = \frac{1}{r^2}\frac{d(r^2 v)}{dr}
+    = \frac{3}{2}\sqrt{\frac{2GM}{r^3}} \neq 0\,.
+\label{eq:divergence}
+\end{equation}
+For $\rho \approx \rho_0 = \text{const}$, the
+continuity equation
+$\partial\rho/\partial t = -\rho_0\nabla\cdot
+\mathbf{v}$ implies a density accumulation rate.
+At the solar limb:
+\begin{equation}
+    \frac{1}{\rho_0}\frac{\partial\rho}{\partial t}
+    = \nabla\cdot\mathbf{v}
+    \approx 1.3 \times 10^{-3}\;\text{s}^{-1}\,.
+\end{equation}
+This is small in absolute terms ($\delta\rho/\rho_0
+\sim 10^{-6}$ per gravitational timescale), so the PG
+flow is a valid quasi-steady approximation on any
+observation timescale. However, a truly steady-state
+solution requires a mechanism to remove the
+accumulated flux.
+
+\subsection{Resolution: axial outflow}
+
+Every astrophysical mass rotates, defining a polar
+axis. The continuity equation in axisymmetric
+coordinates is:
+\begin{equation}
+    \frac{1}{r^2}\frac{\partial(r^2 v_r)}{\partial r}
+    + \frac{1}{r\sin\theta}
+    \frac{\partial(\sin\theta\,v_\theta)}
+    {\partial\theta} = 0\,.
+\label{eq:continuity_axi}
+\end{equation}
+The radial PG inflow creates a positive divergence
+(first term). An angular velocity component
+$v_\theta(r,\theta)$ that redirects the accumulated
+flux along the rotation axis provides a compensating
+negative divergence (second term). The condensate
+flows in equatorially and out polarly, with zero net
+mass flux through any closed surface.
+
+This mechanism predicts that polar outflows (jets)
+are a hydrodynamic consequence of the PG inflow
+geometry. Every gravitating, rotating condensate
+structure must produce axial outflows to maintain
+steady-state continuity. The observed ubiquity of
+astrophysical jets---from protostars to active
+galactic nuclei~\cite{blandford_1977}---is naturally
+explained without requiring magnetic fields as the
+primary driving mechanism.
+
+The acoustic metric in the equatorial plane (where
+light bending is measured) remains the PG metric, so
+$\gamma = 1$ is preserved. The polar outflow modifies
+the metric along the rotation axis, predicting a
+weak gravitational anisotropy that is quadrupolar
+in character ($\sim J_2$) and in principle measurable
+for rapidly rotating compact objects.
+
+The axial outflow mechanism also predicts that the
+vacuum flow geometry near rotating bodies is
+anisotropic, with enhanced gravitational forcing
+along the rotation axis. In planetary interiors, this
+asymmetric forcing may contribute to core convection
+patterns that sustain the geodynamo. The correlation
+between planetary rotation rate and magnetic field
+strength---Earth and Jupiter (fast rotation, strong
+fields) versus Venus and Mars (slow or no rotation,
+weak or absent fields)---is qualitatively consistent
+with this prediction.
+
+
+% ====================================================================
+\section{Discussion}
+\label{sec:discussion}
+% ====================================================================
+
+\subsection{What is derived and what is assumed}
+
+The derivation of the collective PG flow rests on
+three ingredients:
+
+(i) The Poisson equation for the collective potential
+of $N$ point masses. This is standard Newtonian
+gravity, applied to the soliton distribution.
+
+(ii) The Bernoulli relation
+$\tfrac{1}{2}v^2 + \Phi = 0$, which is the
+macroscopic limit of the Hamilton-Jacobi equation
+of the logarithmic condensate~\cite{kulangiev_2026a}.
+
+(iii) The acoustic metric of the resulting flow,
+which reproduces the Schwarzschild geometry in PG
+coordinates~\cite{visser_1998}.
+
+All three are established results from the companion
+papers. The new content is their combination into a
+self-consistency loop, and the numerical verification
+that the Bernoulli route (not the Bondi superposition)
+is the correct coarse-graining.
+
+\subsection{Why the Bondi flow is irrelevant}
+
+The discrepancy between the single-soliton Bondi flow
+($v \propto r^{-2}$) and the collective PG flow
+($v \propto r^{-1/2}$) is not a contradiction. The
+Bondi solution describes the steady-state accretion
+onto a single point source, where continuity constrains
+the velocity profile. The collective PG flow describes
+the vacuum's response to the total gravitational
+potential, where the Bernoulli relation (not
+single-source continuity) constrains the velocity.
+
+At any macroscopic distance $r \gg \xi$, the Bondi
+flow of a single soliton is suppressed by a factor
+$(r_g/r)^{3/2}$ relative to the PG flow, where
+$r_g = G\meff/c^2 \sim \lP$. For the Sun at the
+solar limb, this factor is $(10^{-35}/10^{9})^{3/2}
+\sim 10^{-66}$---utterly negligible.
+
+\subsection{Universality}
+
+The self-consistency loop
+(Sec.~\ref{sec:collective}) does not depend on the
+equation of state of the condensate. The Bernoulli
+relation $\tfrac{1}{2}v^2 + \Phi = 0$ is the leading-order
+result for any barotropic fluid in the weak-field
+limit ($v \ll c$). The acoustic metric of the PG
+flow is Schwarzschild regardless of the specific form
+of $c_s(\rho)$~\cite{kulangiev_2026a}. Therefore,
+the collective PG flow and $\gamma = 1$ are universal
+properties of any superfluid vacuum model with
+emergent Newtonian gravity---not specific to the
+logarithmic equation of state.
+
+The logarithmic EOS enters only in determining the
+value of $\Geff$ (through the soliton energy
+$E_v$~\cite{kulangiev_2026b}) and the healing length
+$\xi$~\cite{kulangiev_2026e}. The flow geometry is
+equation-of-state independent.
+
+
+% ====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+% ====================================================================
+
+We have resolved the central open problem of the
+superfluid vacuum gravity program: the derivation of
+the macroscopic Painlev\'{e}-Gullstrand flow from the
+microscopic soliton dynamics.
+
+The PG flow $v = \sqrt{2GM/r}$ is not the sum of
+$N$ individual Bondi flows ($v \propto r^{-2}$). It
+is the vacuum condensate's collective Bernoulli
+response to the mean-field gravitational potential
+of $N$ solitons. The self-consistency loop---Poisson
+equation $\to$ Bernoulli relation $\to$ PG acoustic
+metric $\to$ Schwarzschild $\to$ $\gamma = 1$ $\to$
+$\Phi_{\mathrm{eff}} = \Phi$---closes automatically
+for any mass distribution, without fine-tuning.
+
+A Monte Carlo simulation with $N = 5000$ solitons
+confirms the Bernoulli velocity matches the PG
+profile to $0.02\%$ accuracy, while the direct Bondi
+sum gives the wrong power law by a factor of four in
+the exponent.
+
+This is the gravitational analogue of the
+Feynman-Onsager relation: just as $N$ quantized
+vortices in rotating helium coarse-grain to
+solid-body rotation, $N$ Gausson solitons in a
+gravitating condensate coarse-grain to the PG flow.
+The coarse-graining spans over 40 orders of
+magnitude from the healing length
+$\xi \sim 10^{-35}$~m to astrophysical scales.
+
+The continuity constraint is resolved by axial
+outflow along the rotation axis. Every rotating
+gravitating body must produce polar jets as a
+hydrodynamic necessity, naturally explaining the
+ubiquity of astrophysical jets without requiring
+magnetic fields as the primary mechanism.
+
+
+% ====================================================================
+\section*{Acknowledgments}
+% ====================================================================
+
+The author thanks K.~G.~Zloshchastiev for
+foundational work on the logarithmic superfluid
+vacuum. Computational tools were used for numerical
+simulations and manuscript preparation. All
+scientific content, equations, and interpretations
+are the author's own.
+
+
+\begin{thebibliography}{25}
+
+\bibitem{kulangiev_2026a}
+B.~B.~Kulangiev,
+Conditions for emergent gravitational light bending
+from a logarithmic superfluid vacuum,
+Preprint (2026),
+\url{https://doi.org/10.55277/researchhub.lt23p3pz.6}.
+
+\bibitem{kulangiev_2026b}
+B.~B.~Kulangiev,
+Emergent Newtonian gravity from the collective acoustic
+metric of a logarithmic superfluid vacuum,
+Preprint (2026),
+\url{https://doi.org/10.55277/researchhub.7x669mec.6}.
+
+\bibitem{kulangiev_2026e}
+B.~B.~Kulangiev,
+Singularity regularization and the emergent Planck scale in the logarithmic superfluid vacuum,
+Preprint (2026).
+\url{https://doi.org/10.55277/researchhub.2wgfiqh8.2}
+
+\bibitem{feynman_1955}
+R.~P.~Feynman,
+Application of quantum mechanics to liquid helium,
+in \emph{Progress in Low Temperature Physics}, Vol.~1,
+ed.\ C.~J.~Gorter (North-Holland, 1955), pp.~17--53.
+
+\bibitem{volovik_2003}
+G.~E.~Volovik,
+\emph{The Universe in a Helium Droplet} (Oxford, 2003).
+
+\bibitem{bondi_1952}
+H.~Bondi,
+On spherically symmetrical accretion,
+Mon.\ Not.\ Roy.\ Astron.\ Soc.\ \textbf{112}, 195
+(1952).
+
+\bibitem{visser_1998}
+M.~Visser,
+Acoustic black holes: Horizons, ergospheres and Hawking
+radiation,
+Class.\ Quant.\ Grav.\ \textbf{15}, 1767 (1998).
+
+\bibitem{blandford_1977}
+R.~D.~Blandford and R.~L.~Znajek,
+Electromagnetic extraction of energy from Kerr black
+holes,
+Mon.\ Not.\ Roy.\ Astron.\ Soc.\ \textbf{179}, 433
+(1977).
+
+\end{thebibliography}
+
+\end{document}

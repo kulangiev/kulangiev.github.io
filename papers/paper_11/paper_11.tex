@@ -1,0 +1,801 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1.8cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{bm,xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{float}
+
+\newcommand{\Geff}{G_{\mathrm{eff}}}
+\newcommand{\meff}{m_{\mathrm{eff}}}
+\newcommand{\heff}{\hbar_{\mathrm{eff}}}
+\newcommand{\rhob}{\bar{\rho}}
+\newcommand{\lP}{\ell_{\mathrm{P}}}
+
+\begin{document}
+
+\title{The Quantum Hall Effect as Topological
+Phase-Locking in the Logarithmic Superfluid Vacuum}
+
+\author{B. B. Kulangiev\\\small{Haifa, Israel}}
+\date{April 2026}
+\maketitle
+
+\begin{abstract}
+\noindent
+We show that the integer quantum Hall effect is a
+natural consequence of the logarithmic superfluid
+vacuum framework. The electron, modeled as a
+vortex-Gausson soliton with winding number $n = -1$,
+couples to an external magnetic field through the
+gauge-invariant phase velocity
+$u_\mu = (\partial_\mu S - eA_\mu)/\meff$. The
+applied field $\mathbf{B}$ imposes a background
+vorticity $\nabla\times\mathbf{A}$ on the condensate,
+to which the electron vortex phase-locks. We derive
+four results: (i)~the von Klitzing constant
+$R_K = h/e^2$ emerges as the impedance of a single
+quantized circulation in the condensate;
+(ii)~Landau levels are the discrete vortex-lattice
+modes of the electron-condensate coupling, with
+spacing $\hbar\omega_c = \hbar eB/\meff$;
+(iii)~the quantized Hall conductance
+$\sigma_{xy} = \nu e^2/h$ follows from the
+topological invariance of the total winding number
+$\nu$ of filled vortex modes; and (iv)~the thermal
+breakdown scale $k_B T^* \sim \hbar\omega_c$
+is recovered as the energy required to break the
+phase-locking between the electron vortex and the
+background field. All four results reproduce the
+standard theory exactly, with no new free parameters.
+The framework provides a mechanical interpretation
+of topological protection: backscattering is
+suppressed because it requires changing the winding
+number of a vortex defect, which is a topological
+invariant of the condensate.
+\end{abstract}
+
+
+% ====================================================================
+\section{Introduction}
+\label{sec:intro}
+% ====================================================================
+
+The integer quantum Hall effect
+(IQHE)~\cite{klitzing_1980} is one of the most
+precisely verified phenomena in physics: the Hall
+resistance of a two-dimensional electron gas in a
+strong perpendicular magnetic field is quantized to
+$R_{xy} = h/(\nu e^2)$ with a precision exceeding
+one part in $10^9$, where $\nu$ is an integer. The
+standard explanation invokes Landau quantization of
+the orbital motion and the topological protection of
+edge states via the Chern number~\cite{thouless_1982}.
+
+While mathematically complete, the standard
+derivation treats the quantization as an abstract
+topological property of the single-particle
+Hamiltonian in a magnetic field. No mechanical
+explanation is offered for \emph{why} backscattering
+is forbidden or \emph{what physical structure}
+carries the topological invariant.
+
+In the logarithmic superfluid vacuum
+framework~\cite{kulangiev_gravity,kulangiev_geff},
+the vacuum is a physical condensate described by a
+complex order parameter
+$\psi = \sqrt{\rho}\,e^{iS/\heff}$, and
+fundamental particles are topological defects
+(vortex-Gausson solitons) of this
+condensate~\cite{kulangiev_planck,kulangiev_inertia}.
+In a companion paper~\cite{kulangiev_maxwell}, we
+showed that gauging the $U(1)$ phase symmetry of
+the condensate produces Maxwell's equations, with
+electric charge quantized by the vortex winding
+number: $Q = ne$.
+
+In this paper, we show that placing a charged
+vortex-soliton (the electron) in an external
+magnetic field (background condensate vorticity)
+naturally produces all the key features of the IQHE.
+The derivation uses only the gauge-invariant
+Madelung velocity from Paper~8 and standard
+superfluid vortex dynamics. No new assumptions or
+parameters are introduced.
+
+
+% ====================================================================
+\section{The Electron as a Vortex in a Background
+Field}
+\label{sec:setup}
+% ====================================================================
+
+\subsection{The gauge-invariant velocity}
+
+From the gauged logarithmic Klein-Gordon
+equation~\cite{kulangiev_maxwell}, the Madelung
+decomposition yields the gauge-invariant
+four-velocity:
+\begin{equation}
+    u_\mu = \frac{1}{\meff}
+    (\partial_\mu S - eA_\mu)\,.
+\label{eq:u_gauge}
+\end{equation}
+The spatial part gives the condensate flow velocity
+around the electron:
+\begin{equation}
+    \mathbf{v} = \frac{1}{\meff}
+    (\nabla S - e\mathbf{A})\,.
+\label{eq:v_gauge}
+\end{equation}
+In the absence of an external field
+($\mathbf{A} = 0$), the electron vortex with winding
+number $n$ has circulation:
+\begin{equation}
+    \oint \mathbf{v}\cdot d\boldsymbol{\ell}
+    = \frac{2\pi n\heff}{\meff}\,.
+\label{eq:circulation}
+\end{equation}
+This is the Onsager-Feynman quantization condition
+for a superfluid vortex~\cite{feynman_1955}.
+
+\subsection{The magnetic field as background vorticity}
+
+An external magnetic field $\mathbf{B} = \nabla
+\times\mathbf{A}$ imposes a background vorticity on
+the condensate. From Eq.~(\ref{eq:v_gauge}), the
+vorticity of the condensate flow is:
+\begin{equation}
+    \boldsymbol{\omega} = \nabla\times\mathbf{v}
+    = \frac{1}{\meff}(\nabla\times\nabla S
+    - e\nabla\times\mathbf{A})
+    = -\frac{e\mathbf{B}}{\meff}
+    + \frac{2\pi n\heff}{\meff}
+    \delta^2(\mathbf{x})\,\hat{\mathbf{z}}\,,
+\label{eq:vorticity}
+\end{equation}
+where the first term is the smooth background
+vorticity from $\mathbf{B}$ and the second is the
+singular vorticity of the electron itself (a delta
+function at the vortex core). The total vorticity is
+the sum of the applied field and the intrinsic
+electron circulation.
+
+
+% ====================================================================
+\section{The Von Klitzing Constant as Circulation
+Impedance}
+\label{sec:RK}
+% ====================================================================
+
+In the condensate, each vortex carries one quantum
+of circulation $\kappa = h/\meff$. The ``impedance''
+of a single circulation quantum---the ratio of the
+phase-gradient driving force to the resulting
+current---is determined by the charge-circulation
+coupling.
+
+The magnetic flux quantum threading one vortex
+cell is:
+\begin{equation}
+    \Phi_0 = \frac{h}{e}\,,
+\label{eq:Phi0}
+\end{equation}
+which follows from the single-valuedness of $\psi$
+around a loop enclosing one flux quantum
+(the Aharonov-Bohm
+condition~\cite{aharonov_1959}). The current
+carried by one filled Landau level per unit voltage
+drop is $I = e\omega_c/(2\pi) = e^2 B/(2\pi\meff)$.
+The voltage per flux quantum is
+$V = \Phi_0 \omega_c/(2\pi)$. Their ratio gives:
+\begin{equation}
+    \boxed{\;R_K = \frac{V}{I} = \frac{h}{e^2}
+    \approx 25\,812.807\;\Omega\;}
+\label{eq:RK}
+\end{equation}
+In the condensate picture, $R_K$ is the
+\emph{impedance of one circulation quantum coupled
+to one charge quantum}. It is the natural resistance
+unit of a quantized vortex carrying electric charge
+$e$. The von Klitzing constant is to the charged
+vortex what the acoustic impedance $Z_0 = \mu_0 c$
+is to the bulk condensate~\cite{kulangiev_impedance}.
+
+The connection to the vacuum impedance is:
+\begin{equation}
+    Z_0 = 2\alpha R_K\,,
+\label{eq:Z0_RK}
+\end{equation}
+where $\alpha = e^2/(4\pi\epsilon_0\hbar c)
+\approx 1/137$ is the fine structure constant. In
+the condensate framework, $\alpha$ is the coupling
+efficiency between the vortex circulation and the
+bulk medium~\cite{kulangiev_impedance}: the fraction
+of the ideal vortex impedance $R_K$ that appears as
+bulk wave impedance $Z_0$.
+
+
+% ====================================================================
+\section{Landau Levels as Vortex-Lattice Modes}
+\label{sec:landau}
+% ====================================================================
+
+\subsection{The cyclotron frequency}
+
+An electron vortex in a uniform background vorticity
+$\boldsymbol{\omega}_B = -e\mathbf{B}/\meff$
+orbits at the cyclotron frequency. From the
+gauge-invariant equation of
+motion~\cite{kulangiev_inertia}, the electron
+(mass $m = E_v/c^2$, charge $-e$) in a uniform
+$\mathbf{B} = B\hat{\mathbf{z}}$ executes circular
+orbits with angular frequency:
+\begin{equation}
+    \omega_c = \frac{eB}{\meff}\,.
+\label{eq:omega_c}
+\end{equation}
+This is the standard cyclotron frequency, here
+interpreted as the angular velocity of the electron
+vortex orbiting in the background vorticity field.
+
+\subsection{The discrete spectrum}
+
+In the condensate picture, the electron vortex
+phase-locks to the background vorticity. The allowed
+states are those where the total phase accumulated
+by the electron around its orbit is an integer
+multiple of $2\pi$:
+\begin{equation}
+    \oint (\nabla S - e\mathbf{A})\cdot
+    d\boldsymbol{\ell} = 2\pi\heff\,n\,,
+    \qquad n = 0, 1, 2, \ldots
+\label{eq:phase_quantization}
+\end{equation}
+This is the Bohr-Sommerfeld condition applied to the
+gauge-invariant phase. For circular orbits in a
+uniform field, this gives equally spaced energy
+levels:
+\begin{equation}
+    \boxed{\;E_n = \hbar\omega_c
+    \left(n + \frac{1}{2}\right)\;}
+\label{eq:landau}
+\end{equation}
+These are the Landau levels. In the condensate
+framework, each level corresponds to a mode of the
+vortex-lattice coupling: the $n$-th level has $n$
+additional circulation quanta wound around the
+guiding center. The half-integer zero-point energy
+$\hbar\omega_c/2$ arises from the irreducible
+circulation of the electron vortex itself
+($n = -1$), which persists even in the lowest
+orbital mode.
+
+\subsection{Degeneracy and flux quantization}
+
+The degeneracy of each Landau level equals the
+number of flux quanta threading the sample:
+\begin{equation}
+    N_\Phi = \frac{BA}{\Phi_0}
+    = \frac{eBA}{h}\,,
+\label{eq:degeneracy}
+\end{equation}
+where $A$ is the sample area. In the condensate
+picture, this is the number of vortex cells that
+tile the sample when the background vorticity is
+$\omega_B = eB/\meff$. Each cell has area
+$a_v = \Phi_0/B = h/(eB)$, and the sample holds
+$A/a_v = eBA/h$ cells. The electron can be
+localized in any one of these cells, giving the
+degeneracy.
+
+
+% ====================================================================
+\section{Quantized Hall Conductance from Winding
+Number Conservation}
+\label{sec:hall}
+% ====================================================================
+
+\subsection{The filling factor}
+
+The filling factor $\nu$ is the ratio of electron
+density $n_e$ to flux quantum density $n_\Phi$:
+\begin{equation}
+    \nu = \frac{n_e}{n_\Phi}
+    = \frac{n_e h}{eB}\,.
+\label{eq:filling}
+\end{equation}
+When $\nu$ is an integer, exactly $\nu$ Landau levels
+are completely filled. Each filled level contributes
+$N_\Phi$ states, all carrying the same topological
+winding number.
+
+\subsection{The Hall conductance}
+
+The current response to a transverse electric field
+$E_x$ in a filled Landau level is:
+\begin{equation}
+    j_y = \sigma_{xy} E_x\,,
+\label{eq:hall_current}
+\end{equation}
+where $\sigma_{xy}$ is the Hall conductance. Each
+filled vortex-lattice mode contributes one quantum
+of conductance $e^2/h$, because each circulation
+quantum transports one charge quantum per flux
+quantum of applied field. For $\nu$ filled levels:
+\begin{equation}
+    \boxed{\;\sigma_{xy} = \nu\,\frac{e^2}{h}\;}
+\label{eq:sigma_xy}
+\end{equation}
+The Hall resistance is:
+\begin{equation}
+    R_{xy} = \frac{1}{\sigma_{xy}}
+    = \frac{h}{\nu e^2}
+    = \frac{R_K}{\nu}\,.
+\label{eq:R_xy}
+\end{equation}
+
+\subsection{Topological protection}
+
+In the condensate framework, the quantization of
+$\sigma_{xy}$ is exact because $\nu$ is a
+\emph{winding number}---the total number of filled
+circulation modes of the vortex lattice. Winding
+numbers are integers by topological necessity:
+you cannot have half a vortex.
+
+Backscattering (the process that destroys
+quantization in ordinary conductors) requires
+transferring an electron from one edge to the
+opposite edge, which means moving a vortex across
+the entire sample. This requires unwinding and
+rewinding the vortex topology across all the
+intervening flux cells---a process forbidden unless
+sufficient energy is supplied to break the
+phase-locking.
+
+This provides the mechanical interpretation of
+topological protection that is absent in the
+abstract Chern-number formulation: the Hall
+quantization is robust because vortex winding
+numbers are conserved quantities of the condensate
+dynamics, not because of an abstract mathematical
+theorem.
+
+
+% ====================================================================
+\section{The Thermal Breakdown Scale}
+\label{sec:thermal}
+% ====================================================================
+
+The phase-locking between the electron vortex and
+the background vorticity is maintained as long as
+thermal fluctuations cannot supply enough energy to
+promote an electron to the next Landau level. The
+critical temperature is:
+\begin{equation}
+    \boxed{\;k_B T^* \sim \hbar\omega_c
+    = \frac{\hbar eB}{\meff}\;}
+\label{eq:T_star}
+\end{equation}
+For $B = 10$~T and $\meff = m_e$:
+\begin{equation}
+    T^* = \frac{\hbar eB}{m_e k_B}
+    \approx \frac{1.055 \times 10^{-34}
+    \times 1.602 \times 10^{-19} \times 10}
+    {9.109 \times 10^{-31}
+    \times 1.381 \times 10^{-23}}
+    \approx 13\;\text{K}\,.
+\label{eq:T_numerical}
+\end{equation}
+This is consistent with the experimental observation
+that the IQHE requires cryogenic temperatures
+($T \lesssim 4$~K for clean samples at $B \sim
+10$~T)~\cite{klitzing_1980}.
+
+In the condensate language: at $T > T^*$, thermal
+phonons in the condensate have sufficient energy to
+break the topological phase-locking between the
+electron vortex and the background vorticity. The
+vortex ``unlocks'' from the lattice mode and scatters
+freely, destroying the quantization.
+
+This result confirms that the framework reproduces
+the correct energy scales without new parameters.
+The thermal wall that prevents room-temperature
+topological protection in the IQHE is:
+\begin{equation}
+    \frac{k_B T_{\mathrm{room}}}{\hbar\omega_c}
+    = \frac{0.025\;\text{eV}}{1.2 \times
+    10^{-4}\;\text{eV}} \approx 210\,,
+\label{eq:thermal_ratio}
+\end{equation}
+for $B = 1$~T. Room-temperature operation would
+require either $B \sim 200$~T (beyond current
+technology) or a condensate with an effective mass
+$\meff$ two orders of magnitude lighter than $m_e$.
+The framework does not provide a mechanism for either.
+
+
+% ====================================================================
+\section{Discussion}
+\label{sec:discussion}
+% ====================================================================
+
+\subsection{What is derived and what is reproduced}
+
+This paper derives no new physical predictions. Every
+result---$R_K = h/e^2$, $E_n = \hbar\omega_c(n+1/2)$,
+$\sigma_{xy} = \nu e^2/h$, and
+$T^* \sim \hbar eB/(\meff k_B)$---is standard
+condensed matter physics~\cite{klitzing_1980,
+thouless_1982}. What is new is the \emph{derivation
+pathway}: all four results follow from the single
+premise that the electron is a vortex defect in the
+vacuum condensate, coupled to the background
+vorticity through the gauge-invariant Madelung
+velocity~(\ref{eq:u_gauge}).
+
+The value of this exercise is threefold:
+
+(i) It demonstrates that the logarithmic superfluid
+vacuum framework, originally constructed to derive
+emergent gravity~\cite{kulangiev_gravity,
+kulangiev_geff}, is consistent with precision
+condensed matter physics at the $10^{-9}$ level.
+
+(ii) It provides a mechanical interpretation of
+topological protection: vortex winding numbers are
+conserved because the condensate is superfluid
+(irrotational except at defects), not because of an
+abstract Chern number.
+
+(iii) It identifies the thermal breakdown scale
+$T^*$ as the vortex phase-unlocking energy, making
+explicit why the IQHE requires cryogenic conditions
+and why no simple modification of the framework can
+bypass this requirement.
+
+\subsection{Relation to the fractional quantum Hall
+effect}
+
+The fractional quantum Hall effect (FQHE), observed
+at filling factors $\nu = p/q$ with $q$
+odd~\cite{laughlin_1983}, involves strong
+electron-electron correlations. In the condensate
+framework, the FQHE would correspond to
+\emph{composite vortex} states: bound states of
+$q$ electron vortices sharing $p$ circulation
+quanta. The Laughlin wavefunction
+$\prod_{i<j}(z_i - z_j)^q\,e^{-|z|^2/4}$ has the
+structure of a product of vortex separations raised
+to the $q$-th power, consistent with $q$-fold
+winding. A detailed derivation of the FQHE from the
+logarithmic condensate is beyond the scope of this
+paper but is a natural extension.
+
+\subsection{Relation to the vacuum impedance}
+
+The hierarchy of impedance scales in the framework
+is:
+\begin{equation}
+    R_K = \frac{h}{e^2} \approx 25.8\;\text{k}\Omega
+    \quad\xrightarrow{\times 2\alpha}\quad
+    Z_0 = \mu_0 c \approx 377\;\Omega\,.
+\label{eq:hierarchy}
+\end{equation}
+The von Klitzing constant is the impedance of one
+vortex circulation quantum. The vacuum impedance is
+the impedance of the bulk condensate, reduced by the
+coupling factor $2\alpha \approx 1/68.5$. This
+hierarchy---from the microscopic (vortex) to the
+macroscopic (bulk)---is the electromagnetic analogue
+of the gravitational Feynman-Onsager relation, where
+microscopic Bondi flows ($r^{-2}$) produce the
+macroscopic PG flow
+($r^{-1/2}$)~\cite{kulangiev_geff}. In both cases,
+the collective response of the condensate differs
+qualitatively from the sum of individual
+contributions.
+
+\subsection{Implications for room-temperature
+topological electronics}
+
+Equation~(\ref{eq:thermal_ratio}) quantifies the
+thermal wall for topological protection: at 1~T,
+room-temperature operation requires overcoming a
+factor of 210 in energy scale. The framework
+identifies three logically possible (but currently
+impractical) routes:
+
+(i) Extreme magnetic fields ($B > 200$~T).
+Destructive pulsed fields have reached
+$\sim 1200$~T~\cite{nakamura_2018}, but sustained
+fields of this magnitude are not available.
+
+(ii) Ultralight effective mass. In Dirac
+materials (graphene, topological insulators), the
+effective mass near the Dirac point approaches
+zero, enhancing $\omega_c$ for a given $B$. The
+anomalous quantum Hall effect in
+graphene~\cite{novoselov_2005} at $T \sim 300$~K
+and $B \sim 45$~T exploits precisely this route.
+
+(iii) A new coupling mechanism beyond the standard
+$eB/\meff$ cyclotron energy. The logarithmic
+condensate does not provide such a mechanism; the
+phase-locking energy is set by $\alpha$, $e$,
+$\hbar$, and $B$, all of which are fixed.
+
+The framework is therefore honest about its
+limitations: it explains the IQHE but does not
+transcend it.
+
+\subsection{The soliton rigidity argument and its
+failure}
+
+A natural conjecture within the framework is that
+the Gausson's internal binding energy
+($E_v = \meff c^2 \approx 0.511$~MeV for the
+electron) might provide topological protection
+far exceeding the Landau gap
+$\hbar\omega_c \sim 10^{-4}$~eV. The argument
+would be: a thermal phonon at 0.025~eV cannot
+deform the Gausson's phase topology, which is
+locked by the logarithmic nonlinearity at the
+MeV scale, and therefore cannot induce
+backscattering.
+
+This argument conflates two distinct processes.
+\emph{Destroying} the electron (unwinding the
+vortex topology) costs $\meff c^2 \sim$~MeV and
+is indeed inaccessible to thermal phonons.
+However, \emph{backscattering} the electron
+(translating the intact soliton from one guiding
+center to another) does not alter the internal
+topology. The soliton remains a perfectly rigid
+Gausson throughout; only its center-of-mass
+coordinate $\mathbf{X}_{\mathrm{cm}}$ changes.
+
+The center-of-mass equation of motion for any
+localized wavepacket in a uniform magnetic field
+is~\cite{kohn_1961}:
+\begin{equation}
+    \meff\,\ddot{\mathbf{X}}_{\mathrm{cm}}
+    = e\mathbf{E}
+    + e\,\dot{\mathbf{X}}_{\mathrm{cm}}
+    \times\mathbf{B}\,.
+\label{eq:kohn}
+\end{equation}
+This is Kohn's theorem: the center-of-mass
+dynamics of a charged system in a uniform field
+is identical to that of a point particle,
+regardless of the internal structure, binding
+energy, or nonlinearity of the wavepacket. The
+cyclotron frequency is $\omega_c = eB/\meff$ and
+the Landau gap is $\hbar\omega_c$, independent of
+whether the electron is a point charge, a Gaussian
+wavepacket, or a logarithmic Gausson soliton.
+
+The physical picture is clear: the Gausson's
+logarithmic binding energy protects its
+\emph{shape} (internal modes cost $\sim \meff c^2$
+to excite), but not its \emph{position} (the
+center-of-mass translation is a zero-energy
+Goldstone mode of the internal Hamiltonian). A
+thermal phonon cannot shatter the soliton, but it
+can nudge it sideways into an adjacent vortex cell.
+The nudging energy is the Landau gap
+$\hbar\omega_c$, not the binding energy $\meff c^2$.
+
+A violation of Kohn's theorem would require a
+nonlinear coupling between the center-of-mass
+motion and the local condensate density at the
+scale of the magnetic length
+$\ell_B = \sqrt{\hbar/(eB)} \sim 10^{-8}$~m.
+However, the PG density correction is
+$\epsilon_1 = 0$ (Sec.~\ref{sec:landau}), so the
+condensate density is uniform at all relevant
+scales. The nonlinear coupling vanishes, and
+Kohn's theorem holds exactly.
+
+We therefore conclude that the logarithmic
+nonlinearity does not provide a mechanism for
+room-temperature topological protection beyond
+the standard Landau gap. Any proposed device
+exploiting condensate-mediated phase-locking
+(e.g., a ``Vacuum-Tension Transistor'') must
+confront the same thermal wall as the conventional
+quantum Hall effect:
+$k_B T_{\mathrm{room}}/\hbar\omega_c \approx 210$
+at 1~T.
+
+\subsection{Deterministic ontology and quantum mechanics}
+
+The framework provides a deterministic ontology for
+quantum mechanics analogous to de Broglie-Bohm pilot
+wave theory~\cite{bohm_1952}, with the logarithmic
+condensate serving as the physical pilot wave medium.
+The order parameter $\psi(\mathbf{x},t)$ evolves
+deterministically via the logarithmic Klein-Gordon
+equation; particles are Gausson solitons with
+definite positions and velocities at all times. Quantum
+superposition corresponds to a definite condensate
+field configuration $\psi = \psi_A + \psi_B$ that is
+a coherent sum of two localized perturbations---both
+branches coexist in the real fluid, not in an abstract
+Hilbert space. Measurement selects a branch through
+decoherence: coupling to macroscopic degrees of
+freedom distributes the cross-terms across
+$\sim 10^{23}$ environmental modes, rendering
+interference unobservable without requiring a
+collapse postulate. The Born rule
+($P \propto |\psi|^2$) is recovered because
+$|\psi|^2 = \rho$ is the physical condensate density,
+and soliton configurations in thermal contact with
+the condensate relax to quantum equilibrium, as shown
+by Valentini~\cite{valentini_1991} for general
+pilot wave theories. This interpretation does not
+modify any prediction of standard quantum mechanics;
+it provides the mechanical substrate that the
+Copenhagen interpretation leaves unspecified.
+
+% ====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+% ====================================================================
+
+We have shown that the integer quantum Hall effect
+follows naturally from the logarithmic superfluid
+vacuum framework:
+
+(1) The von Klitzing constant $R_K = h/e^2$ is the
+impedance of one quantized circulation in the
+condensate, linked to the vacuum impedance by
+$Z_0 = 2\alpha R_K$.
+
+(2) Landau levels $E_n = \hbar\omega_c(n + 1/2)$
+are the discrete vortex-lattice modes of the
+electron-condensate coupling, with the zero-point
+energy arising from the irreducible electron vortex
+circulation.
+
+(3) The quantized Hall conductance
+$\sigma_{xy} = \nu e^2/h$ follows from the
+topological invariance of the winding number $\nu$
+of filled vortex-lattice modes.
+
+(4) The thermal breakdown scale
+$k_B T^* \sim \hbar eB/\meff \approx 13$~K at
+10~T reproduces the observed cryogenic requirement,
+confirming that the framework introduces no new
+energy scales.
+
+No new predictions are made. The contribution is the
+unification of a precision condensed matter
+phenomenon ($10^{-9}$ accuracy) with the emergent
+gravity program, using the same condensate, the same
+gauge-invariant velocity, and the same topological
+vortex structure that produces Newton's law, Maxwell's
+equations, and the Planck
+scale~\cite{kulangiev_gravity,kulangiev_geff,
+kulangiev_maxwell,kulangiev_planck}.
+
+
+% ====================================================================
+\section*{Acknowledgments}
+% ====================================================================
+
+The author thanks K.~G.~Zloshchastiev for
+foundational work on the logarithmic superfluid
+vacuum. Claude (Anthropic, claude-opus-4-6) and Gemini (Google, Gemini 3.1 Pro) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and
+interpretations are the author's own.
+
+
+\begin{thebibliography}{20}
+
+\bibitem{kohn_1961}
+W.~Kohn,
+Cyclotron resonance and de Haas-van Alphen
+oscillations of an interacting electron gas,
+Phys.\ Rev.\ \textbf{123}, 1242 (1961).
+
+\bibitem{bohm_1952}
+D.~Bohm,
+A suggested interpretation of the quantum theory in
+terms of ``hidden'' variables,
+Phys.\ Rev.\ \textbf{85}, 166 (1952).
+
+\bibitem{valentini_1991}
+A.~Valentini,
+Signal-locality, uncertainty, and the subquantum
+H-theorem,
+Phys.\ Lett.\ A \textbf{156}, 5 (1991).
+
+\bibitem{klitzing_1980}
+K.~von Klitzing, G.~Dorda, and M.~Pepper,
+New method for high-accuracy determination of the
+fine-structure constant based on quantized Hall
+resistance,
+Phys.\ Rev.\ Lett.\ \textbf{45}, 494 (1980).
+
+\bibitem{thouless_1982}
+D.~J.~Thouless, M.~Kohmoto, M.~P.~Nightingale,
+and M.~den Nijs,
+Quantized Hall conductance in a two-dimensional
+periodic potential,
+Phys.\ Rev.\ Lett.\ \textbf{49}, 405 (1982).
+
+\bibitem{laughlin_1983}
+R.~B.~Laughlin,
+Anomalous quantum Hall effect: An incompressible
+quantum fluid with fractionally charged excitations,
+Phys.\ Rev.\ Lett.\ \textbf{50}, 1395 (1983).
+
+\bibitem{novoselov_2005}
+K.~S.~Novoselov \emph{et al.},
+Two-dimensional gas of massless Dirac fermions in
+graphene,
+Nature \textbf{438}, 197 (2005).
+
+\bibitem{nakamura_2018}
+D.~Nakamura \emph{et al.},
+Record indoor magnetic field of 1200~T generated by
+electromagnetic flux-compression,
+Rev.\ Sci.\ Instrum.\ \textbf{89}, 095106 (2018).
+
+\bibitem{aharonov_1959}
+Y.~Aharonov and D.~Bohm,
+Significance of electromagnetic potentials in the
+quantum theory,
+Phys.\ Rev.\ \textbf{115}, 485 (1959).
+
+\bibitem{feynman_1955}
+R.~P.~Feynman,
+Application of quantum mechanics to liquid helium,
+in \emph{Progress in Low Temperature Physics},
+Vol.~1, ed.\ C.~J.~Gorter (North-Holland, 1955),
+pp.~17--53.
+
+\bibitem{kulangiev_gravity}
+B.~B.~Kulangiev,
+Conditions for Emergent Gravitational Light Bending from a Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper1}
+
+\bibitem{kulangiev_geff}
+B.~B.~Kulangiev,
+Emergent Newtonian Gravity and the Gravitational Feynman-Onsager Relation in the Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#combined}
+
+\bibitem{kulangiev_planck}
+B.~B.~Kulangiev,
+Singularity Regularization and the Emergent Planck Scale in the Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper5}
+
+\bibitem{kulangiev_maxwell}
+B.~B.~Kulangiev,
+Emergent Electromagnetism from the Gauged Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper8}
+
+\bibitem{kulangiev_inertia}
+B.~B.~Kulangiev,
+Emergent Inertia, Mass-Energy Equivalence, and the Helmholtz Decomposition of Charge and Spin in the Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper-inertia}
+
+\bibitem{kulangiev_impedance}
+B.~B.~Kulangiev,
+Environment-Dependent Vacuum Impedance: The
+$\mu_0$--$\epsilon_0$ Splitting in the Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper10}
+
+\end{thebibliography}
+
+\end{document}
