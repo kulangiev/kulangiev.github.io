@@ -18,7 +18,7 @@
 \maketitle
 
 \begin{abstract}
-\noindent Purely scalar theories of gravitation predict a Parameterized Post-Newtonian (PPN) parameter $\gamma = 0$, yielding only half the observed light deflection. We trace this failure to an inescapable kinematic constraint: in any real scalar wave equation, the characteristic propagation speed is fixed by the D'Alembertian operator and cannot depend on the background field, regardless of the self-interaction potential. We show that modeling the vacuum as a complex superfluid with a relativistic logarithmic nonlinearity, analyzed via the Madelung transformation, introduces two new degrees of freedom absent in the wave equation form: a density-dependent sound speed and a macroscopic flow velocity. Using the standard relativistic acoustic-metric formalism of Barcel\'{o}-Liberati-Visser, we derive the sound speed $c_s^2 = [2\ln(\bar{\rho}/\rho_c) + 3]^{-1}$ from the logarithmic equation of state, demonstrating its dependence on the local vacuum density---an effect absent in the non-relativistic limit. We compute the PPN parameter for the static acoustic metric, finding $\gamma = (1-\alpha)/(1+\alpha)$ where $\alpha = d\ln c_s/d\ln\rho$. The logarithmic equation of state at the background density gives $\alpha = -1$, placing $\gamma_{\mathrm{static}}$ exactly at the pole of this expression: the static acoustic metric is not merely numerically wrong but mathematically ill-defined. We then demonstrate that a non-static acoustic metric with macroscopic vacuum flow regularizes this pathology and yields $\gamma = 1$ exactly, provided the flow velocity satisfies $v(r) = \sqrt{2G_{\mathrm{eff}}M/r}$---the Painlev\'{e}-Gullstrand profile. Using a self-consistent Bondi accretion calculation, we show that the logarithmic equation of state does not naturally produce this profile in the far field, where the flow decays as $r^{-2}$ rather than the required $r^{-1/2}$. We further show that the Painlev\'{e}-Gullstrand flow is the \emph{only} self-consistent weak-field solution of the acoustic metric equations: the static metric is divergent, whereas the flowing metric closes the self-consistency loop for any barotropic fluid. The remaining open problem is to derive this macroscopic flow as a collective effect of the microscopic soliton dynamics.
+\noindent Purely scalar theories of gravitation predict a Parameterized Post-Newtonian (PPN) parameter $\gamma = 0$, yielding only half the observed light deflection. We trace this failure to a structural feature of real scalar wave equations: the characteristic propagation speed is fixed by the D'Alembertian operator and cannot depend on the background field, regardless of the self-interaction potential. We show that modeling the vacuum as a complex superfluid with a relativistic logarithmic nonlinearity, analyzed via the Madelung transformation, introduces two new degrees of freedom absent in the wave equation form: a density-dependent sound speed and a macroscopic flow velocity. Using the standard relativistic acoustic-metric formalism of Barcel\'{o}-Liberati-Visser, we derive the sound speed $c_s^2 = [2\ln(\bar{\rho}/\rho_c) + 3]^{-1}$ from the logarithmic equation of state, demonstrating its dependence on the local vacuum density---an effect absent in the non-relativistic limit. We compute the PPN parameter for the static acoustic metric, finding $\gamma = (1-\alpha)/(1+\alpha)$ where $\alpha = d\ln c_s/d\ln\rho$. The logarithmic equation of state at the background density gives $\alpha = -1$, placing $\gamma_{\mathrm{static}}$ exactly at the pole of this expression: the static acoustic metric is not merely numerically wrong but mathematically ill-defined. We then demonstrate that a non-static acoustic metric with macroscopic vacuum flow regularizes this pathology and yields $\gamma = 1$ exactly, provided the flow velocity satisfies $v(r) = \sqrt{2G_{\mathrm{eff}}M/r}$---the Painlev\'{e}-Gullstrand profile. Using a self-consistent Bondi accretion calculation, we show that the logarithmic equation of state does not naturally produce this profile in the far field, where the flow decays as $r^{-2}$ rather than the required $r^{-1/2}$. We further show that the Painlev\'{e}-Gullstrand flow is the \emph{only} self-consistent weak-field solution of the acoustic metric equations: the static metric is divergent, whereas the flowing metric closes the self-consistency loop for any barotropic fluid. The remaining open problem is to derive this macroscopic flow as a collective effect of the microscopic soliton dynamics.
 \end{abstract}
 
 
@@ -81,6 +81,10 @@ giving $\gamma = 0$. This holds for \emph{any} potential $V(D)$: the characteris
 \label{sec:madelung}
 % ====================================================================
 
+\subsection*{Interpretation of the order parameter}
+
+We take a deliberately classical-field stance toward Eq.~(\ref{eq:log_kg}) below: $\psi(x,t)$ is a complex \emph{order parameter} for a deterministic vacuum substrate, not a quantum-mechanical wavefunction in the standard sense. Its squared magnitude $|\psi|^2 = \rho$ is a number density of the substrate's microscopic constituents, not a probability density, and is not subject to the unitary normalization $\int |\psi|^2 d^3x = 1$. The Madelung decomposition $\psi = \sqrt{\rho}\,e^{iS/\hbar_{\mathrm{eff}}}$ is therefore a hydrodynamic ansatz for a real classical fluid, in the spirit of de~Broglie's pilot-wave program~\cite{deBroglie_1927} and the Madelung-Bohm hydrodynamic interpretation of quantum mechanics~\cite{madelung_1927, bohm_1952, holland_1993}. The relativistic Lorentz-covariant form of Eq.~(\ref{eq:log_kg}) reflects an emergent symmetry of small fluctuations around the condensate's rest frame---identified physically with the cosmic vacuum frame in which the cosmic microwave background dipole vanishes---rather than an exact symmetry of the underlying theory. We do not specify a UV completion or a quantization procedure for the underlying field; the framework is studied here as a classical effective theory whose hydrodynamic predictions are compared with weak-field gravitational observations.
+
 \subsection{The logarithmic superfluid}
 
 We model the vacuum as a complex order parameter $\psi(x,t)$ evolving under~\cite{zloshchastiev_2023,zloshchastiev_2020}:
@@ -89,6 +93,14 @@ We model the vacuum as a complex order parameter $\psi(x,t)$ evolving under~\cit
 \label{eq:log_kg}
 \end{equation}
 The logarithmic nonlinearity produces Gaussian-localized solitons (``Gaussons'')~\cite{bialynicki_birula_1979,avdeenkov_2011} and preserves the Landau roton-maxon spectrum~\cite{zloshchastiev_2012}.
+
+\paragraph{Units of the order parameter}
+A clarification on dimensions. In the relativistic k-essence Lagrangian $\mathcal{L} = \rho\,X - V(\rho)$, with $X = \partial_\mu S\,\partial^\mu S$ and $S$ having dimensions of action, the variable $\rho = |\psi|^2$ does not have units of mass density [kg/m$^3$]. Demanding $[\mathcal{L}] = [\text{energy}/\text{volume}]$ together with $[X] = [\text{momentum}^2]$ forces $[\rho] = [(\text{energy}\cdot\text{volume})^{-1}]$. The Lagrangian variable $\rho$ is therefore an inverse-energy-volume quantity; the physical mass density of the condensate, which is what enters the gravitational source term and what one would measure as kg/m$^3$, is a \emph{distinct} quantity computed from the time-time component of the stress-energy tensor:
+\begin{equation}
+    \rho_{\mathrm{mass}} = \frac{T_{00}}{c^2} = \frac{\rho\,V'(\rho) + V(\rho)}{c^2}\,,
+\label{eq:physical_mass_density}
+\end{equation}
+where the right-hand side is evaluated using the Lagrangian variable $\rho$ and reduces, at the background, to a constant $\rho_0^{\mathrm{phys}}$. We retain the conventional notation $\rho$ for the order parameter throughout, but the reader should keep in mind that physical observables involving mass density use $\rho_{\mathrm{mass}} = T_{00}/c^2$, not $\rho$ itself. The Madelung decomposition below treats $\rho$ as the field variable, with all subsequent equations dimensionally consistent under this identification.
 
 \subsection{The Madelung decomposition}
 
@@ -108,6 +120,9 @@ Applying $\psi = \sqrt{\rho}\,e^{iS/\hbar_{\mathrm{eff}}}$ and separating real a
 The last term is the quantum potential (Bohm potential), negligible in the macroscopic limit. The fluid four-velocity is $u_\mu = \partial_\mu S/m_{\mathrm{eff}}$, irrotational by construction except at topological defects (vortices).
 
 The crucial point is that Eq.~(\ref{eq:hj}), unlike a wave equation, couples the phase gradient $\partial_\mu S$ to the density $\rho$ through a constraint that depends on the local thermodynamic state. This coupling produces a density-dependent sound speed, as we now show.
+
+\paragraph{Origin of the continuity equation}
+The d'Alembertian in Eq.~(\ref{eq:log_kg}) contains second-order time derivatives, so Eq.~(\ref{eq:log_kg}) is a wave equation, not directly a continuity equation. However, the Madelung decomposition $\psi = \sqrt{\rho}\,e^{iS/\hbar_{\mathrm{eff}}}$ separates Eq.~(\ref{eq:log_kg}) into real and imaginary parts that have distinct physical content. The real part yields the relativistic Hamilton-Jacobi equation (\ref{eq:hj}), which is second-order in time and governs phase dynamics. The imaginary part yields the first-order conservation law in Eq.~(\ref{eq:continuity}) which is the relativistic continuity equation for the four-current $J^\mu = \rho\,\partial^\mu S/\hbar_{\mathrm{eff}}$ associated with the global U(1) symmetry $\psi \to e^{i\theta}\psi$ of Eq.~(\ref{eq:log_kg}). In the rest frame of the condensate, where $\partial_t S \approx -\hbar_{\mathrm{eff}}\omega_0$ is approximately constant and spatial gradients are small, Eq.~(\ref{eq:continuity}) reduces to the familiar non-relativistic continuity form $\partial_t \rho + \nabla\cdot(\rho\,\mathbf{v}) = 0$ with $\mathbf{v} = \nabla S/m_{\mathrm{eff}}$. The wave-equation character of Eq.~(\ref{eq:log_kg}) is therefore consistent with the existence of a first-order conservation law for the U(1) charge density.
 
 
 % ====================================================================
@@ -133,7 +148,7 @@ Substituting (the minus signs cancel in the ratio):
 \end{equation}
 The coupling $b$ cancels, and $c_s$ depends on the local vacuum density $\bar{\rho}$ through the logarithm. Normalizing so that $c_s = c$ at the background density $\rho_\infty$ fixes $\rho_c = e\,\rho_\infty$.
 
-This density dependence is a relativistic effect. In the non-relativistic logarithmic Schr\"{o}dinger equation, the denominator of~(\ref{eq:cs_general}) is dominated by $|V'(\rho_0)| \approx m_{\mathrm{eff}}c^2 \gg |\rho_0 V''|$, yielding $c_s^2 \approx |\rho_0 V''|/(2m_{\mathrm{eff}}c^2) \propto b/(m_{\mathrm{eff}}c^2)$, independent of density~\cite{avdeenkov_2011}. In the relativistic regime, $V'$ and $\rho_0 V''$ are comparable, and the density dependence survives (Fig.~\ref{fig:sound_speed}). Equation~(\ref{eq:cs_log}) also reveals a hard minimum density: at $\bar{\rho} = \rho_c\,e^{-3/2}$ the sound speed diverges, and below this threshold $c_s^2 < 0$, signaling breakdown of the hydrodynamic description.
+This density dependence is a relativistic effect. In the non-relativistic logarithmic Schr\"{o}dinger equation, the denominator of~(\ref{eq:cs_general}) is dominated by $|V'(\rho_0)| \approx m_{\mathrm{eff}}c^2 \gg |\rho_0\,V''|$ (where $\rho_0$ here denotes the background value of the Lagrangian variable, not the physical mass density), yielding $c_s^2 \approx |\rho_0\,V''|/(2m_{\mathrm{eff}}c^2) \propto b/(m_{\mathrm{eff}}c^2)$, independent of density~\cite{avdeenkov_2011}. In the relativistic regime, $V'$ and $\rho_0\,V''$ are comparable, and the density dependence survives (Fig.~\ref{fig:sound_speed}). Equation~(\ref{eq:cs_log}) also reveals a hard minimum density: at $\bar{\rho} = \rho_c\,e^{-3/2}$ the sound speed diverges, and below this threshold $c_s^2 < 0$, signaling breakdown of the hydrodynamic description.
 
 \begin{figure}[H]
     \centering
@@ -149,6 +164,8 @@ The equation of state exponent, which controls the PPN structure, is:
 \end{equation}
 At the cosmological background $\bar{\rho} = \rho_\infty$ (where $\ln(\rho_\infty/\rho_c) = -1$): $\alpha = -1$.
 
+\paragraph{Comparison with non-relativistic SVT}
+We note that this density-dependent sound speed differs from the result obtained in the non-relativistic superfluid vacuum theory (NR-SVT) program~\cite{zloshchastiev_2023}, where the first-sound speed of the logarithmic superfluid is found to be density-independent: $c_s^2 = -Db/\hbar$ with $b$ approximately constant. The two results are not in conflict; they describe different regimes. NR-SVT analyzes the non-relativistic logarithmic Schr\"{o}dinger equation, in which the rest-mass term dominates the dispersion relation and the sound speed reduces to a fixed scalar function of the coupling. The relativistic logarithmic equation~(\ref{eq:log_kg}) used here couples the phase dynamics to the density through the d'Alembertian operator, producing the density dependence of Eq.~(\ref{eq:cs_log}). The density dependence is therefore a relativistic effect, absent in the non-relativistic limit. As established in Sec.~\ref{sec:kinematic_trap}, this density dependence is essential for the framework to recover $\gamma = 1$: a density-independent sound speed cannot, by itself, produce the spatial-curvature contribution to light bending observed by Cassini~\cite{bertotti_2003}. The relativistic starting point is therefore a deliberate methodological choice with observational motivation, not an oversight of the non-relativistic case.
 
 % ====================================================================
 \section{The Static Acoustic Metric and Its Limitations}
@@ -181,6 +198,7 @@ This is the PPN parameter for any static barotropic acoustic metric with equatio
     \label{fig:static_gamma}
 \end{figure}
 
+\newpage
 \subsection{The static acoustic metric is pathological}
 
 Equation~(\ref{eq:gamma_static}) reveals a fundamental obstruction. For the logarithmic equation of state at the background density, $\alpha = -1$, and the denominator of $\gamma_{\mathrm{static}}$ vanishes:
@@ -237,7 +255,7 @@ with $c_s^2(\bar{\rho})$ given by Eq.~(\ref{eq:cs_log}) and $\bar{\rho}$ from co
 \begin{figure}[H]
     \centering
     \includegraphics[width=\columnwidth]{fig4_bondi_vs_pg.pdf}
-    \caption{(a)~Bondi accretion velocity (solid gold) vs.\ the Painlev\'{e}-Gullstrand requirement $v = \sqrt{2GM/r}$ (dashed red). In the subsonic far field, $v_{\mathrm{Bondi}} \propto r^{-2}$, falling far below the $r^{-1/2}$ profile. (b)~Ratio $v_{\mathrm{Bondi}}/v_{\mathrm{PG}}$. At the solar limb ($r \sim 5\times 10^5\,r_s$), the ratio is $\approx 2.8\times 10^{-9}$.}
+    \caption{(a)~Bondi accretion velocity (solid gold) vs.\ the Painlev\'{e}-Gullstrand requirement $v = \sqrt{2GM/r}$ (dashed red). In the subsonic far field, $v_{\mathrm{Bondi}} \propto r^{-2}$, falling far below the $r^{-1/2}$ profile. (b)~Ratio $v_{\mathrm{Bondi}}/v_{\mathrm{PG}}$. At the solar limb ($r \sim 5\times 10^5\,GM/c^2$), the ratio is $\approx 2.8\times 10^{-9}$.}
     \label{fig:bondi}
 \end{figure}
 
@@ -245,6 +263,7 @@ This establishes that single-soliton Bondi accretion cannot produce the PG profi
 
 
 % ====================================================================
+\newpage
 \section{Discussion}
 \label{sec:discussion}
 % ====================================================================
@@ -349,10 +368,29 @@ The Bondi accretion calculation shows that a single spherically symmetric source
 \section*{Acknowledgments}
 % ====================================================================
 
-The author thanks K.~G.~Zloshchastiev for foundational work on the logarithmic superfluid vacuum and C.~Barcel\'{o}, S.~Liberati, and M.~Visser for the acoustic metric framework. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
+The author thanks K.~G.~Zloshchastiev for foundational work on the logarithmic superfluid vacuum and C.~Barcel\'{o}, S.~Liberati, and M.~Visser for the acoustic metric framework. The methodological stance of this paper---treating the order parameter as a real classical field whose hydrodynamic behavior underlies emergent gravitational phenomena---is indebted to the Madelung-de~Broglie-Bohm tradition, particularly as developed in P.~R.~Holland's exposition of the quantum theory of motion. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
 
 
 \begin{thebibliography}{25}
+
+\bibitem{deBroglie_1927}
+L.~de~Broglie,
+La m\'{e}canique ondulatoire et la structure atomique de la mati\`{e}re et du rayonnement,
+J.\ Phys.\ Radium \textbf{8}, 225 (1927).
+
+\bibitem{madelung_1927}
+E.~Madelung,
+Quantentheorie in hydrodynamischer Form,
+Z.\ Phys.\ \textbf{40}, 322 (1927).
+
+\bibitem{bohm_1952}
+D.~Bohm,
+A suggested interpretation of the quantum theory in terms of ``hidden'' variables. I,
+Phys.\ Rev.\ \textbf{85}, 166 (1952).
+
+\bibitem{holland_1993}
+P.~R.~Holland,
+\emph{The Quantum Theory of Motion} (Cambridge University Press, 1993).
 
 \bibitem{babichev_mukhanov_vikman_2008}
 E.~Babichev, V.~Mukhanov, and A.~Vikman,

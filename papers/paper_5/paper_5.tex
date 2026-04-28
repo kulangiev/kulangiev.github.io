@@ -22,7 +22,7 @@
 \title{Singularity Regularization and the Emergent Planck Scale\\
 in the Logarithmic Superfluid Vacuum}
 
-\author{B. B. Kulangiev\\\small{Haifa, Israel}}
+\author{B.~B.~Kulangiev\\\small{Haifa, Israel}}
 \date{April 2026}
 \maketitle
 
@@ -104,6 +104,26 @@ fixes $\xi = \lP$, the Planck length.
 % ====================================================================
 
 The Madelung decomposition~\cite{madelung_1927} of the logarithmic Klein-Gordon equation~\cite{kulangiev_2026a} yields the Hamilton-Jacobi equation (in energy units, so that both sides have dimensions of energy):
+
+\paragraph{Two distinct densities}
+Before proceeding, we clarify a dimensional subtlety that will become important in Section~\ref{sec:derivation}. The relativistic Lagrangian $\mathcal{L} = \rho\,X - V(\rho)$
+with $X = \partial_\mu S\,\partial^\mu S$ requires
+$\rho = |\psi|^2$ to have units of inverse-energy-volume, not mass density: demanding $[\mathcal{L}] = [\text{energy/volume}]$ together with $[X] = [\text{momentum}^2]$ forces $[\rho] = [(\text{energy}\cdot\text{volume})^{-1}]$. The
+Lagrangian variable $\rho$ is therefore not directly the physical mass density of the condensate. The physical mass density---the quantity one would measure as kg/m$^3$---is computed from the time-time component of the stress-energy tensor:
+\begin{equation}
+    \rho_{\mathrm{mass}} = \frac{T_{00}}{c^2}
+    = \frac{\rho\,V'(\rho) + V(\rho)}{c^2}\,,
+\label{eq:rho_mass_def}
+\end{equation}
+which at the background reduces to a constant
+$\rho_0^{\mathrm{phys}}$. In the energy-units convention adopted here, both the Lagrangian variable and its relation to physical mass density become explicit: the field $\rho$ enters the Hamilton-Jacobi equation below directly, while $\rho_{\mathrm{mass}}$ enters the gravitational coupling derived in
+Section~\ref{sec:derivation}. We use the symbol $\rho$
+without subscript for the Lagrangian variable throughout Sections~\ref{sec:bohm}--\ref{sec:gausson}, and switch to $\rho_0$ (without further qualification) for the physical background mass density in
+Section~\ref{sec:derivation} onwards. The relation
+$\rho_0 = \meff\,n_0$, used in
+Section~\ref{sec:self_consistency}, is the link between
+the number-density representation $n_0 = $ (particles
+per unit volume) and the physical mass density.
 \begin{equation}
     \frac{1}{2\meff}\,\partial_\mu S\,\partial^\mu S
     = \meff c^2 - b\,\ln\!\left(\frac{\rho}{\rho_0}\right)
@@ -116,11 +136,7 @@ energy, and the quantum potential (Bohm potential) is
     Q[\rho] = -\frac{\heff^2}{2\meff}\,\frac{\Box\sqrt{\rho}}{\sqrt{\rho}}\,.
 \label{eq:bohm}
 \end{equation}
-$Q$ has units of energy, consistent with the other terms.
-In the companion paper, $Q$ was neglected at macroscopic
-scales ($r \gg \xi$), where the density varies slowly.
-We now examine the regime $r \sim \xi$ where $Q$
-becomes dominant.
+$Q$ has units of energy, consistent with the other terms. In the companion paper, $Q$ was neglected at macroscopic scales ($r \gg \xi$), where the density varies slowly. We now examine the regime $r \sim \xi$ where $Q$ becomes dominant.
 
 \subsection{Scaling analysis}
 
@@ -229,7 +245,6 @@ associated curvature scale is $Q(0)/\heff^2 \sim 1/\xi^2$. This is the maximum c
 is bounded by $K \lesssim 1/\xi^4$.
 
 % ====================================================================
-\newpage
 \section{Derivation of the Healing Length from Known Parameters}
 \label{sec:derivation}
 % ====================================================================
@@ -569,7 +584,6 @@ the condensate evolves) and to the quantum-mechanical
 arrow (the phase accumulates monotonically).
 
 % ====================================================================
-\newpage
 \section{Singularity Regularization}
 \label{sec:singularity}
 % ====================================================================
@@ -751,7 +765,6 @@ effects are sourced by perturbations
 $\delta\rho$ rather than by the background density
 $\rho_0$.
 
-\newpage
 \subsection{Testable consequences}
 
 The healing-length regularization makes two
@@ -795,6 +808,7 @@ detailed density profile inside the horizon.
 
 
 % ====================================================================
+\newpage
 \section{Conclusion}
 \label{sec:conclusion}
 

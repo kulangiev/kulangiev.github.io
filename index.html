@@ -1,639 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B. B. Kulangiev — Logarithmic Superfluid Vacuum Research Program</title>
-<meta name="description" content="Research program on emergent gravity, electromagnetism, and cosmology from the logarithmic superfluid vacuum framework.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B. B. Kulangiev — Logarithmic Superfluid Vacuum Research Program</title>
+  <meta name="description"
+    content="Research program on emergent gravity, electromagnetism, and cosmology from the logarithmic superfluid vacuum framework.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap"
+    rel="stylesheet">
 
-<style>
-:root {
-  --bg: #faf9f7;
-  --text: #1a1a1a;
-  --text-secondary: #555;
-  --accent: #8b2500;
-  --accent-light: #c4522a;
-  --border: #ddd;
-  --card-bg: #fff;
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  --tag-gravity: #1a5276;
-  --tag-cosmo: #6c3483;
-  --tag-em: #b7950b;
-  --tag-qm: #117864;
-  --tag-predict: #922b21;
-}
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --accent: #8b2500;
+      --accent-light: #c4522a;
+      --border: #ddd;
+      --card-bg: #fff;
+      --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      --tag-gravity: #1a5276;
+      --tag-cosmo: #6c3483;
+      --tag-em: #b7950b;
+      --tag-qm: #117864;
+      --tag-predict: #922b21;
+    }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Crimson Pro', Georgia, serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.65;
-  font-size: 18px;
-}
+    body {
+      font-family: 'Crimson Pro', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 18px;
+    }
 
-.container {
-  max-width: 820px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-/* Header */
-header {
-  padding: 60px 0 40px;
-  border-bottom: 1px solid var(--border);
-}
+    /* Header */
+    header {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
 
-header h1 {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  margin-bottom: 6px;
-}
+    header h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
 
-header .location {
-  color: var(--text-secondary);
-  font-size: 16px;
-  font-style: italic;
-}
+    header .location {
+      color: var(--text-secondary);
+      font-size: 16px;
+      font-style: italic;
+    }
 
-header .tagline {
-  margin-top: 20px;
-  font-size: 19px;
-  line-height: 1.6;
-  color: var(--text);
-}
+    header .tagline {
+      margin-top: 20px;
+      font-size: 19px;
+      line-height: 1.6;
+      color: var(--text);
+    }
 
-/* Navigation */
-nav {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-}
+    /* Navigation */
+    nav {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
 
-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-}
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
 
-nav a:hover { text-decoration: underline; }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-/* Sections */
-section {
-  padding: 40px 0;
-  border-bottom: 1px solid var(--border);
-}
+    /* Sections */
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+    }
 
-section:last-of-type { border-bottom: none; }
+    section:last-of-type {
+      border-bottom: none;
+    }
 
-h2 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: var(--accent);
-  letter-spacing: -0.3px;
-}
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--accent);
+      letter-spacing: -0.3px;
+    }
 
-h3 {
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
 
-/* Paper cards */
-.paper {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
-  padding: 18px 22px;
-  margin-bottom: 14px;
-  transition: box-shadow 0.2s;
-}
+    /* Paper cards */
+    .paper {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 18px 22px;
+      margin-bottom: 14px;
+      transition: box-shadow 0.2s;
+    }
 
-.paper:hover {
-  box-shadow: var(--card-shadow);
-}
+    .paper:hover {
+      box-shadow: var(--card-shadow);
+    }
 
-.paper-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-}
+    .paper-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
 
-.paper-id {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--text-secondary);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
+    .paper-id {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
 
-.paper-title {
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: var(--text);
-  margin-bottom: 6px;
-}
+    .paper-title {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
 
-.paper-title a {
-  color: inherit;
-  text-decoration: none;
-}
+    .paper-title a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.paper-title a:hover {
-  color: var(--accent);
-  text-decoration: underline;
-}
+    .paper-title a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
 
-.paper-meta {
-  font-size: 14px;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
-}
+    .paper-meta {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
 
-.paper-desc {
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.55;
-}
+    .paper-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
 
-.tag {
-  display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  padding: 2px 7px;
-  border-radius: 3px;
-  color: #fff;
-  margin-right: 4px;
-}
+    .tag {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 3px;
+      color: #fff;
+      margin-right: 4px;
+    }
 
-.tag-gravity { background: var(--tag-gravity); }
-.tag-cosmo { background: var(--tag-cosmo); }
-.tag-em { background: var(--tag-em); }
-.tag-qm { background: var(--tag-qm); }
-.tag-predict { background: var(--tag-predict); }
+    .tag-gravity {
+      background: var(--tag-gravity);
+    }
 
-.status {
-  display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  padding: 2px 7px;
-  border-radius: 3px;
-  margin-left: 6px;
-}
+    .tag-cosmo {
+      background: var(--tag-cosmo);
+    }
 
-.status-review {
-  background: #fdebd0;
-  color: #935116;
-}
+    .tag-em {
+      background: var(--tag-em);
+    }
 
-.status-published {
-  background: #d5f5e3;
-  color: #1e8449;
-}
+    .tag-qm {
+      background: var(--tag-qm);
+    }
 
-/* Key results */
-.results-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
+    .tag-predict {
+      background: var(--tag-predict);
+    }
 
-@media (max-width: 600px) {
-  .results-grid { grid-template-columns: 1fr; }
-}
+    .status {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin-left: 6px;
+    }
 
-.result-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  padding: 16px;
-}
+    .status-review {
+      background: #fdebd0;
+      color: #935116;
+    }
 
-.result-card .equation {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  color: var(--accent);
-  margin-bottom: 6px;
-}
+    .status-published {
+      background: #d5f5e3;
+      color: #1e8449;
+    }
 
-.result-card .label {
-  font-size: 14px;
-  color: var(--text-secondary);
-}
+    /* Key results */
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
 
-/* Contact */
-.contact-line {
-  font-size: 16px;
-  margin-bottom: 6px;
-}
+    @media (max-width: 600px) {
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
-.contact-line a {
-  color: var(--accent);
-  text-decoration: none;
-}
+    .result-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 16px;
+    }
 
-.contact-line a:hover { text-decoration: underline; }
+    .result-card .equation {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
 
-/* Footer */
-footer {
-  padding: 30px 0;
-  text-align: center;
-  font-size: 13px;
-  color: var(--text-secondary);
-}
+    .result-card .label {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
 
-/* Equation block */
-.eq-highlight {
-  background: #f5f0eb;
-  border-left: 3px solid var(--accent);
-  padding: 14px 20px;
-  margin: 20px 0;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
-  color: var(--text);
-  overflow-x: auto;
-}
-</style>
+    /* Contact */
+    .contact-line {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .contact-line a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* Equation block */
+    .eq-highlight {
+      background: #f5f0eb;
+      border-left: 3px solid var(--accent);
+      padding: 14px 20px;
+      margin: 20px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      color: var(--text);
+      overflow-x: auto;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container">
-
-<header>
-  <h1>B. B. Kulangiev</h1>
-  <div class="location">Independent Researcher · Haifa, Israel</div>
-  <p class="tagline">
-    Developing a multi-paper framework for emergent gravity, electromagnetism, and cosmology
-    from the relativistic logarithmic superfluid vacuum. The vacuum condensate's Madelung 
-    hydrodynamics produce the Schwarzschild metric, Maxwell's equations, the Planck scale, 
-    and dark energy from a single wave equation.
-  </p>
-</header>
-
-<nav>
-  <a href="#papers">Papers</a>
-  <a href="#results">Key Results</a>
-  <a href="#predictions">Testable Predictions</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<!-- ============================================================ -->
-<section id="results">
-<h2>Key Results</h2>
-
-<div class="results-grid">
-  <div class="result-card">
-    <div class="equation">γ = 1 (PPN)</div>
-    <div class="label">Light bending recovered exactly via the Painlevé-Gullstrand acoustic metric. Cassini-consistent.</div>
-  </div>
-  <div class="result-card">
-    <div class="equation">G = ηc²/(4πρ₀)</div>
-    <div class="label">Gravitational constant derived from vacuum condensate density. ρ₀ ≈ 10²⁶ kg/m³.</div>
-  </div>
-  <div class="result-card">
-    <div class="equation">β = 1 (PPN)</div>
-    <div class="label">Mercury perihelion precession (42.98″/century) from equivalence principle + PG metric.</div>
-  </div>
-  <div class="result-card">
-    <div class="equation">w = −1</div>
-    <div class="label">Dark energy as native vacuum pressure. Logarithmic EOS gives cosmological constant.</div>
-  </div>
-  <div class="result-card">
-    <div class="equation">R = 0.994</div>
-    <div class="label">Planetary magnetic scaling law across 6 planets, 8 orders of magnitude, single parameter.</div>
-  </div>
-  <div class="result-card">
-    <div class="equation">∂μF^μν = J^ν</div>
-    <div class="label">Maxwell's equations from gauged U(1) phase symmetry. Charge quantized by vortex winding.</div>
-  </div>
-</div>
-</section>
-
-<!-- ============================================================ -->
-<section id="papers">
-<h2>Papers</h2>
-
-<div class="paper" id="paper0">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.rczbbcws.3" target="_blank">
-          An Approximate Numerical Relation Between Ω_γ and the Fine Structure Constant
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-cosmo">cosmology</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 0</div>
-  </div>
-  <div class="paper-desc">
-    The observational relation Ω_γ ≈ α² as a thermodynamic constraint of the vacuum condensate.
-  </div>
-</div>
-
-<div class="paper" id="paper1">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.lt23p3pz.5" target="_blank">
-          Conditions for Emergent Gravitational Light Bending from a Logarithmic Superfluid Vacuum
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-gravity">gravity</span>
-        <span class="status status-review">Under Review — Grav. & Cosmol.</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 1</div>
-  </div>
-  <div class="paper-desc">
-    The kinematic trap (γ = 0 for any real scalar field), the Madelung escape, 
-    the static metric failure (γ = 3), and the unique PG solution yielding γ = 1.
-  </div>
-</div>
-
-<div class="paper" id="combined">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.5zj0sd53.3" target="_blank">
-          Emergent Newtonian Gravity and the Gravitational Feynman-Onsager Relation
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-gravity">gravity</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Papers 2+7</div>
-  </div>
-  <div class="paper-desc">
-    G_eff derivation, collective PG flow from N solitons (Monte Carlo: 0.02%, slope −0.500),
-    axial outflow/jet prediction, planetary magnetic scaling (R = 0.994).
-  </div>
-</div>
-
-<div class="paper" id="paper3">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.zb97iumm.3" target="_blank">
-          Cosmological Implications: Dark Energy, the Hubble Tension, and a Vacuum Self-Consistency Equation
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-cosmo">cosmology</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 3</div>
-  </div>
-  <div class="paper-desc">
-    w = −1 from logarithmic EOS, Hubble tension as vacuum thermodynamic fluctuation, 
-    CMB temperature as condensate equilibrium, Ω_γ ≈ α² self-consistency.
-  </div>
-</div>
-
-<div class="paper" id="paper4">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.0f3sc1d1.4" target="_blank">
-          Frozen Vacuum Perturbations as a Dark Matter Analogue
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-cosmo">cosmology</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 4</div>
-  </div>
-  <div class="paper-desc">
-    SPARC rotation curve analysis. 112 galaxies fitted with vacuum density perturbation model.
-  </div>
-</div>
-
-<div class="paper" id="paper5">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.2wgfiqh8.4" target="_blank">
-          Singularity Regularization and the Emergent Planck Scale
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-gravity">gravity</span>
-        <span class="tag tag-qm">quantum</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 5</div>
-  </div>
-  <div class="paper-desc">
-    Self-consistency of gravitational coupling with Gausson energy scaling yields 
-    m_eff ≈ 0.67 m_Planck and ξ ≈ 1.5 l_Planck.
-  </div>
-</div>
-
-<div class="paper" id="paper6">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.q7r7petc.3" target="_blank">
-          Emergent Time as Phase Dynamics
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-qm">quantum</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 6</div>
-  </div>
-  <div class="paper-desc">
-    Time as bookkeeping parameter from phase dynamics. Gravitational time dilation 
-    as spatial variation of chemical potential. Hubble flow as parabolic phase winding.
-  </div>
-</div>
-
-<div class="paper" id="paper8">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.yxhq39l8.3" target="_blank">
-          Emergent Electromagnetism from the Gauged Logarithmic Superfluid Vacuum
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-em">electromagnetism</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 8</div>
-  </div>
-  <div class="paper-desc">
-    Gauging U(1) phase symmetry → Maxwell's equations. Charge quantization from vortex topology.
-    London equation for EM screening. c_gw = c_em automatically.
-  </div>
-</div>
-
-<div class="paper" id="paper9">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.mefuunki.2" target="_blank">
-          A Testable Prediction: Environment-Dependent Speed of Light
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-predict">prediction</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 9</div>
-  </div>
-  <div class="paper-desc">
-    δc/c = −GM/(2c²r). Light slower near mass, faster in voids. 
-    Three tests: FRB timing, CMB void correlation, multi-messenger events.
-  </div>
-</div>
-
-<div class="paper" id="paper10">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.rvj53pon.7" target="_blank">
-          Environment-Dependent Vacuum Impedance: The μ₀–ε₀ Splitting
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-em">electromagnetism</span>
-        <span class="tag tag-predict">prediction</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 10</div>
-  </div>
-  <div class="paper-desc">
-    Near mass: δμ₀/μ₀ = +U, δε₀/ε₀ = 0. Speed drops, impedance rises.
-    Fine structure constant: δα/α = +U/2. Testable with atomic clocks.
-  </div>
-</div>
-
-<div class="paper" id="paper-inertia">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.3z0joqi1.9" target="_blank">
-          Emergent Inertia, Mass-Energy Equivalence, and the Helmholtz Decomposition of Charge and Spin
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-qm">quantum</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Inertia</div>
-  </div>
-  <div class="paper-desc">
-    F = ma from hydrodynamic added mass. E = mc² from momentum flux. 
-    Charge = irrotational flow (divergence). Spin = solenoidal flow (curl). 
-    su(2) from antisymmetric velocity gradient tensor.
-  </div>
-</div>
-
-<div class="paper" id="paper11">
-  <div class="paper-header">
-    <div>
-      <div class="paper-title">
-        <a href="https://doi.org/10.55277/researchhub.x7bw3yty.3" target="_blank">
-          The Quantum Hall Effect as Topological Phase-Locking
-        </a>
-      </div>
-      <div class="paper-meta">
-        <span class="tag tag-qm">quantum</span>
-        <span class="status status-published">ResearchHub</span>
-      </div>
-    </div>
-    <div class="paper-id">Paper 11</div>
-  </div>
-  <div class="paper-desc">
-    R_K = h/e² as circulation impedance. Landau levels as vortex-lattice modes.
-    σ_xy = νe²/h from winding number conservation. Reproduces IQHE to 10⁻⁹.
-  </div>
-</div>
-
-</section>
-
-<!-- ============================================================ -->
-<section id="predictions">
-<h2>Testable Predictions</h2>
-
-<div class="paper" style="border-left-color: var(--tag-predict);">
-  <h3>1. FRB Timing Residuals</h3>
-  <div class="paper-desc">
-    FRBs traversing cosmic voids arrive earlier than DM-predicted.
-    Testable with CHIME/FRB + SDSS/DESI cross-correlation.
-    Predicted magnitude: seconds for a 60 Mpc void crossing.
-  </div>
-</div>
-
-<div class="paper" style="border-left-color: var(--tag-predict);">
-  <h3>2. Planetary Magnetic Scaling</h3>
-  <div class="paper-desc">
-    B ∝ [Ω · (GM/Rc²) · R_core³ · f_liquid]^0.79 with R = 0.994 across 
-    Mercury, Earth, Jupiter, Saturn, Uranus, Neptune. The GM/(Rc²) factor
-    distinguishes this from standard dynamo scaling.
-  </div>
-</div>
-
-<div class="paper" style="border-left-color: var(--tag-predict);">
-  <h3>3. Astrophysical Jets as Gravitational Exhaust</h3>
-  <div class="paper-desc">
-    Polar jets predicted as hydrodynamic necessity of PG inflow continuity.
-    Exact analytical solution: v_θ = −(3/2)√(2GM/r) cot θ.
-    50% of mass transport within 30° of pole.
-  </div>
-</div>
-
-<div class="paper" style="border-left-color: var(--tag-predict);">
-  <h3>4. μ₀–ε₀ Splitting</h3>
-  <div class="paper-desc">
-    Near gravitating mass: μ₀ increases (+U), ε₀ unchanged.
-    Implies δα/α = +U/2. Testable with atomic clock comparisons
-    at different gravitational potentials.
-  </div>
-</div>
-</section>
-
-<!-- ============================================================ -->
-<section id="contact">
-<h2>Contact</h2>
-<p class="contact-line">Email: <a href="mailto:bennybk.research@gmail.com">bennybk.research@gmail.com</a></p>
-</section>
-
-</div>
-
-<footer>
   <div class="container">
-    © 2026 B. B. Kulangiev · Last updated April 2026
+
+    <header>
+      <h1>B. B. Kulangiev</h1>
+      <div class="location">Independent Researcher · Haifa, Israel</div>
+      <p class="tagline">
+        Developing a multi-paper framework for emergent gravity, electromagnetism, and cosmology
+        from the relativistic logarithmic superfluid vacuum. The vacuum condensate's Madelung
+        hydrodynamics produce the Schwarzschild metric, Maxwell's equations, the Planck scale,
+        and dark energy from a single wave equation.
+      </p>
+    </header>
+
+    <nav>
+      <a href="#papers">Papers</a>
+      <a href="#results">Key Results</a>
+      <a href="#predictions">Testable Predictions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- ============================================================ -->
+    <section id="results">
+      <h2>Key Results</h2>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="equation">γ = 1 (PPN)</div>
+          <div class="label">Light bending recovered exactly via the Painlevé-Gullstrand acoustic metric.
+            Cassini-consistent.</div>
+        </div>
+        <div class="result-card">
+          <div class="equation">G = ηc²/(4πρ₀)</div>
+          <div class="label">Gravitational constant derived from vacuum condensate density. ρ₀ ≈ 10²⁶ kg/m³.</div>
+        </div>
+        <div class="result-card">
+          <div class="equation">β = 1 (PPN)</div>
+          <div class="label">Mercury perihelion precession (42.98″/century) from equivalence principle + PG metric.
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="equation">w = −1</div>
+          <div class="label">Dark energy as native vacuum pressure. Logarithmic EOS gives cosmological constant.</div>
+        </div>
+        <div class="result-card">
+          <div class="equation">R = 0.994</div>
+          <div class="label">Planetary magnetic scaling law across 6 planets, 8 orders of magnitude, single parameter.
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="equation">∂μF^μν = J^ν</div>
+          <div class="label">Maxwell's equations from gauged U(1) phase symmetry. Charge quantized by vortex winding.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="papers">
+      <h2>Papers</h2>
+
+      <div class="paper" id="paper0">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.rczbbcws.4" target="_blank">
+                An Approximate Numerical Relation Between Ω_γ and the Fine Structure Constant
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-cosmo">cosmology</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 0</div>
+        </div>
+        <div class="paper-desc">
+          The observational relation Ω_γ ≈ α² as a thermodynamic constraint of the vacuum condensate.
+        </div>
+      </div>
+
+      <div class="paper" id="paper1">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.lt23p3pz.8" target="_blank">
+                Conditions for Emergent Gravitational Light Bending from a Logarithmic Superfluid Vacuum
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-gravity">gravity</span>
+              <span class="status status-review">Under Review — Grav. & Cosmol.</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 1</div>
+        </div>
+        <div class="paper-desc">
+          The kinematic trap (γ = 0 for any real scalar field), the Madelung escape,
+          the static metric failure (γ = 3), and the unique PG solution yielding γ = 1.
+        </div>
+      </div>
+
+      <div class="paper" id="combined">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.5zj0sd53.3" target="_blank">
+                Emergent Newtonian Gravity and the Gravitational Feynman-Onsager Relation
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-gravity">gravity</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Papers 2+7</div>
+        </div>
+        <div class="paper-desc">
+          G_eff derivation, collective PG flow from N solitons (Monte Carlo: 0.02%, slope −0.500),
+          axial outflow/jet prediction, planetary magnetic scaling (R = 0.994).
+        </div>
+      </div>
+
+      <div class="paper" id="paper3">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.zb97iumm.3" target="_blank">
+                Cosmological Implications: Dark Energy, the Hubble Tension, and a Vacuum Self-Consistency Equation
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-cosmo">cosmology</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 3</div>
+        </div>
+        <div class="paper-desc">
+          w = −1 from logarithmic EOS, Hubble tension as vacuum thermodynamic fluctuation,
+          CMB temperature as condensate equilibrium, Ω_γ ≈ α² self-consistency.
+        </div>
+      </div>
+
+      <div class="paper" id="paper4">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.0f3sc1d1.4" target="_blank">
+                Frozen Vacuum Perturbations as a Dark Matter Analogue
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-cosmo">cosmology</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 4</div>
+        </div>
+        <div class="paper-desc">
+          SPARC rotation curve analysis. 112 galaxies fitted with vacuum density perturbation model.
+        </div>
+      </div>
+
+      <div class="paper" id="paper5">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.2wgfiqh8.6" target="_blank">
+                Singularity Regularization and the Emergent Planck Scale
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-gravity">gravity</span>
+              <span class="tag tag-qm">quantum</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 5</div>
+        </div>
+        <div class="paper-desc">
+          Self-consistency of gravitational coupling with Gausson energy scaling yields
+          m_eff ≈ 0.67 m_Planck and ξ ≈ 1.5 l_Planck.
+        </div>
+      </div>
+
+      <div class="paper" id="paper6">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.q7r7petc.3" target="_blank">
+                Emergent Time as Phase Dynamics
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-qm">quantum</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 6</div>
+        </div>
+        <div class="paper-desc">
+          Time as bookkeeping parameter from phase dynamics. Gravitational time dilation
+          as spatial variation of chemical potential. Hubble flow as parabolic phase winding.
+        </div>
+      </div>
+
+      <div class="paper" id="paper8">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.yxhq39l8.3" target="_blank">
+                Emergent Electromagnetism from the Gauged Logarithmic Superfluid Vacuum
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-em">electromagnetism</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 8</div>
+        </div>
+        <div class="paper-desc">
+          Gauging U(1) phase symmetry → Maxwell's equations. Charge quantization from vortex topology.
+          London equation for EM screening. c_gw = c_em automatically.
+        </div>
+      </div>
+
+      <div class="paper" id="paper9">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.mefuunki.2" target="_blank">
+                A Testable Prediction: Environment-Dependent Speed of Light
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-predict">prediction</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 9</div>
+        </div>
+        <div class="paper-desc">
+          δc/c = −GM/(2c²r). Light slower near mass, faster in voids.
+          Three tests: FRB timing, CMB void correlation, multi-messenger events.
+        </div>
+      </div>
+
+      <div class="paper" id="paper10">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.rvj53pon.7" target="_blank">
+                Environment-Dependent Vacuum Impedance: The μ₀–ε₀ Splitting
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-em">electromagnetism</span>
+              <span class="tag tag-predict">prediction</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 10</div>
+        </div>
+        <div class="paper-desc">
+          Near mass: δμ₀/μ₀ = +U, δε₀/ε₀ = 0. Speed drops, impedance rises.
+          Fine structure constant: δα/α = +U/2. Testable with atomic clocks.
+        </div>
+      </div>
+
+      <div class="paper" id="paper-inertia">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.3z0joqi1.9" target="_blank">
+                Emergent Inertia, Mass-Energy Equivalence, and the Helmholtz Decomposition of Charge and Spin
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-qm">quantum</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Inertia</div>
+        </div>
+        <div class="paper-desc">
+          F = ma from hydrodynamic added mass. E = mc² from momentum flux.
+          Charge = irrotational flow (divergence). Spin = solenoidal flow (curl).
+          su(2) from antisymmetric velocity gradient tensor.
+        </div>
+      </div>
+
+      <div class="paper" id="paper11">
+        <div class="paper-header">
+          <div>
+            <div class="paper-title">
+              <a href="https://doi.org/10.55277/researchhub.x7bw3yty.3" target="_blank">
+                The Quantum Hall Effect as Topological Phase-Locking
+              </a>
+            </div>
+            <div class="paper-meta">
+              <span class="tag tag-qm">quantum</span>
+              <span class="status status-published">ResearchHub</span>
+            </div>
+          </div>
+          <div class="paper-id">Paper 11</div>
+        </div>
+        <div class="paper-desc">
+          R_K = h/e² as circulation impedance. Landau levels as vortex-lattice modes.
+          σ_xy = νe²/h from winding number conservation. Reproduces IQHE to 10⁻⁹.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="predictions">
+      <h2>Testable Predictions</h2>
+
+      <div class="paper" style="border-left-color: var(--tag-predict);">
+        <h3>1. FRB Timing Residuals</h3>
+        <div class="paper-desc">
+          FRBs traversing cosmic voids arrive earlier than DM-predicted.
+          Testable with CHIME/FRB + SDSS/DESI cross-correlation.
+          Predicted magnitude: seconds for a 60 Mpc void crossing.
+        </div>
+      </div>
+
+      <div class="paper" style="border-left-color: var(--tag-predict);">
+        <h3>2. Planetary Magnetic Scaling</h3>
+        <div class="paper-desc">
+          B ∝ [Ω · (GM/Rc²) · R_core³ · f_liquid]^0.79 with R = 0.994 across
+          Mercury, Earth, Jupiter, Saturn, Uranus, Neptune. The GM/(Rc²) factor
+          distinguishes this from standard dynamo scaling.
+        </div>
+      </div>
+
+      <div class="paper" style="border-left-color: var(--tag-predict);">
+        <h3>3. Astrophysical Jets as Gravitational Exhaust</h3>
+        <div class="paper-desc">
+          Polar jets predicted as hydrodynamic necessity of PG inflow continuity.
+          Exact analytical solution: v_θ = −(3/2)√(2GM/r) cot θ.
+          50% of mass transport within 30° of pole.
+        </div>
+      </div>
+
+      <div class="paper" style="border-left-color: var(--tag-predict);">
+        <h3>4. μ₀–ε₀ Splitting</h3>
+        <div class="paper-desc">
+          Near gravitating mass: μ₀ increases (+U), ε₀ unchanged.
+          Implies δα/α = +U/2. Testable with atomic clock comparisons
+          at different gravitational potentials.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="contact-line">Email: <a href="mailto:bennybk.research@gmail.com">bennybk.research@gmail.com</a></p>
+    </section>
+
   </div>
-</footer>
+
+  <footer>
+    <div class="container">
+      © 2026 B. B. Kulangiev · Last updated April 2026
+    </div>
+  </footer>
 
 </body>
+
 </html>
