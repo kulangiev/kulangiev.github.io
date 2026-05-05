@@ -23,12 +23,12 @@
 
 \title{Emergent Newtonian Gravity from the Collective Acoustic Metric\\of a Logarithmic Superfluid Vacuum}
 
-\author{B. B. Kulangiev\\\small{Haifa, Israel}}
-\date{March 2026}
+\author{B.~B.~Kulangiev\\\small{Haifa, Israel}}
+\date{April 2026}
 \maketitle
 
 \begin{abstract}
-\noindent In a companion paper~\cite{kulangiev_2026}, we showed that the Painlev\'{e}-Gullstrand (PG) flow $v = \sqrt{2GM/r}$ regularizes the static-metric pathology of the logarithmic superfluid vacuum, yielding the PPN parameter $\gamma = 1$ for any barotropic equation of state. Here we derive this macroscopic flow as a collective mean-field effect of $N$ microscopic vortex-Gausson solitons---the topological defects of the logarithmic condensate. We show that the self-consistency requirement selects the PG flow uniquely: the static solution fails catastrophically (the spatial-to-temporal metric ratio diverges at the background equation-of-state exponent $\alpha = -1$), while the PG flow closes the self-consistency loop exactly. Postulating that each soliton sources the acoustic metric through a localized perturbation, we derive the emergent gravitational constant $\Geff \sim c^2/(\xi^2\rho_0)$, where $\xi$ is the healing length and $\rho_0$ is the vacuum condensate mass density. This expression is universal---independent of the source mass $M$ and the distance $r$. Matching $\Geff$ to Newton's constant, combined with the natural condensate packing density $n_0 \sim 1/\xi^3$, determines $\xi \sim \ell_P$ (the Planck length) and $\rho_0 \sim m_P/\ell_P^3$ (the Planck density). An independent derivation from the Bernoulli relation of the logarithmic fluid confirms that Newtonian gravity ($\delta\rho \propto 1/r$) requires exactly the PG velocity profile ($v^2 \propto 1/r$). The continuity constraint is discussed as an open problem.
+\noindent In a companion paper, we showed that the Painlev\'{e}-Gullstrand (PG) flow $v = \sqrt{2GM/r}$ regularizes the static-metric pathology of the logarithmic superfluid vacuum, yielding the PPN parameter $\gamma = 1$ for any barotropic equation of state. Here we derive this macroscopic flow as a collective mean-field effect of $N$ microscopic vortex-Gausson solitons---the topological defects of the logarithmic condensate. We show that the self-consistency requirement selects the PG flow uniquely: the static solution fails catastrophically (the spatial-to-temporal metric ratio diverges at the background equation-of-state exponent $\alpha = -1$), while the PG flow closes the self-consistency loop exactly. Postulating that each soliton sources the acoustic metric through a localized perturbation, we derive the emergent gravitational constant $\Geff \sim c^2/(\xi^2\rho_0)$, where $\xi$ is the healing length and $\rho_0$ is the vacuum condensate mass density. This expression is universal---independent of the source mass $M$ and the distance $r$. Matching $\Geff$ to Newton's constant, combined with the natural condensate packing density $n_0 \sim 1/\xi^3$, determines $\xi \sim \ell_P$ (the Planck length) and $\rho_0 \sim m_P/\ell_P^3$ (the Planck density). An independent derivation from the Bernoulli relation of the logarithmic fluid confirms that Newtonian gravity ($\delta\rho \propto 1/r$) requires exactly the PG velocity profile ($v^2 \propto 1/r$). The continuity constraint is discussed as an open problem.
 \end{abstract}
 
 
@@ -43,7 +43,7 @@ In a companion paper~\cite{kulangiev_2026}, we established that a superfluid vac
 
 (ii) The Madelung escape: the complex field's hydrodynamic representation introduces a density-dependent sound speed and a macroscopic flow velocity.
 
-(iii) The static limitation: the static acoustic metric gives $\gamma = (1-\alpha)/(1+\alpha) \neq 1$ for any nondegenerate equation of state.
+(iii) The static pathology: the static acoustic metric gives $\gamma_{\mathrm{static}} = (1-\alpha)/(1+\alpha)$, which has a pole at $\alpha = -1$. The relativistic logarithmic equation of state at the background density gives precisely $\alpha = -1$, making the static acoustic metric mathematically ill-defined.
 
 (iv) The PG solution: the flowing acoustic metric with $v(r) = \sqrt{2\Geff M/r}$ gives $\gamma = 1$ exactly, and is the unique self-consistent weak-field configuration.
 
@@ -63,6 +63,14 @@ The vacuum condensate is described by a complex order parameter $\psi(x,t)$ sati
 \label{eq:log_kg}
 \end{equation}
 with healing length $\xi = \heff/(\meff \cs)$ setting the microscopic scale. The Madelung decomposition $\psi = \sqrt{\rho}\,e^{iS/\heff}$ yields a continuity equation and a Hamilton-Jacobi equation coupling the condensate density $\rho$ and flow velocity $\mathbf{v} = \nabla S/\meff$~\cite{kulangiev_2026}.
+
+\paragraph{Two distinct densities}
+A dimensional clarification: in the relativistic Lagrangian $\mathcal{L} = \rho X - V(\rho)$ with $X = \partial_\mu S\,\partial^\mu S$, the variable $\rho = |\psi|^2$ has units of inverse-energy-volume, not mass density~\cite{kulangiev_2026}. The physical mass density of the condensate, the quantity one would measure as kg/m$^3$, is computed from the time-time component of the stress-energy tensor:
+\begin{equation}
+    \rho_{\mathrm{mass}} = T_{00}/c^2 = [\rho V'(\rho) + V(\rho)]/c^2\,,
+\label{eq:rho_mass_def}
+\end{equation}
+which at the background reduces to a constant. Throughout this paper, when $\rho_0$ appears in dimensional formulae for the gravitational coupling (Eqs.~\ref{eq:G_eff}, \ref{eq:planck_scale}), we mean $\rho_0^{\mathrm{phys}} = T_{00}/c^2$ at the background; when $\rho$ or $\rho_0$ appears in the field equations and Bernoulli relations (Eqs.~\ref{eq:log_kg}, \ref{eq:bernoulli_log}), we mean the Lagrangian variable. The two are linearly related at fixed background through Eq.~(\ref{eq:rho_mass_def}); the conversion factor is absorbed into the O(1) prefactors of the dimensional analysis below.
 
 In the superfluid vacuum model, fundamental particles are topological defects---vortex-Gaussons---with core size $\sim\xi$ and energy $E_v$~\cite{bialynicki_birula_1979,avdeenkov_2011}. A macroscopic gravitating body (star, planet) consists of $N = M/m$ such solitons, where $M$ is the total mass and $m$ is the mass per particle. The gravitational field is measured at distances $r \gg R_{\mathrm{star}} \gg N^{1/3}\xi$, far from any individual soliton.
 
@@ -94,7 +102,6 @@ where $\mathcal{S}(r) = n(r)\cdot\Gamma_{\mathrm{sink}}$ is the sink rate from s
 
 
 % ====================================================================
-\newpage
 \section{The Self-Consistency Argument}
 \label{sec:self_consistency}
 % ====================================================================
@@ -136,7 +143,7 @@ For the relativistic logarithmic equation of state at the background density, $\
     \gamma_{\mathrm{static}} \to \infty\quad\text{at}\quad \alpha = -1\,.
 \label{eq:gamma_pathology}
 \end{equation}
-The static acoustic metric is mathematically pathological: the spatial metric perturbation diverges relative to the temporal one, and no finite weak-field expansion around the static background exists. Physically, the pole signals that the static configuration is not a stable background for perturbations of the density alone. Any consistent treatment must therefore introduce additional dynamical content beyond the static density channel; this is the role of the macroscopic flow developed in Sec.~\ref{sec:self_consistency}.B below.
+The static acoustic metric is mathematically pathological: the spatial metric perturbation diverges relative to the temporal one, and no finite weak-field expansion around the static background exists. Physically, the pole signals that the static configuration is not a stable background for perturbations of the density alone. Any consistent treatment must therefore introduce additional dynamical content beyond the static density channel; this is the role of the macroscopic flow developed in Sec.~\ref{sec:self_consistency} below.
 
 
 \subsection{Solution B: Painlev\'{e}-Gullstrand flow \texorpdfstring{($\vb = \sqrt{2\Phieff}$, $\rhob \approx \rho_0$)}{(v = sqrt(2*Phi\_eff), rho approx rho\_0)}}
@@ -193,7 +200,6 @@ Conversely, a standard vortex circulation ($v_\theta \propto 1/r$) would produce
 
 
 % ====================================================================
-\newpage
 \section{The Emergent Gravitational Constant}
 \label{sec:G_eff}
 % ====================================================================
@@ -250,7 +256,7 @@ where $m_P = \sqrt{\hbar c/G}$ is the Planck mass. The corresponding healing len
 \end{equation}
 where $\lP = \sqrt{\hbar G/c^3}$ is the Planck length. The vacuum condensate has Planck-mass particles spaced by Planck-length distances, with bulk mass density at the Planck scale. This is the natural maximum density for a relativistic quantum field; the framework therefore predicts a Planck-density vacuum reservoir, with gravitational effects sourced by $O(U \rho_0)$ \emph{perturbations} of this background rather than by the background density itself.
 
-The detailed self-consistency derivation, including O(1) prefactors, is presented separately in the Planck-scale companion paper.
+The detailed self-consistency derivation, including O(1) prefactors, is presented separately in the Planck-scale companion paper~\cite{kulangiev_2026e}.
 
 
 % ====================================================================
@@ -267,7 +273,7 @@ using a split-step Fourier method on a $512^2$ grid with $\heff = \meff = b = \r
 
 \subsection{Ground states}
 
-Imaginary-time evolution with fixed phase topology ($\psi \to |\psi|\,e^{in\theta}$ at each step) yields stationary vortex-Gausson states for winding numbers $n = 0, 1, 2, 3$:
+Imaginary-time evolution with fixed phase topology ($\psi \to |\psi|\,e^{in\theta}$ at each step) yields stationary vortex-Gausson states for winding numbers $n = 0, 1, 2, 3$. The healing length in the simulation's natural units is $\xi = \heff/\sqrt{2\meff b}$ from the soliton-core balance, against which the ground-state widths $\sigma$ are normalized:
 
 \begin{center}
 \begin{tabular}{cccccc}
@@ -295,39 +301,39 @@ This result establishes that a \emph{single} vortex-Gausson cannot produce the P
 The preceding subsections verify the soliton building block. We now verify the collective result: that the PG inflow $v = \sqrt{2\Geff M/r}$ with $\rho \approx \rho_0$ is a self-consistent and dynamically stable solution of the coarse-grained Euler equations with the relativistic logarithmic equation of state.
 
 We solve the one-dimensional spherical Euler equations
-(continuity and momentum) on a radial grid of 4096 points ($r \in [5, 400]$) with the density-dependent sound speed $c_s^2 = [\ln(\rho/\rho_c) + 2]^{-1}$, a gravitational source $\Phi = -GM/r$, and a distributed sink $\mathcal{S}(r) = \rho_0\,|\nabla\cdot\mathbf{v}_
-{\mathrm{PG}}|$ balancing the PG flow divergence
-(Sec.~\ref{sec:continuity}). Time integration uses a
-third-order TVD Runge-Kutta scheme with CFL number 0.25.
+(continuity and momentum) on a radial grid of 4096 points ($r \in [5, 400]$) with the relativistic logarithmic sound speed $c_s^2 = c^2/[2\ln(\rho/\rho_c) + 3]$ (Paper~1~\cite{kulangiev_2026}), a gravitational source $\Phi = -GM/r$, and a distributed sink $\mathcal{S}(r) = \rho_0\,|\nabla\cdot\mathbf{v}_{\mathrm{PG}}|$ balancing the PG flow divergence (Sec.~\ref{sec:continuity}). Time integration uses a third-order TVD Runge-Kutta scheme with CFL number 0.25.
 
 Two cases are evolved for $2 \times 10^5$ time steps
-($T = 4822$ in units of $r_{\mathrm{min}}/c_s$):
+($T \approx 4822$ in units of $r_{\mathrm{min}}/c_s$):
 
 \emph{Case~1:} Exact PG initial conditions
 ($\rho = \rho_0$, $v = \sqrt{2GM/r}$). The density
-deviation remains below $|\delta\rho/\rho_0| < 10^{-5}$
-and the velocity error below $10^{-4}\%$ throughout,
+deviation remains bounded by $|\delta\rho/\rho_0| < 10^{-5}$
+and the velocity error stays below $10^{-3}\%$ throughout,
 confirming $\epsilon_1 = 0$ (Eq.~\ref{eq:epsilon_zero})
-numerically. The measured velocity power law is
-$v \propto r^{-0.500}$.
+numerically to the precision of the spatial discretization. The measured velocity power law is $v \propto r^{-0.500}$ to three significant figures.
 
 \emph{Case~2:} A 20\% sinusoidal velocity perturbation
 is imposed on the PG profile. The perturbation decays
-exponentially, with the velocity error decreasing from
-12.8\% to 0.02\% over $\sim 4000$ dynamical times and
-the power law slope recovering to $-0.500$. This
-demonstrates that the PG flow is not merely a stationary point but a \emph{dynamical attractor}: perturbations are expelled, and the system relaxes back to the PG configuration.
+monotonically with the velocity error decreasing from
+12.8\% to 0.02\% over $T \approx 4220$ in units of
+$r_{\mathrm{min}}/c_s$, and the power law slope
+recovering to $-0.500$. The final density excursion
+$|\delta\rho/\rho_0| \approx 4 \times 10^{-5}$ and final velocity error of $0.02\%$ are both consistent with relaxation toward the PG configuration. This
+demonstrates that the PG flow is not merely a stationary point but a \emph{dynamical attractor}: perturbations are expelled, and the system relaxes to the PG configuration. 
+
+We note that the PG attractor behavior demonstrated here is generic to any barotropic EOS that asymptotes to $c_s \to c$ at the background; the simulation thus verifies the dynamical stability of the PG configuration and the correct functioning of the distributed sink mechanism, but is not a specific test of the relativistic logarithmic equation of state. Tests sensitive to the EOS at higher orders in $\delta\rho/\rho_0$ are deferred to future work.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{pg_distributed_sink.pdf}
+\includegraphics[width=\textwidth]{pg_distributed_sink.png}
 \caption{\emph{Top row, left to right:} density deviation and velocity error versus time for exact PG (blue) and 20\% velocity perturbation (green); final density profile.
 \emph{Bottom row:} final velocity profile compared with
 $v_{\mathrm{PG}} = \sqrt{2GM/r}$ (dashed red); velocity
 power law with measured slopes; velocity ratio
 $v/v_{\mathrm{PG}}$. Both cases converge to
 $v \propto r^{-0.500}$ with $\rho/\rho_0 = 1$ to within
-$0.2\%$.}
+$10^{-4}$.}
 \label{fig:pg_numerical}
 \end{figure}
 
@@ -344,7 +350,7 @@ Our results establish a complete chain from microscopic to macroscopic:
 
 \paragraph{Collective source} $N = M/m$ solitons create a coarse-grained source $T_{00}(r) = n(r)\cdot E_v$ in the condensate (Sec.~\ref{sec:framework}).
 
-\paragraph{Acoustic metric response} The linearized acoustic perturbation equations give a Newtonian potential $\Phieff = -\Geff M/r$ with $\Geff = E_v/(4\pi\rho_0 c^2 m)$ (Sec.~\ref{sec:G_eff}).
+\paragraph{Acoustic metric response} The linearized acoustic perturbation equations give a Newtonian potential $\Phieff = -\Geff M/r$ with $\Geff \sim c^2/(\xi^2\rho_0)$ (Sec.~\ref{sec:G_eff}).
 
 \paragraph{Self-consistency selects PG} The PG flow $\vb = \sqrt{2\Geff M/r}$ is the unique weak-field solution whose acoustic metric reproduces the assumed gravitational potential. The static solution fails this test (Sec.~\ref{sec:self_consistency}).
 
@@ -402,7 +408,6 @@ The framework makes several testable predictions:
 
 
 % ====================================================================
-\newpage
 \section{Conclusion}
 \label{sec:conclusion}
 % ====================================================================
@@ -422,36 +427,28 @@ $v^2 \propto 1/r$.
 vanishes identically ($\epsilon_1 = 0$), ensuring that
 the vacuum around a gravitating mass is indistinguishable from free vacuum at the $10^{-12}$ level.
 
-The apparent continuity constraint of the macroscopic PG inflow is naturally resolved by relaxing the assumption of strict spherical symmetry. Every astrophysical mass rotates, defining a polar axis. The steady-state axisymmetric continuity equation is satisfied by an angular velocity component that redirects the accumulated radial flux along the rotation axis: the condensate flows in equatorially and is expelled polarly, with zero net mass flux through any closed surface. This yields a direct observational prediction: astrophysical jets are a
-hydrodynamic consequence of the PG inflow geometry, not
-purely an electromagnetic phenomenon. The formal
-derivation of the macroscopic PG flow as a collective
-Bernoulli response of $N$ microscopic vortex-Gaussons to the mean-field gravitational potential---the gravitational analogue of the Feynman-Onsager relation in rotating superfluids---is presented in a companion
-paper~\cite{kulangiev_2026c}.
+The apparent continuity constraint of the macroscopic PG inflow remains an open problem. Among the candidate mechanisms discussed in Sec.~\ref{sec:continuity}, the geometric-redirection option---where rotation defines a polar axis and the radial inflow is balanced by axial outflow at large angles from the equatorial plane---is mathematically attractive but requires a proper axisymmetric analysis beyond the present scope. The formal derivation of the macroscopic PG flow as a collective Bernoulli response of $N$ microscopic vortex-Gaussons to the mean-field gravitational potential---the gravitational analogue of the Feynman-Onsager relation in rotating superfluids---is left to future work.
 
 
 % ====================================================================
 \section*{Acknowledgments}
 
-The author thanks K.~G.~Zloshchastiev for foundational work on the logarithmic superfluid vacuum, C.~Barcel\'{o}, S.~Liberati, and M.~Visser for the acoustic metric framework, and G.~E.~Volovik for the two-fluid perspective. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
+The author thanks K.~G.~Zloshchastiev for foundational work on the logarithmic superfluid vacuum, C.~Barcel\'{o}, S.~Liberati, and M.~Visser for the acoustic metric framework, and G.~E.~Volovik for the two-fluid perspective. The methodological stance of this paper---treating the order parameter as a real classical field whose hydrodynamic behavior underlies emergent gravitational phenomena---is indebted to the Madelung-de~Broglie-Bohm tradition, particularly as developed in P.~R.~Holland's exposition of the quantum theory of motion. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
 
 
 \begin{thebibliography}{25}
 
 \bibitem{kulangiev_2026}
 B.~B.~Kulangiev,
-Conditions for emergent gravitational light bending
-from a logarithmic superfluid vacuum,
+Conditions for Emergent Gravitational Light Bending from a Logarithmic Superfluid Vacuum,
 Preprint (2026).
 \url{https://kulangiev.github.io#paper1}
 
-\bibitem{kulangiev_2026c}
+\bibitem{kulangiev_2026e}
 B.~B.~Kulangiev,
-The gravitational Feynman-Onsager relation:
-Collective Painlev\'{e}-Gullstrand flow from $N$
-solitons in the logarithmic superfluid vacuum,
+Singularity Regularization and the Emergent Planck Scale in the Logarithmic Superfluid Vacuum,
 Preprint (2026).
-\url{https://doi.org/10.55277/researchhub.odvi7ea0.2}
+\url{https://kulangiev.github.io#paper5}
 
 \bibitem{zloshchastiev_2023}
 K.~G.~Zloshchastiev,
