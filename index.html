@@ -308,8 +308,8 @@
       <p class="tagline">
         Developing a multi-paper framework for emergent gravity, electromagnetism, and cosmology
         from the relativistic logarithmic superfluid vacuum. The vacuum condensate's Madelung
-        hydrodynamics produce the Schwarzschild metric, Maxwell's equations, the Planck scale,
-        and dark energy from a single wave equation.
+        hydrodynamics provides a unified starting point for the Schwarzschild metric, Maxwell's equations, the Planck
+        scale, and dark energy from a single wave equation.
       </p>
     </header>
 
@@ -331,22 +331,13 @@
             Cassini-consistent.</div>
         </div>
         <div class="result-card">
-          <div class="equation">G = ηc²/(4πρ₀)</div>
-          <div class="label">Gravitational constant derived from vacuum condensate density. ρ₀ ≈ 10²⁶ kg/m³.</div>
-        </div>
-        <div class="result-card">
-          <div class="equation">β = 1 (PPN)</div>
-          <div class="label">Mercury perihelion precession (42.98″/century) from equivalence principle + PG metric.
-          </div>
+          <div class="equation">G ~ c²/(ξ²ρ₀)</div>
+          <div class="label">Gravitational constant emerges from vacuum stiffness. Self-consistency forces ξ ~ ℓ_P, ρ₀ ~
+            Planck density.</div>
         </div>
         <div class="result-card">
           <div class="equation">w = −1</div>
           <div class="label">Dark energy as native vacuum pressure. Logarithmic EOS gives cosmological constant.</div>
-        </div>
-        <div class="result-card">
-          <div class="equation">R = 0.994</div>
-          <div class="label">Planetary magnetic scaling law across 6 planets, 8 orders of magnitude, single parameter.
-          </div>
         </div>
         <div class="result-card">
           <div class="equation">∂μF^μν = J^ν</div>
@@ -390,14 +381,15 @@
             </div>
             <div class="paper-meta">
               <span class="tag tag-gravity">gravity</span>
-              <span class="status status-review">Under Review — Grav. & Cosmol.</span>
+              <span class="status status-published">Qeios Preprint</span> · <a href="https://doi.org/10.32388/OWEUNJ.2"
+                target="_blank">scienceopen</a>
             </div>
           </div>
           <div class="paper-id">Paper 1</div>
         </div>
         <div class="paper-desc">
           The kinematic trap (γ = 0 for any real scalar field), the Madelung escape,
-          the static metric failure (γ = 3), and the unique PG solution yielding γ = 1.
+          the static metric pathology (γ_static diverges at α = −1), and the unique PG solution yielding γ = 1.
         </div>
       </div>
 
@@ -417,8 +409,8 @@
           <div class="paper-id">Paper 2</div>
         </div>
         <div class="paper-desc">
-          G_eff derivation, collective PG flow from N solitons (Monte Carlo: 0.02%, slope −0.500),
-          axial outflow/jet prediction, planetary magnetic scaling (R = 0.994).
+          G_eff = c²/(ξ²ρ₀) derivation from N-soliton collective response. PG flow as dynamical attractor (1D Euler
+          simulation: 12.8% perturbation → 0.02%, slope −0.500). Continuity mechanism left as open problem.
         </div>
       </div>
 
@@ -474,14 +466,15 @@
             <div class="paper-meta">
               <span class="tag tag-gravity">gravity</span>
               <span class="tag tag-qm">quantum</span>
-              <span class="status status-published">ResearchHub</span>
+              <span class="status status-published">Qeios Preprint</span> · <a href="https://doi.org/10.32388/2DOU67"
+                target="_blank">scienceopen</a>
             </div>
           </div>
           <div class="paper-id">Paper 5</div>
         </div>
         <div class="paper-desc">
-          Self-consistency of gravitational coupling with Gausson energy scaling yields
-          m_eff ≈ 0.67 m_Planck and ξ ≈ 1.5 l_Planck.
+          Self-consistency of the framework — combining G ~ c²/(ξ²ρ₀) with the Gausson healing-length structure and
+          natural condensate packing — uniquely determines ξ ~ ℓ_Planck and ρ₀ ~ Planck density.
         </div>
       </div>
 
@@ -607,20 +600,18 @@
       </div>
 
       <div class="paper" style="border-left-color: var(--tag-predict);">
-        <h3>2. Planetary Magnetic Scaling</h3>
+        <h3>3. Environment-Dependent Speed of Light</h3>
         <div class="paper-desc">
-          B ∝ [Ω · (GM/Rc²) · R_core³ · f_liquid]^0.79 with R = 0.994 across
-          Mercury, Earth, Jupiter, Saturn, Uranus, Neptune. The GM/(Rc²) factor
-          distinguishes this from standard dynamo scaling.
+          δc/c = −GM/(2c²r). Light slower near mass, faster in voids.
+          Three tests: FRB timing, CMB void correlation, multi-messenger events.
         </div>
       </div>
 
       <div class="paper" style="border-left-color: var(--tag-predict);">
-        <h3>3. Astrophysical Jets as Gravitational Exhaust</h3>
+        <h3>3. Geometric continuity mechanism (in development)</h3>
         <div class="paper-desc">
-          Polar jets predicted as hydrodynamic necessity of PG inflow continuity.
-          Exact analytical solution: v_θ = −(3/2)√(2GM/r) cot θ.
-          50% of mass transport within 30° of pole.
+          The PG inflow's continuity can be balanced by axial outflow at large angles, suggesting a hydrodynamic origin
+          for astrophysical jets. Detailed derivation in preparation as a separate paper.
         </div>
       </div>
     </section>
@@ -635,9 +626,20 @@
 
   <footer>
     <div class="container">
-      © 2026 B. B. Kulangiev · Last updated April 2026
+      © 2026 B. B. Kulangiev · Last updated <span id="last-updated-month">April</span> <span
+        id="last-updated-year">2026</span>
     </div>
   </footer>
+
+  <script>
+    const monthNames = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    const now = new Date();
+    document.getElementById('last-updated-month').textContent = monthNames[now.getMonth()];
+    document.getElementById('last-updated-year').textContent = now.getFullYear();
+  </script>
 
 </body>
 
