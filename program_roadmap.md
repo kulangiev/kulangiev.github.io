@@ -400,6 +400,17 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 
 ---
 
+### P-rotation — Global condensate rotation and CMB anomalies
+   **Status:** Concept only
+   **Substantive content:** Global vacuum vorticity from condensate dynamics; predicted CMB signatures (aligned multipoles, dipole tension); comparison to "axis of evil" literature
+   **Substantive open questions:**
+   - Does the framework predict a specific rotation rate?
+   - Can it match Planck's bound ω/H_0 < 10^-9?
+   - Does it explain the radio-vs-CMB dipole tension?
+   **Submission gating:** P1, P5, P-foundations published; serious literature review of CMB anomalies required
+
+---
+
 ## The dependency graph
 
 Boxed papers must be stable before unboxed papers can be submitted:

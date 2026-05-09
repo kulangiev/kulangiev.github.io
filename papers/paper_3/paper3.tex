@@ -21,13 +21,13 @@
 \title{Cosmological Implications of the Logarithmic Superfluid Vacuum:\\
 Dark Energy, the Hubble Tension, and a Vacuum Self-Consistency Equation}
 
-\author{B. B. Kulangiev\\\small{Haifa, Israel}}
-\date{March 2026}
+\author{B.~B.~Kulangiev\\\small{Haifa, Israel}}
+\date{May 2026}
 \maketitle
 
 \begin{abstract}
 \noindent
-We derive the cosmological consequences of modeling the vacuum as a relativistic logarithmic superfluid. The logarithmic equation of state yields $w = -1$ natively, identifying dark energy as the thermodynamic pressure of the condensate rather than an additional cosmological component. Combining the emergent gravitational constant $\Geff = \eta c^2/(4\pi\rho_0)$~\cite{kulangiev_2026b} with the observed relation $\Omega_\gamma \approx \alpha^2$~\cite{kulangiev_2026c}, we derive a vacuum self-consistency equation $\alpha^2 H_0^2 \rho_0 = \tfrac{2}{3}\eta\,u_{\mathrm{CMB}}$ linking the fine structure constant, the Hubble parameter, the vacuum density, and the CMB photon energy density. When the vacuum density varies spatially, all local parameters---the speed of light $c_s$, the gravitational constant $G$, and the effective cosmological constant $\Lambda$---vary in concert. We show that a modest 6.5\% vacuum underdensity inside the observed KBC void suffices to produce the locally measured $H_0 \approx 73$~km\,s$^{-1}$\,Mpc$^{-1}$ from a global value of 68.15~km\,s$^{-1}$\,Mpc$^{-1}$. We prove that the CMB acoustic peak positions are exactly invariant under these variations, because both the sound horizon and the comoving distance scale linearly with the local speed of light. The framework thus automatically satisfies the most stringent constraint in observational cosmology without tuning.
+We derive the cosmological consequences of modeling the vacuum as a relativistic logarithmic superfluid. The logarithmic equation of state yields $w = -1$ natively, identifying dark energy as the thermodynamic pressure of the condensate rather than an additional cosmological component. Combining the emergent gravitational coupling $\Geff \sim c^2/(\xi^2\rho_0)$ with the observed relation $\Omega_\gamma \approx \alpha^2$, we derive a vacuum self-consistency equation $\alpha^2 H_0^2 (\rho_0\xi^2) \propto u_{\mathrm{CMB}}$ linking the fine structure constant, the Hubble parameter, the vacuum density, and the CMB photon energy density. When the vacuum density varies spatially, the speed of light $c_s$, the gravitational constant $G$, and the effective cosmological constant $\Lambda$ all vary together in calculable ways set by the equation of state. We show that a modest $\sim 3.6\%$ vacuum underdensity inside the observed KBC void suffices to produce the locally measured $H_0 \approx 73$~km\,s$^{-1}$\,Mpc$^{-1}$ from a global value of $68.15$~km\,s$^{-1}$\,Mpc$^{-1}$. We prove that the CMB acoustic peak positions are exactly invariant under these variations, because both the sound horizon and the comoving distance scale linearly with the local speed of light. The framework thus automatically satisfies the most stringent constraint in observational cosmology without tuning. Promoting the empirical relation $\Omega_\gamma = \alpha^2$ to a framework postulate yields a parameter-free prediction $\Tcmb(\alpha, H_0) = [45\hbar^3 c^5\alpha^2 H_0^2/(8\pi^3 k_B^4 G)]^{1/4}$ that matches the FIRAS measurement to $0.002\%$.
 \end{abstract}
 
 
@@ -38,7 +38,7 @@ We derive the cosmological consequences of modeling the vacuum as a relativistic
 
 Three open problems in cosmology motivate this work. First, the cosmological constant problem: why the vacuum energy density driving the accelerated expansion of the universe takes the value it does, and why its equation of state is $w = -1$. Second, the Hubble tension: the persistent $\sim 5\sigma$ discrepancy between the Hubble constant inferred from the early-universe Cosmic Microwave Background (CMB) ($H_0 = 67.36 \pm 0.54$~km\,s$^{-1}$\,Mpc$^{-1}$~\cite{planck_2020}) and the late-universe distance ladder ($H_0 = 73.04 \pm 1.04$~km\,s$^{-1}$\,Mpc$^{-1}$~\cite{riess_2022}). Third, the nature of the CMB temperature: whether $\Tcmb = 2.7255$~K~\cite{fixsen_2009} is a freely set initial condition or a quantity determined by fundamental physics.
 
-In companion papers~\cite{kulangiev_2026a,kulangiev_2026b}, we developed a superfluid vacuum model based on the relativistic logarithmic Klein-Gordon equation, showing that the Painlev\'{e}-Gullstrand (PG) inflow $v = \sqrt{2\Geff M/r}$ is the unique self-consistent weak-field solution of the acoustic metric equations, yielding the Parameterized Post-Newtonian (PPN) parameter $\gamma = 1$ and an emergent gravitational constant $\Geff = \eta c^2/(4\pi\rho_0)$. Separately, an approximate numerical relation $\Omega_\gamma \approx \alpha^2$ was reported~\cite{kulangiev_2026c}, predicting $H_0 = 68.15$~km\,s$^{-1}$\,Mpc$^{-1}$.
+In companion papers~\cite{kulangiev_2026a,kulangiev_2026b}, we developed a superfluid vacuum model based on the relativistic logarithmic Klein-Gordon equation, showing that the Painlev\'{e}-Gullstrand (PG) inflow $v = \sqrt{2\Geff M/r}$ is the unique self-consistent weak-field solution of the acoustic metric equations, yielding the Parameterized Post-Newtonian (PPN) parameter $\gamma = 1$ and the emergent gravitational coupling $\Geff \sim c^2/(\xi^2\rho_0)$. Separately, an approximate numerical relation $\Omega_\gamma \approx \alpha^2$ was reported~\cite{kulangiev_2026o}, predicting $H_0 = 68.15$~km\,s$^{-1}$\,Mpc$^{-1}$.
 
 In this paper, we show that combining these results yields cosmological consequences addressing all three problems. The logarithmic equation of state produces $w = -1$ from first principles. The emergent $\Geff$ and the $\Omega_\gamma = \alpha^2$ relation together imply a self-consistency equation linking $\alpha$, $H_0$, $\rho_0$, and $\Tcmb$. Spatial variations of $\rho_0$ provide a physical mechanism for the Hubble tension, and the CMB peak structure is shown to be exactly invariant under these variations.
 
@@ -53,14 +53,21 @@ The vacuum is modeled as a complex order parameter $\psi(x,t)$ satisfying the re
     \Box\psi + \mu^2\psi - b\,\psi\,\ln\!\left(\frac{|\psi|^2}{\rho_0}\right) = 0\,.
 \label{eq:log_kg}
 \end{equation}
-The Madelung decomposition $\psi = \sqrt{\rho}\,e^{iS/\heff}$ yields a continuity equation and a Hamilton-Jacobi equation coupling the condensate density $\rho$ and flow velocity $\mathbf{v} = \nabla S/\meff$~\cite{kulangiev_2026a}. For the logarithmic potential $V(\rho) = -b\,\rho\,\ln(\rho/\rho_c)$, where the minus sign reflects the attractive (self-binding) interaction, the relativistic sound speed is $c_s^2 = [\ln(\rhob/\rho_c) + 2]^{-1}$, normalized so that $c_s = c$ at the background density $\rho_0$~\cite{kulangiev_2026a}.
+We adopt the Bohmian/deterministic interpretation~\cite{madelung_1927,bohm_1952,holland_1993}: $\psi$ is a real classical order parameter, not a quantum-mechanical wavefunction. In the relativistic Lagrangian $\mathcal{L} = \rho X - V(\rho)$ with $X = \partial_\mu S\,\partial^\mu S$, the variable $\rho = |\psi|^2$ has units of inverse-energy-volume, distinct from the physical mass density $\rho_{\mathrm{mass}} = T_{00}/c^2$ which is what enters the gravitational source term. We use $\rho_0$ for the background mass density throughout this paper, with the convention identical to that established in~\cite{kulangiev_2026a,kulangiev_2026b}.
 
-Fundamental particles are topological defects---vortex-Gaussons---with energy $E_v$ and mass $m$~\cite{bialynicki_birula_1979}. The emergent gravitational constant, derived from the collective acoustic metric of $N = M/m$ solitons, is~\cite{kulangiev_2026b}:
+The Madelung decomposition $\psi = \sqrt{\rho}\,e^{iS/\heff}$ yields a continuity equation and a Hamilton-Jacobi equation coupling the condensate density $\rho$ and flow velocity $\mathbf{v} = \nabla S/\meff$~\cite{kulangiev_2026a}. For the logarithmic potential $V(\rho) = -b\,\rho\,\ln(\rho/\rho_c)$, the relativistic sound speed is~\cite{kulangiev_2026a}
 \begin{equation}
-    \Geff = \frac{\eta\,c^2}{4\pi\rho_0}\,,\qquad \eta \equiv \frac{E_v}{mc^2}\,,
+    c_s^2 = \frac{c^2}{2\ln(\rhob/\rho_c) + 3}\,,
+\label{eq:cs_log}
+\end{equation}
+normalized so that $c_s = c$ at the background density $\rho_0$ (where $\rho_c = e\,\rho_0$). The corresponding equation-of-state exponent is $\alpha = d\ln c_s/d\ln\rho = -1$ at the background.
+
+Fundamental particles are topological defects---vortex-Gaussons---with energy $E_v = mc^2$~\cite{bialynicki_birula_1979}. The emergent gravitational constant, derived from the collective acoustic metric of $N = M/m$ solitons~\cite{kulangiev_2026b}, follows from dimensional analysis as
+\begin{equation}
+    \Geff \;\sim\; \frac{c^2}{\xi^2\,\rho_0}\,,
 \label{eq:G_eff}
 \end{equation}
-which is universal (independent of $M$, $r$, and $N$) and inversely proportional to the vacuum density. Matching to Newton's constant gives $\rho_0 = \eta c^2/(4\pi G) \approx \eta \times 10^{26}$~kg/m$^3$.
+where $\xi$ is the healing length of the condensate. Self-consistency with the observed Newton's constant, combined with the natural condensate packing density $n_0 \sim 1/\xi^3$, fixes $\xi \sim \ell_P$ (the Planck length) and $\rho_0 \sim m_P/\ell_P^3$ (the Planck mass density)~\cite{kulangiev_2026e}. The combination $\rho_0\xi^2 \approx c^2/G \approx 1.35 \times 10^{27}$~kg/m enters the macroscopic equations below.
 
 
 % ====================================================================
@@ -82,8 +89,8 @@ With $b$ normalized so that $c_s = c$ at the background density, this gives $P =
 For any change in cosmic volume $dV$, the first law gives $dU = -P\,dV = \rho_0 c^2\,dV$: the energy content adjusts to maintain a constant \emph{mean} density $\rho_0$ whether the volume expands or contracts. The cosmological density scales as $\rho \propto a^{-3(1+w)} = a^0$. The logarithmic vacuum does not dilute or compress under homogeneous expansion; it isothermally replicates, ensuring that the background $\Geff$ remains an invariant fundamental constant. Local thermodynamic fluctuations $\delta\rho_0(\mathbf{x})$ around this mean are permitted and have observable consequences (Sec.~\ref{sec:hubble_tension}).
 
 \subsection{The open-system interpretation}
-
-A natural interpretation is that the condensate is an open system: a localized phase transition accreting non-condensed vacuum from an external reservoir. The expansion of the universe corresponds to the advance of the phase boundary rather than the stretching of a closed manifold. New condensate is not created from nothing; it is converted from the disordered parent vacuum, with energy crossing the boundary. This is analogous to nucleation growth in condensed matter systems, where a crystal grows by incorporating atoms from the surrounding melt while maintaining its internal density. We note this interpretation without developing it fully here.
+\label{sec:open-system}
+The thermodynamic stability above is a property of the equation of state alone and does not require a specific cosmological mechanism. One natural interpretive picture, which we note here without using it as load-bearing input for any subsequent result, is that the condensate is an open system: a localized phase transition accreting non-condensed vacuum from an external reservoir. The expansion of the universe corresponds to the advance of the phase boundary rather than the stretching of a closed manifold. This is analogous to nucleation growth in condensed matter systems. None of the predictions in Sections~\ref{sec:self_consistency}--\ref{sec:tcmb} depend on this interpretation; they follow from the equation of state and the dimensional structure of $\Geff$.
 
 
 % ====================================================================
@@ -93,57 +100,42 @@ A natural interpretation is that the condensate is an open system: a localized p
 
 \subsection{Derivation}
 
-The observed relation $\Omega_\gamma \approx \alpha^2$~\cite{kulangiev_2026c} can be written as:
+The observed relation $\Omega_\gamma \approx \alpha^2$~\cite{kulangiev_2026o} can be written as:
 \begin{equation}
-    H_0^2 = \frac{\Tcmb^4}{\alpha^2}\cdot\frac{8\pi^3 G k_B^4}{45\hbar^3 c^5}\,.
-\label{eq:H0_from_alpha}
+    u_{\mathrm{CMB}} = \alpha^2\,\rho_c\,c^2\,,
+\label{eq:omega_gamma}
 \end{equation}
-Substituting $\Geff = \eta c^2/(4\pi\rho_0)$:
+where $u_{\mathrm{CMB}} = \pi^2 k_B^4 \Tcmb^4/(15\hbar^3 c^3)$ is the Stefan-Boltzmann energy density and $\rho_c = 3H_0^2/(8\pi G)$ is the Friedmann critical density. Substituting the dimensionally-corrected emergent gravitational coupling $\Geff \sim c^2/(\xi^2\rho_0)$~(Eq.~\ref{eq:G_eff}) into $\rho_c$:
 \begin{equation}
-    H_0^2 = \frac{2\pi^2\,\eta\,k_B^4\,\Tcmb^4}{45\,\hbar^3\,c^3\,\alpha^2\,\rho_0}\,.
-\end{equation}
-Recognizing the Stefan-Boltzmann energy density $u_{\mathrm{CMB}} = \pi^2 k_B^4 \Tcmb^4/(15\hbar^3 c^3)$, this rearranges to:
-\begin{equation}
-    \boxed{\;\alpha^2 \cdot H_0^2(\mathbf{x}) \cdot \rho_0(\mathbf{x})
-    = \frac{2}{3}\,\eta\; u_{\mathrm{CMB}}(\mathbf{x})\;}
-\label{eq:triangle}
-\end{equation}
-For $\eta = 1$, this relation holds at every spatial point, with all quantities evaluated locally. Since $\alpha$ and $\eta$ are universal constants, the equation couples the three spatially varying fields $H_0(\mathbf{x})$, $\rho_0(\mathbf{x})$, and $u_{\mathrm{CMB}}(\mathbf{x})$: a region with lower $\rho_0$ has faster local $c_s$, lower local $u_{\mathrm{CMB}}$, and higher local $H_0$.
-
-\subsection{Origin of the numerical factor}
-
-The factor $2/3$ has a transparent geometric origin. Substituting $\Geff = \eta c^2/(4\pi\rho_0)$ into the Friedmann critical density $\rho_c = 3H_0^2/(8\pi G)$ gives
-\begin{equation}
-    \rho_c = \frac{3H_0^2}{8\pi}\cdot\frac{4\pi\rho_0}{\eta\,c^2}
-           = \frac{3}{2\eta}\,\frac{H_0^2\,\rho_0}{c^2}\,.
+    \rho_c \;=\; \frac{3H_0^2}{8\pi G_{\mathrm{eff}}}
+           \;\sim\; \frac{3 H_0^2 \xi^2\rho_0}{8\pi c^2}\,.
 \label{eq:rho_c_condensate}
 \end{equation}
-The factors of $\pi$ cancel exactly: $4\pi$ from the solid angle of the Gauss-law integration over a spherical boundary (the topology of the point source), and $8\pi$ from the Einstein field equations $G_{\mu\nu} = 8\pi G\,T_{\mu\nu}$. Their ratio leaves a strict factor of~$2$, encoding the normalization that relates the relativistic tensor coupling to the Newtonian potential. The factor of~$3$ counts the spatial dimensions participating in isotropic expansion; in the Friedmann derivation from the Einstein equations, it enters as the trace of the spatial metric. In $d$ spatial dimensions, it would be replaced by~$d$.
-
-Multiplying both sides of Eq.~(\ref{eq:rho_c_condensate}) by $c^2$:
+Multiplying both sides by $c^2$ and substituting into Eq.~(\ref{eq:omega_gamma}):
 \begin{equation}
-    \rho_c\,c^2 = \frac{3}{2\eta}\,H_0^2\,\rho_0\,.
-\label{eq:kinetic}
+    \boxed{\;\alpha^2 \cdot H_0^2(\mathbf{x}) \cdot \rho_0(\mathbf{x})\,\xi^2
+    \;\sim\; \frac{8\pi}{3}\, u_{\mathrm{CMB}}(\mathbf{x})\;}
+\label{eq:triangle}
 \end{equation}
-This has the structure of $(d/2) \times \text{density} \times \text{velocity}^2$, i.e.\ the kinetic energy density of an isotropically expanding fluid in three dimensions, with $H_0$ playing the role of the expansion velocity per unit distance and $\rho_0$ the mass density of the medium. In the superfluid vacuum framework, this identification is literal: the critical density of the universe is the kinetic energy density of the macroscopic vacuum condensate participating in the Hubble flow. The self-consistency equation~(\ref{eq:triangle}) then follows immediately from $u_{\mathrm{CMB}} = \alpha^2\,\rho_c\,c^2$.
+This relation holds at every spatial point, with all quantities evaluated locally. Since $\alpha$ and $\xi$ are universal constants ($\xi$ being the Planck length, set by quantum gravity), Eq.~(\ref{eq:triangle}) couples the three spatially varying fields $H_0(\mathbf{x})$, $\rho_0(\mathbf{x})$, and $u_{\mathrm{CMB}}(\mathbf{x})$: a region with lower $\rho_0$ has faster local $c_s$, lower local $u_{\mathrm{CMB}}$, and higher local $H_0$.
 
 \subsection{Physical interpretation}
 
-If $\Tcmb$ is the equilibrium temperature of the condensate rather than a relic initial condition, the self-consistency equation~(\ref{eq:triangle}) is not a numerical coincidence but a thermodynamic constraint: $\rho_0$ sets $\Geff$, which sets $H_0$ via the Friedmann equation, which together with $\Tcmb$ determines $\Omega_\gamma$, and the condensate's electromagnetic coupling $\alpha$ closes the loop. The relation $\Omega_\gamma = \alpha^2$ is then a \emph{consequence} of the vacuum being in thermodynamic equilibrium.
+The combination $\rho_0\,\xi^2 \approx c^2/G$ has dimensions of mass per length and absorbs the dimensional content of the gravitational coupling. The relation~(\ref{eq:triangle}) is therefore a thermodynamic constraint: $\rho_0$ (with $\xi$ fixed at the Planck length) sets $\Geff$, which sets the critical density via Friedmann, which together with the CMB temperature determines the photon energy fraction $\Omega_\gamma$, and the condensate's electromagnetic coupling $\alpha$ closes the loop. The relation $\Omega_\gamma = \alpha^2$ is then a \emph{consequence} of the vacuum being in thermodynamic equilibrium, not a numerical coincidence.
 
 \subsection{The coupled parameter system}
 \label{sec:coupled}
 
-In the superfluid vacuum, all local physical parameters depend on the condensate density. For a region with $\rho = \rho_0(1+\delta)$ relative to the global mean:
+In the superfluid vacuum, all local physical parameters depend on the condensate density. For a region with $\rho = \rho_0(1+\delta)$ relative to the global mean, Eq.~(\ref{eq:cs_log}) gives:
 \begin{align}
-    \frac{c_{\mathrm{local}}^2}{c_{\mathrm{global}}^2} &= \frac{1}{1 + \ln(1+\delta)}\,,
+    \frac{c_{\mathrm{local}}^2}{c_{\mathrm{global}}^2} &= \frac{1}{1 + 2\ln(1+\delta)}\,,
 \label{eq:c_variation}\\[6pt]
-    \frac{G_{\mathrm{local}}}{G_{\mathrm{global}}} &= \frac{1}{(1+\delta)\,[1 + \ln(1+\delta)]}\,,
+    \frac{G_{\mathrm{local}}}{G_{\mathrm{global}}} &= \frac{1}{(1+\delta)\,[1 + 2\ln(1+\delta)]}\,,
 \label{eq:G_variation}\\[6pt]
-    \frac{\Lambda_{\mathrm{local}}}{\Lambda_{\mathrm{global}}} &= \frac{c_{\mathrm{local}}^4}{c_{\mathrm{global}}^4} = \frac{1}{[1 + \ln(1+\delta)]^2}\,.
+    \frac{\Lambda_{\mathrm{local}}}{\Lambda_{\mathrm{global}}} &= \frac{c_{\mathrm{local}}^4}{c_{\mathrm{global}}^4} = \frac{1}{[1 + 2\ln(1+\delta)]^2}\,.
 \label{eq:Lambda_variation}
 \end{align}
-Equation~(\ref{eq:c_variation}) follows from the logarithmic equation of state $c_s^2 = [\ln(\rho/\rho_c)+2]^{-1}$. Equation~(\ref{eq:G_variation}) follows from $\Geff = \eta c_s^2/(4\pi\rho_0)$. Equation~(\ref{eq:Lambda_variation}) follows from the effective cosmological constant $\Lambda = 8\pi G\,\rho_{\mathrm{vac}}\,c^2 = 2\eta\,c_s^4$, where the $\rho_0$ dependence of $G$ and $\rho_{\mathrm{vac}}$ cancel but the $c_s$ dependence survives as the fourth power.
+Equation~(\ref{eq:c_variation}) follows directly from~(\ref{eq:cs_log}) at fixed $\rho_c$. Equation~(\ref{eq:G_variation}) follows from $\Geff \sim c_s^2/(\xi^2 \rho_0)$ at fixed $\xi$. Equation~(\ref{eq:Lambda_variation}) follows from the effective cosmological constant $\Lambda \sim G\rho_{\mathrm{vac}}c^2 \propto c_s^4$, where the $\rho_0$ dependence of $G$ and $\rho_{\mathrm{vac}}$ cancel but the $c_s$ dependence survives as the fourth power.
 
 A critical consequence: the effective cosmological constant is \emph{not} spatially uniform. A vacuum underdensity increases the local speed of light, which raises $\Lambda_{\mathrm{local}}$ as $c^4$. Since $\Omega_\Lambda \approx 0.685$ dominates the Friedmann equation, this $c^4$ lever arm is the dominant channel for modifying the local expansion rate.
 
@@ -165,21 +157,20 @@ The local Hubble parameter satisfies:
 \label{eq:H_coupled}
 \end{equation}
 where $\Omega_m = 0.315$ and $\Omega_\Lambda = 0.685$ are the global density fractions. Taking
-\newline
-$H_{\mathrm{global}} = 68.15$~km\,s$^{-1}$\,Mpc$^{-1}$ (from the $\Omega_\gamma = \alpha^2$ prediction~\cite{kulangiev_2026c}) and requiring 
-\newline
-$H_{\mathrm{local}} = 73.04$~km\,s$^{-1}$\,Mpc$^{-1}$ (SH0ES~\cite{riess_2022}), we find:
+$H_{\mathrm{global}} = 68.15$ km\,s$^{-1}$\,Mpc$^{-1}$ (from the $\Omega_\gamma = \alpha^2$ prediction~\cite{kulangiev_2026o}) and requiring $H_{\mathrm{local}} = 73.04$~km\,s$^{-1}$\,Mpc$^{-1}$ (SH0ES~\cite{riess_2022}), numerical solution of~(\ref{eq:H_coupled}) gives:
 \begin{equation}
-    \frac{\delta\rho_0}{\rho_0} \approx -6.5\%\,.
+    \frac{\delta\rho_0}{\rho_0} \approx -3.6\%\,.
 \label{eq:delta_rho_required}
 \end{equation}
-This corresponds to $\delta G/G \approx +15\%$, $\delta c/c \approx +3.5\%$, and $\delta\Lambda/\Lambda \approx +15\%$. The $\Lambda$ variation dominates because $\Omega_\Lambda \gg \Omega_m$ and because $\Lambda \propto c^4$ provides a steep lever arm.
+This corresponds to $\delta G/G \approx +12\%$, $\delta c/c \approx +3.8\%$, and $\delta\Lambda/\Lambda \approx +16\%$. The $\Lambda$ variation dominates because $\Omega_\Lambda \gg \Omega_m$ and because $\Lambda \propto c^4$ provides a steep lever arm.
 
-A 6.5\% vacuum underdensity is a modest thermodynamic fluctuation, well within what might be expected for a Gpc-scale region in a compressible condensate. For comparison, the observed \emph{matter} underdensity in the KBC void is 20--46\%~\cite{keenan_2013}---substantially larger.
+A $3.6\%$ vacuum underdensity is a modest thermodynamic fluctuation, well within what might be expected for a Gpc-scale region in a compressible condensate. For comparison, the observed \emph{matter} underdensity in the KBC void is $20$--$46\%$~\cite{keenan_2013}---substantially larger.
+
+The mechanism by which a vacuum density perturbation produces an inflated locally-inferred $H_0$ is the modified expansion dynamics of the void itself, not a recalibration of standard candles. In the void, the modified Friedmann equation~(\ref{eq:H_coupled}) gives a faster expansion rate at the relevant scale; this is what the SH0ES distance ladder, when applied to local sources, infers as $H_0^{\mathrm{local}} \approx 73$~km\,s$^{-1}$\,Mpc$^{-1}$. The CMB-inferred value $H_0 \approx 67$--$68$~km\,s$^{-1}$\,Mpc$^{-1}$ remains consistent with the global background~(\ref{eq:H_coupled}), and the CMB peak invariance theorem (Sec.~\ref{sec:cmb}) ensures that no additional fine-tuning is required to reconcile the two measurements. Whether modifications to standard candle physics (Chandrasekhar mass, supernova luminosity calibration) due to varying $c$ and $G$ inside the void produce an \emph{additional} contribution to the inferred discrepancy is a separate question; the answer depends on the Volovik condition (Sec.~\ref{sec:refractive}) and is left for future investigation.
 
 \subsection{The global anchor}
 
-The $\Omega_\gamma = \alpha^2$ relation~\cite{kulangiev_2026c} predicts $H_0 = 68.15 \pm 0.15$~km\,s$^{-1}$\,Mpc$^{-1}$ as the \emph{global} value---the expansion rate of the undisturbed vacuum far from any void. The Planck measurement ($67.36 \pm 0.54$) is closest to this value because the CMB averages over the entire sky, probing the global vacuum. The SH0ES measurement ($73.04 \pm 1.04$) reflects the local void environment. In this picture, the Hubble tension is not a crisis requiring new physics but an environmental effect: the two measurements \emph{should} differ, and their discrepancy is the observational signature of a vacuum thermodynamic fluctuation.
+The $\Omega_\gamma = \alpha^2$ relation~\cite{kulangiev_2026o} predicts $H_0 = 68.15 \pm 0.15$~km\,s$^{-1}$\,Mpc$^{-1}$ as the \emph{global} value---the expansion rate of the undisturbed vacuum far from any void. The Planck measurement ($67.36 \pm 0.54$) is closest to this value because the CMB averages over the entire sky, probing the global vacuum. The SH0ES measurement ($73.04 \pm 1.04$) reflects the local void environment. In this picture, the Hubble tension is not a crisis requiring new physics but an environmental effect: the two measurements \emph{should} differ, and their discrepancy is the observational signature of a vacuum thermodynamic fluctuation.
 
 
 % ====================================================================
@@ -198,7 +189,7 @@ The CMB acoustic peak positions are determined by the angular acoustic scale:
 \end{equation}
 where $r_s = \int_0^{z_{\mathrm{rec}}} c_s^{\mathrm{bp}}(z)\,dz/[(1+z)\,H(z)]$ is the comoving sound horizon (with $c_s^{\mathrm{bp}} = c/\sqrt{3(1+R)}$ the baryon-photon sound speed) and $d_C = \int_0^{z_{\mathrm{rec}}} c\,dz/H(z)$ is the comoving distance to recombination.
 
-Under a vacuum density variation $\rho_0 \to \rho_0(1+\delta)$, the speed of light transforms as $c \to c/\sqrt{1 + \ln(1+\delta)} \equiv c \cdot f$, where $f < 1$ for an underdensity. Both integrands scale linearly with $c$:
+Under a vacuum density variation $\rho_0 \to \rho_0(1+\delta)$, the speed of light transforms as $c \to c/\sqrt{1 + 2\ln(1+\delta)} \equiv c \cdot f$~(Eq.~\ref{eq:c_variation}), where $f < 1$ for an underdensity. (The proof below is valid for any monotonic $f(\delta)$ that scales both integrands identically; the specific functional form does not enter the invariance argument.) Both integrands scale linearly with $c$:
 \begin{align}
     r_s &\to r_s \cdot f\,,\\
     d_C &\to d_C \cdot f\,.
@@ -212,7 +203,7 @@ The CMB peak positions are exactly invariant under the superfluid vacuum transfo
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.89\columnwidth]{cmb_invariance_plot.pdf}
+\includegraphics[width=0.75\columnwidth]{cmb_invariance_plot.pdf}
 \caption{\emph{Top:} CMB temperature power spectrum computed with CAMB~\cite{camb} for three cases with identical physical densities ($\omega_b = 0.0224$, $\omega_c = 0.120$): the global vacuum
 ($H_0 = 68.15$~km\,s$^{-1}$\,Mpc$^{-1}$, solid blue), the local void in standard $\Lambda$CDM ($H_0 = 73.04$, dashed orange), and the superfluid vacuum with $c_s$ rescaling ($H_0 = 73.04$, dotted green). The superfluid spectrum is obtained by rescaling the
 multipole axis by $\theta_{*,\mathrm{local}}/\theta_{*,\mathrm{global}}$,
@@ -236,14 +227,37 @@ The CMB constrains the physical densities $\omega_b = \Omega_b h^2$ and $\omega_
 
 In standard cosmology, $\Tcmb = 2.7255$~K is a relic initial condition set by the baryon-to-photon ratio and the thermal history following the Big Bang. No fundamental principle within the Standard Model or general relativity predicts its value.
 
-In the superfluid vacuum framework, $\Tcmb$ is reinterpreted as the present-day equilibrium temperature of the condensate, determined by its thermodynamic properties. The photon bath is in equilibrium with the vacuum, whose electromagnetic structure is governed by $\alpha$. The photon energy density therefore scales as $\alpha^2$ of the critical density---explaining the observed relation $\Omega_\gamma \approx \alpha^2$~\cite{kulangiev_2026c} not as a numerical coincidence but as a thermodynamic prediction.
+In the superfluid vacuum framework, $\Tcmb$ is reinterpreted as the present-day equilibrium temperature of the condensate, determined by its thermodynamic properties. The photon bath is in equilibrium with the vacuum, whose electromagnetic structure is governed by $\alpha$. The photon energy density therefore scales as $\alpha^2$ of the critical density---explaining the observed relation $\Omega_\gamma \approx \alpha^2$~\cite{kulangiev_2026o} not as a numerical coincidence but as a thermodynamic prediction.
 
-The self-consistency equation~(\ref{eq:triangle}) makes this precise: $\Tcmb$ is not a free parameter but is determined by $\alpha$, $H_0$, and $\rho_0$ through
+\subsection{The CMB temperature as a parameter-free prediction}
+\label{sec:tcmb_prediction}
+
+Promoting the empirical relation $\Omega_\gamma = \alpha^2$~\cite{kulangiev_2026o} to a framework postulate---justified by the thermodynamic equilibrium argument above, with a first-principles derivation deferred to future work---yields a parameter-free relation linking $\Tcmb$, $\alpha$, and $H_0$. From Eqs.~(\ref{eq:omega_gamma}) and~(\ref{eq:rho_c_condensate}):
 \begin{equation}
-    \Tcmb = \left(\frac{15\,\hbar^3 c^3}{2\pi^2 k_B^4}\cdot\frac{\alpha^2 H_0^2 \rho_0}{\eta}\right)^{1/4}\,.
-\label{eq:T_from_triangle}
+    \Tcmb^4 = \frac{45\,\hbar^3 c^5\,\alpha^2 H_0^2}{8\pi^3 k_B^4\,G}\,.
+\label{eq:T_prediction}
 \end{equation}
-Substituting the measured values gives $\Tcmb = 2.710$~K, within 0.6\% of the FIRAS measurement. The remaining discrepancy may reflect the difference between the local and global vacuum parameters.
+This expression depends only on universal constants $(\alpha, \hbar, c, k_B, G)$ and the Hubble parameter; the framework parameters $\rho_0$ and $\xi$ enter only through the combination $\rho_0\xi^2 = c^2/G$, which is set by self-consistency with the observed Newton's constant~\cite{kulangiev_2026e}. Substituting the framework's predicted global Hubble value $H_0 = 68.15$~km\,s$^{-1}$\,Mpc$^{-1}$~\cite{kulangiev_2026o} and the CODATA value of $\alpha$:
+\begin{equation}
+    \Tcmb = 2.7256~\mathrm{K}\,,
+\label{eq:T_predicted_value}
+\end{equation}
+within $0.002\%$ of the FIRAS measurement $\Tcmb = 2.7255 \pm 0.0006$~K~\cite{fixsen_2009}. Figure~\ref{fig:tcmb_prediction} shows the predicted $\Tcmb(\alpha, H_0)$ relation across a range of $H_0$ values, with the framework's prediction landing inside the FIRAS uncertainty band.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{tcmb_prediction.pdf}
+\caption{The parameter-free prediction of Eq.~(\ref{eq:T_prediction}). \emph{Top:} $\Tcmb$ as a function of $H_0$ at fixed CODATA $\alpha$, compared to the FIRAS measurement (orange band). The framework's predicted global $H_0 = 68.15$~km\,s$^{-1}$\,Mpc$^{-1}$~\cite{kulangiev_2026o} (green dashed) yields $\Tcmb = 2.7256$~K (green circle). For comparison, Planck's $H_0 = 67.36$ would give $\Tcmb = 2.71$~K and SH0ES's $H_0 = 73.04$ would give $\Tcmb = 2.82$~K; only the framework's $H_0$ prediction is consistent with FIRAS. \emph{Bottom:} Zoom showing the residual relative to FIRAS in parts per million. The framework prediction at $H_0 = 68.15$ sits at $+21$~ppm, well within the FIRAS $\pm 1\sigma$ band ($\pm 220$~ppm). The value $H_0 = 68.147$~km\,s$^{-1}$\,Mpc$^{-1}$ exactly reproduces $\Tcmb = 2.7255$~K, consistent with the $\Omega_\gamma = \alpha^2$ anchor to four significant figures.}
+\label{fig:tcmb_prediction}
+\end{figure}
+
+Equation~(\ref{eq:T_prediction}) over-determines the system. With four observables $\{\alpha, H_0, \Tcmb, G\}$ and one constraint, any three predict the fourth. Three useful inversions:
+\begin{itemize}
+\item Given $\{\alpha, H_0\}$ from independent measurements, $\Tcmb$ is predicted to $0.002\%$ accuracy~(\ref{eq:T_predicted_value}).
+\item Given $\{\alpha, \Tcmb\}$, the predicted global Hubble value is $H_0 = 68.147$~km\,s$^{-1}$\,Mpc$^{-1}$, consistent with the $\Omega_\gamma = \alpha^2$ anchor~\cite{kulangiev_2026o} to four significant figures.
+\item Given $\{H_0, \Tcmb\}$, the predicted fine-structure constant is $\alpha = 7.2971 \times 10^{-3}$, within $0.004\%$ of CODATA.
+\end{itemize}
+The framework is therefore not merely consistent with these four quantities; it predicts their relations to part-in-$10^4$ precision once the $\Omega_\gamma = \alpha^2$ postulate is adopted. We emphasize that this postulate is itself currently empirical~\cite{kulangiev_2026o}; a first-principles derivation from the thermodynamic equilibrium between photons-as-phonons and the $\alpha$-coupled matter sector remains an open problem within the framework.
 
 \subsection{The blackbody spectrum as thermal equilibrium}
 
@@ -265,7 +279,7 @@ momenta~\cite{zloshchastiev_2012}, but the deviation from linearity occurs at th
 
 We emphasize that thermal equilibrium of the condensate does not imply a static universe. The negative pressure $P = -\rho_0 c^2$ is a property of the condensate \emph{in} equilibrium---the tension of the self-binding logarithmic interaction---and drives de Sitter expansion
 ($\ddot{a} > 0$, $H = \mathrm{const}$) at all times. The condensate is in internal thermal equilibrium while---in the open-system interpretation---in external thermodynamic disequilibrium with the surrounding non-condensed reservoir
-(Sec.~\ref{sec:topology}).
+(Sec.~\ref{sec:open-system}).
 
 \subsection{Redshift evolution of the equilibrium temperature}
 \label{sec:tcmb_evolution}
@@ -288,13 +302,13 @@ At any given scale factor $a$, the phonon distribution is a perfect Planck black
 
 \subsection{Relation to the cosmological constant problem}
 
-The observed vacuum energy density $\rho_\Lambda \sim 10^{-27}$~kg/m$^3$ is not $\rho_0$. The condensate density $\rho_0 \sim 10^{26}$~kg/m$^3$ is the number density of particles in the ground state, not the energy density driving expansion. In BEC physics, these are distinct quantities~\cite{volovik_2003}. The effective cosmological vacuum energy depends on the \emph{perturbation} energy $\delta\rho\,c^2$ associated with macroscopic flows, not on the background $\rho_0$~\cite{zloshchastiev_2020}.
+The framework's prediction $\rho_0 \sim m_P/\ell_P^3 \approx 5 \times 10^{96}$~kg/m$^3$ (Planck density)~\cite{kulangiev_2026e} is precisely the magnitude that quantum field theory naively predicts for the vacuum energy density, and which the cosmological constant problem identifies as $\sim 120$ orders of magnitude larger than the observed dark energy density $\rho_\Lambda \sim 10^{-27}$~kg/m$^3$.
 
-The 120-order-of-magnitude discrepancy between Planck-scale estimates and the observed $\rho_\Lambda$ is recast in this framework: the relevant ratio is $\rho_\Lambda/\rho_0 \sim 10^{-53}$, which encodes the ratio of the cosmological expansion energy to the condensate rest energy. Whether this ratio has a natural explanation within the logarithmic model remains an open question.
+In the present framework, this is not a fine-tuning problem because gravitational effects are sourced by perturbations $\delta\rho$ around the background $\rho_0$, not by $\rho_0$ itself. The background is not directly observable; only fluctuations couple to test particles through the acoustic metric. The question shifts from "why is the vacuum energy so small" to "why is the relevant cosmological perturbation so small," a reframing that does not solve the cosmological constant problem but does relocate it. A first-principles derivation of $\rho_\Lambda$ from the perturbation spectrum of the condensate is left as an open problem.
 
 \subsection{Mach's principle}
 
-The relation $\Geff \propto 1/\rho_0$ realizes a
+The relation $\Geff \propto 1/(\xi^2\rho_0)$ realizes a
 form of Mach's principle: the local gravitational
 coupling is determined by the large-scale vacuum
 environment. Dense regions (superclusters), where
@@ -308,16 +322,27 @@ the macroscopic matter distribution. The coupled
 parameter system
 (Eqs.~\ref{eq:c_variation}--\ref{eq:Lambda_variation})
 provides the quantitative realization: inside the
-KBC void, a $6.5\%$ vacuum underdensity produces
-$\delta G/G \approx +15\%$, $\delta c/c \approx
-+3.5\%$, and $\delta\Lambda/\Lambda \approx +15\%$,
+KBC void, a $\sim 3.6\%$ vacuum underdensity produces
+$\delta G/G \approx +12\%$, $\delta c/c \approx
++3.8\%$, and $\delta\Lambda/\Lambda \approx +16\%$,
 resolving the Hubble tension as a direct
 consequence of Mach's principle
 (Sec.~\ref{sec:hubble_tension}).
 
-\subsection{The refractive boundary and cosmic acceleration}
+\subsection{The CMB dipole and the condensate rest frame}
 
-The coupled parameter system (Sec.~\ref{sec:coupled}) predicts that the speed of light inside the KBC void is $\sim 3.5\%$ faster than the cosmic mean. Photons from distant supernovae at $z \sim 0.5$--$1$ travel through the global vacuum before entering our local void, crossing a refractive boundary where $c_s$ changes. In classical analogue gravity, such a transition preserves frequency while stretching
+The framework's preferred rest frame---the frame in which the condensate's macroscopic phase satisfies $\partial_t S = -\hbar\omega_0$ with vanishing spatial gradients---is identified physically with the cosmic vacuum frame. The measured CMB dipole anisotropy
+(amplitude $3.36$~mK, direction toward $(l,b) = (264^\circ, 48^\circ)$~\cite{planck_dipole_2020}) is then not merely a kinematic artifact of our motion through abstract spacetime, but our motion at $\sim 370$~km/s relative to the local condensate rest frame. This identification is structural in the framework: a deterministic order parameter requires a preferred foliation, and the CMB rest frame is its observational
+realization.
+
+The framework therefore offers a natural kinematic interpretation of the CMB dipole consistent with the standard treatment, without predicting any additional intrinsic anisotropy at the level of current measurements. We note that the recently-reported tension between the kinematic dipole inferred from the CMB and that inferred from radio source
+counts~\cite{secrest_2021,secrest_2022} suggests an intrinsic dipole component beyond the purely kinematic effect. Within the present framework, such an intrinsic component could arise from global vorticity of the vacuum condensate (a phenomenon naturally
+allowed by superfluid dynamics, with the rotation axis fixed by the order parameter's macroscopic phase structure). A quantitative treatment of vacuum vorticity and its observational signatures in the CMB and large-scale structure is deferred to a separate investigation.
+
+\subsection{The refractive boundary and cosmic acceleration}
+\label{sec:refractive}
+
+The coupled parameter system (Sec.~\ref{sec:coupled}) predicts that the speed of light inside the KBC void is $\sim 3.8\%$ faster than the cosmic mean. Photons from distant supernovae at $z \sim 0.5$--$1$ travel through the global vacuum before entering our local void, crossing a refractive boundary where $c_s$ changes. In classical analogue gravity, such a transition preserves frequency while stretching
 wavelength, inducing an anomalous redshift.
 
 However, the magnitude of the observable effect depends on how atomic measurement scales (the Bohr radius, transition frequencies, detector responses) transform under a change in $c_s$. If all local physics
@@ -327,55 +352,13 @@ misattributed to metric expansion and could mimic or modify the apparent late-ti
 Resolving this requires deriving the explicit dependence of atomic structure on condensate parameters within the logarithmic superfluid framework---effectively, answering how the Standard Model emerges from the vacuum microstructure. We flag this as a central open problem with potentially profound consequences: if a residual refractive redshift
 exists, the case for dynamical dark energy weakens considerably.
 
-\subsection{The topology of the condensate}
-\label{sec:topology}
-
-Two interpretations of the long-term expansion dynamics are available. In the open-system picture, the condensate is a bubble accreting fluid from a finite external Bulk. As the Bulk depletes, $H$ decreases monotonically and the expansion eventually ceases, with $w = -1 + \epsilon(t)$ where
-$\epsilon \to 0^+$ as $t \to \infty$.
-
-An alternative---and physically more natural---possibility is that the condensate has the topology of a persistent superfluid current: a closed, toroidal flow with quantized circulation
-$\oint \mathbf{v} \cdot d\mathbf{l} = n\,h/\meff$. In this picture, the Hubble flow is the tangential velocity of the persistent current, which is topologically protected against decay. There is no boundary and no Bulk depletion; the condensate recirculates through a closed manifold. The equation
-of state is $w = -1$ exactly, and $H$ asymptotes to a constant set by the circulation quantum and the torus geometry.
-
-The toroidal topology makes specific predictions: a preferred axis (the torus symmetry axis), suppressed power at the largest CMB multipoles ($\ell = 2, 3$) from modes that do not fit within the compact dimension, and potentially detectable matched
-circles in the CMB sky. The observed anomalous alignment of low-multipole CMB modes and the suppressed quadrupole power are qualitatively consistent with this picture. Distinguishing the
-two topologies observationally requires precision measurements of $w(z)$: the open-system predicts slow evolution toward $-1$, while the toroidal topology predicts $w = -1$ at all epochs.
-
-\subsection{The cosmological timeline as a phase transition}
-\label{sec:timeline}
-
-The superfluid vacuum framework suggests a unified interpretation of the cosmological timeline. At $t = 0$, a critical bubble of logarithmic condensate nucleates from the disordered Bulk. The condensate's native equation of state $w = -1$ drives exponential
-expansion of the bubble interior---this is inflation, arising from the same physics as the present-day dark energy rather than from a separate scalar field.
-
-The phase transition releases latent heat, which thermalizes into high-frequency condensate excitations (radiation). As this radiation dominates the energy budget, the effective equation of state transitions from $w = -1$ to $w = +1/3$, ending inflation and
-initiating the radiation era. Solitons (particles) condense from the cooling phonon bath as temperature drops. As radiation and matter dilute through expansion, the constant condensate pressure $\rho_0
-c^2$ eventually re-emerges as the dominant energy component---the current epoch of accelerated expansion.
-
-The full sequence is:
-\begin{equation}
-    w = -1 \;\xrightarrow{\;\text{latent heat}\;}\;
-    +\tfrac{1}{3} \;\xrightarrow{\;\text{dilution}\;}\;
-    0 \;\xrightarrow{\;\text{dilution}\;}\;
-    -1\,.
-\end{equation}
-Inflation and dark energy are the same condensate pressure, separated by the epoch during which the latent heat products dominate. The ``coincidence problem''---why $\Omega_\Lambda \approx
-\Omega_m$ today---is resolved: the current epoch is simply when the latent heat has diluted back to the level of the background condensate pressure, an event that occurs exactly once in any expanding condensate.
-
-Quantifying this picture---deriving the e-folding count from the latent heat ratio, the spectral index from the phase transition dynamics, and the reheating temperature from the energy balance---requires a detailed model of the Bulk-to-condensate
-transition, which we defer to future work.
-
-Two speculative extensions deserve mention. First, the acoustic horizon at $v = c_s$ in the Painlev\'{e}-Gullstrand flow naturally identifies black hole horizons with phase boundaries, raising the possibility of nested condensate structures. Second,
-a condensate bubble nucleated with nonzero angular momentum would break statistical isotropy at the largest scales, potentially connecting to the observed anomalous alignment of low-multipole CMB modes. We explore both directions elsewhere.
-
 \subsection{Predictions and falsifiability}
 
 The framework makes several testable predictions:
 
-\paragraph{Equation of state}
-The logarithmic equation of state gives $w = -1$ in the
-topologically protected (toroidal) limit. If the condensate is instead an open system accreting from a finite Bulk, $w = -1 + \epsilon(t)$ with $\epsilon \ll 1$ approaching zero from above (Sec.~\ref{sec:topology}). In neither case does $w$ cross the phantom divide $w = -1$ from below. Upcoming surveys (DESI, Euclid, Roman) measuring $w(z)$ with percent-level precision will distinguish the two topologies: $w = -1$ at all epochs favors the toroidal picture, while slow evolution toward $-1$ favors the open system.
+\paragraph{Equation of state} The logarithmic equation of state gives $w = -1$ at the background. Upcoming surveys (DESI, Euclid, Roman) measuring $w(z)$ with percent-level precision will probe this prediction.
 
-\paragraph{Spatial variation of $\Lambda$} Unlike standard $\Lambda$CDM, the effective cosmological constant varies spatially as $\Lambda \propto c_s^4$. A 6.5\% vacuum underdensity produces $\sim 15\%$ variation in $\Lambda$. This is testable by comparing expansion rate measurements in void vs.\ wall environments.
+\paragraph{Spatial variation of $\Lambda$} Unlike standard $\Lambda$CDM, the effective cosmological constant varies spatially as $\Lambda \propto c_s^4$. A $3.6\%$ vacuum underdensity produces $\sim 16\%$ variation in $\Lambda$. This is testable by comparing expansion rate measurements in void vs.\ wall environments.
 
 \paragraph{$H_0 = 68.15 \pm 0.15$ as the global value} Standard sirens (LIGO/Virgo/KAGRA), strong lensing time delays (TDCOSMO), and tip-of-the-red-giant-branch calibrations should converge on this value when averaged over sufficiently large volumes.
 
@@ -393,15 +376,13 @@ We have derived the cosmological implications of the logarithmic superfluid vacu
 
 (1) The logarithmic equation of state gives $w = -1$ natively, identifying dark energy as the thermodynamic pressure of the condensate.
 
-(2) The vacuum self-consistency equation $\alpha^2 H_0^2 \rho_0 = \tfrac{2}{3}\eta\,u_{\mathrm{CMB}}$ unifies the fine structure constant, the Hubble parameter, the vacuum density, and the CMB photon energy density in a single relation.
+(2) The vacuum self-consistency equation $\alpha^2 H_0^2 \rho_0\xi^2 \sim (8\pi/3)\,u_{\mathrm{CMB}}$ unifies the fine structure constant, the Hubble parameter, the vacuum density combined with the Planck length, and the CMB photon energy density in a single relation.
 
-(3) When $\rho_0$ varies spatially, the speed of light, the gravitational constant, and the effective cosmological constant all vary in concert. The $\Lambda \propto c^4$ dependence provides a steep lever arm: a modest 6.5\% vacuum underdensity inside the KBC void suffices to produce the full Hubble tension.
+(3) When $\rho_0$ varies spatially, the speed of light, the gravitational constant, and the effective cosmological constant all vary in concert. The $\Lambda \propto c^4$ dependence provides a steep lever arm: a modest $3.6\%$ vacuum underdensity inside the KBC void suffices to produce the full Hubble tension.
 
 (4) The CMB acoustic peak positions are exactly invariant under vacuum density variations, because both the sound horizon and the comoving distance scale linearly with $c$. The framework is automatically consistent with CMB observations.
 
 (5) $\Tcmb$ is reinterpreted as the equilibrium temperature of the condensate, turning the observed relation $\Omega_\gamma \approx \alpha^2$ from a numerical coincidence into a thermodynamic prediction.
-
-(6) The cosmological timeline is reinterpreted as stages of a single phase transition: inflation and dark energy are the same condensate pressure, separated by the epoch during which the latent heat products (radiation, matter) dominate.
 
 The remaining open problems are: the quantitative void profile $\rho_0(r)$ and its effect on supernova luminosity distances; the feedback equation coupling $\rho_0$ to the local matter distribution; and the role of frozen vacuum perturbations as a replacement for cold dark matter in structure formation, which
 we address in a companion paper.
@@ -410,10 +391,15 @@ we address in a companion paper.
 \section*{Acknowledgments}
 % ====================================================================
 
-Claude (Anthropic, claude-opus-4-6) and Gemini (Google, Gemini 3.1 Pro) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
+The methodological stance of this paper---treating the order parameter as a real classical field whose hydrodynamic behavior underlies emergent cosmological phenomena---is indebted to the Madelung-de~Broglie-Bohm tradition, particularly as developed in P.~R.~Holland's exposition of the quantum theory of motion. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
 
-
+\newpage
 \begin{thebibliography}{25}
+
+\bibitem{kulangiev_2026o}
+B.~B.~Kulangiev,
+An approximate numerical relation between the CMB photon density parameter and the fine structure constant,
+Preprint (2026). \url{https://kulangiev.github.io/#paper0}
 
 \bibitem{kulangiev_2026a}
 B.~B.~Kulangiev,
@@ -422,25 +408,33 @@ Preprint (2026). \url{https://kulangiev.github.io/#paper1}
 
 \bibitem{kulangiev_2026b}
 B.~B.~Kulangiev,
-Emergent Newtonian Gravity and the Gravitational
-Feynman-Onsager Relation in the Logarithmic Superfluid Vacuum,
+Emergent Newtonian Gravity from the Collective Acoustic Metric of a Logarithmic Superfluid Vacuum,
 Preprint (2026).
-\url{https://kulangiev.github.io/#combined}
+\url{https://kulangiev.github.io/#paper2}
 
-\bibitem{kulangiev_2026c}
+\bibitem{kulangiev_2026e}
 B.~B.~Kulangiev,
-An approximate numerical relation between the CMB photon density parameter and the fine structure constant,
-Preprint (2026). \url{https://kulangiev.github.io/#paper0}
+Singularity regularization and the emergent Planck scale in the logarithmic superfluid vacuum,
+Preprint (2026). \url{https://kulangiev.github.io/#paper5}
+
+\bibitem{madelung_1927}
+E.~Madelung,
+Quantentheorie in hydrodynamischer Form,
+Z.\ Phys.\ \textbf{40}, 322 (1927).
+
+\bibitem{bohm_1952}
+D.~Bohm,
+A suggested interpretation of the quantum theory in terms of ``hidden'' variables. I,
+Phys.\ Rev.\ \textbf{85}, 166 (1952).
+
+\bibitem{holland_1993}
+P.~R.~Holland,
+\emph{The Quantum Theory of Motion} (Cambridge University Press, 1993).
 
 \bibitem{zloshchastiev_2012}
 K.~G.~Zloshchastiev,
 Volume element structure and roton-maxon-phonon excitations in superfluid helium beyond the Gross-Pitaevskii approximation,
 Eur.\ Phys.\ J.\ B \textbf{85}, 273 (2012).
-
-\bibitem{zloshchastiev_2020}
-K.~G.~Zloshchastiev,
-An alternative to dark matter and dark energy: Scale-dependent gravity in superfluid vacuum theory,
-Universe \textbf{6}, 180 (2020).
 
 \bibitem{zloshchastiev_2023}
 K.~G.~Zloshchastiev,
@@ -499,6 +493,21 @@ C.~M.~Will,
 A.~Lewis, A.~Challinor, and A.~Lasenby,
 Efficient computation of cosmic microwave background anisotropies in closed Friedmann-Robertson-Walker models,
 Astrophys.\ J.\ \textbf{538}, 473 (2000).
+
+\bibitem{planck_dipole_2020}
+Planck Collaboration,
+Planck 2018 results.\ I.\ Overview and the cosmological legacy of Planck,
+Astron.\ Astrophys.\ \textbf{641}, A1 (2020).
+
+\bibitem{secrest_2021}
+N.~J.~Secrest, S.~von~Hausegger, M.~Rameez, R.~Mohayaee, S.~Sarkar, and J.~Colin,
+A test of the cosmological principle with quasars,
+Astrophys.\ J.\ Lett.\ \textbf{908}, L51 (2021).
+
+\bibitem{secrest_2022}
+N.~J.~Secrest, S.~von~Hausegger, M.~Rameez, R.~Mohayaee, and S.~Sarkar,
+A challenge to the standard cosmological model,
+Astrophys.\ J.\ Lett.\ \textbf{937}, L31 (2022).
 
 \end{thebibliography}
 
