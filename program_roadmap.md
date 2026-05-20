@@ -24,23 +24,45 @@ The program is open-ended. No paper is expected to be the "last word"; each cont
 
 | ID | Title (abbreviated) | Status | Submission target |
 |---|---|---|---|
-| P0 | Ωγ ≈ α² coincidence | Drafted | Short letter |
-| P1 | γ=1 light bending from log-KG | Submitted (Qeios), G&C rejected | Foundations of Physics |
-| P2 | Emergent G from collective PG | v9 nearly ready | Class. Quantum Grav. |
-| P3 | Cosmology (w=−1, Hubble tension) | Drafted, needs propagation | Universe / EPJ-C |
-| P4 | Dark matter from frozen vacuum | v7, needs propagation | Universe / Astrophys. J. |
-| P5 | Planck-scale healing length | v10, ready after Patch 5-α | Foundations of Physics |
-| P6 | Emergent time | v3, needs framing | Foundations of Physics |
-| P7 | Jets / axial outflow / continuity | Future | Class. Quantum Grav. |
-| P8 | Maxwell from gauged log-KG | v4, needs propagation | EPJ-C / J. Phys. A |
-| P9 | Variable c from EOS | v3, needs major rework | Phys. Lett. B (high risk) |
-| P10 | Gravitational invariance of Z₀ | v9 → pivot | Foundations of Physics |
-| P11 | Quantum Hall from log-condensate | v4, secondary | Phys. Rev. B (long shot) |
-| P-inertia | m = E_v/c² from added mass | v2, needs propagation | Found. Phys. |
-| P-foundations | Bohmian framework manifesto | Future | Found. Phys. |
-| P-β | β=1 PPN derivation | Drafted (private) | TBD |
+| P0 | Ωγ ≈ α² coincidence | Submitted (Foundations of Physics), released on ResearchHub | Foundations of Physics |
+| P1 | γ=1 light bending from log-KG | Submitted (Foundations of Physics), released on Qeios + ResearchHub; first Qeios review received (major revision, constructive) | Foundations of Physics |
+| P2 | Emergent G from collective PG | Submitted (Foundations of Physics), released on ResearchHub | Foundations of Physics |
+| P3 | Cosmology (w=−1, Hubble tension, T_CMB prediction) | Submitted (Foundations of Physics), released on ResearchHub | Foundations of Physics |
+| P4 | Dark matter from frozen vacuum (no-go theorem + frozen primordial templates + SPARC inverse problem) | Polishing v11+; released on ResearchHub | Foundations of Physics |
+| P5 | Singularity regularization and the emergent Planck scale | Submitted (Foundations of Physics), released on ResearchHub | Foundations of Physics |
+| P6 | Emergent time | Drafted (v3), held for later release | Foundations of Physics |
+| P7 | Jets / axial outflow / continuity | Future paper | Foundations of Physics |
+| P8 | Maxwell from gauged log-KG | Polishing after P4; will release on ResearchHub | Foundations of Physics |
+| P9 | Variable c from EOS | Drafted (v3), held for later release | Foundations of Physics |
+| P10 | Gravitational invariance of Z₀ | Drafted (v9), held; may merge with P8 | Foundations of Physics |
+| P11 | Quantum Hall from log-condensate | Drafted (v4), held for later release | Foundations of Physics |
+| P-inertia | m = E_v/c² from added mass | Drafted (v2), held for later release | Foundations of Physics |
+| P-foundations | Bohmian framework manifesto | Future paper | Foundations of Physics |
+| P-β | β=1 PPN derivation | Drafted (private) | Foundations of Physics |
+| P-PPN-2PN | Preferred-frame and conservation-law PPN parameters at 2PN | Concept; motivated by Qeios K2 review on P1 | Foundations of Physics |
+| P-WEP | Composition-dependent matter-condensate coupling and MICROSCOPE-precision EP bounds | Concept; motivated by Qeios K3 review on P1 | Foundations of Physics |
 
-**Active priorities:** P1, P2, P5 — the core triad. Everything else propagates once these are stable.
+**Currently in the FoP review queue:** P0, P1, P2, P3, P5. **Polishing:** P4 (active), P8 (next). **Held for later release:** P6, P7, P9, P10, P11, P-inertia, P-β, P-foundations, P-PPN-2PN, P-WEP.
+
+
+---
+
+## Public release state
+
+All program papers are released on **ResearchHub** with assigned DOIs. The personal website **kulangiev.github.io** serves as the canonical entry point: every paper has a stable redirect (#paper0, #paper1, ..., #paper5, #paper8) that points to the current ResearchHub DOI for that paper. Cross-references in papers go through these redirects, so DOI updates propagate through a single web-page edit.
+
+**Currently visible on kulangiev.github.io** (after the planned website cleanup):
+- P0 — Ωγ ≈ α² coincidence
+- P1 — γ=1 light bending
+- P2 — Emergent G from collective PG
+- P3 — Cosmology (w=−1, Hubble tension, T_CMB prediction)
+- P4 — Dark matter from frozen vacuum (once polishing is complete)
+- P5 — Singularity regularization and Planck scale
+- P8 — Maxwell from gauged log-KG (once polishing is complete)
+
+**Held off the website until polished and released on ResearchHub:** P6, P7, P9, P10, P11, P-inertia, P-foundations, P-β.
+
+The discipline is: papers go on the website only when they are dimensionally consistent, internally coherent with the rest of the published program, and ready for external review. The cleanup reduces clutter and reflects the program's actual current state.
 
 ---
 
@@ -72,7 +94,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Position as Letter to dedicated venue, not main-paper
 - Decide whether this paper should exist at all, or fold into P3 / P8
 
-**Submission gating:** P1 published (so the framework reference is solid)
 
 ---
 
@@ -86,14 +107,12 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - PG flow argument is mathematically tight
 - Foundations explicitly Bohmian
 **Weaknesses:**
-- Bondi failure quantitatively shown but not microscopically derived
-- Continuity constraint left open
-- Microscopic origin of PG flow deferred to P2 / P7
+- Bondi calculation establishes that the asymptotic dynamics is not the trivial "single accreting object" picture — the PG profile is the unique self-consistent macroscopic solution, identified by the framework rather than imposed externally
+- The microscopic origin of the macroscopic flow (collective behavior of N vortex-Gausson solitons) is the natural next derivation, partly addressed in P2 and continued in P7
 **Open work to reach REVIEWABLE → SUBMITTED elsewhere:**
 - Wait for Qeios reviews and respond
 - Prepare cover letter for Foundations of Physics that explicitly addresses the G&C referee report
 - Optional: add Test A (sound-speed measurement from sim) as supplementary verification
-**Submission gating:** v12 already submitted to Qeios. Future submissions wait for Qeios resolution.
 
 ---
 
@@ -119,7 +138,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Derive single-soliton ansatz from linearized Madelung-Poisson (would fix the O(1) prefactor)
 - This derivation is what P5 *anchors* but neither paper *delivers*
 - Probably a future paper of its own
-**Submission gating:** P1 v13 stable URL; P5 v11 stable URL
 
 ---
 
@@ -146,7 +164,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 **Open work to reach REVIEWABLE:**
 - Either acknowledge ωᵥ as fitted parameter or derive it from framework
 - Bulk reservoir picture either needs proper derivation or marking as speculation
-**Submission gating:** P1, P2, P5 all stable
 
 ---
 
@@ -174,7 +191,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 **Open work to reach SCIENTIFICALLY COMPLETE:**
 - Predict (not postdict) at least one observational signature unique to the framework
 - Possible: lensing-vs-dynamical-mass discrepancy in voids
-**Submission gating:** P2 v9 stable; P5 v11 stable
 
 ---
 
@@ -196,7 +212,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 **Open work to reach REVIEWABLE:**
 - Apply Patch 5-α (Two distinct densities paragraph)
 - Verify all bibitems are consistent (no unfixed-paper forward-cites)
-**Submission gating:** P1 v13 stable URL
 
 ---
 
@@ -222,7 +237,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Distinguish Schwarzschild from cosmological horizons explicitly
 - Resolve the laboratory-clock-vs-Planck-frequency tension
 - Clean up twin paradox derivation
-**Submission gating:** P1 v13 stable; can be submitted independently of P2/P5
 
 ---
 
@@ -243,7 +257,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Verify the v_θ ansatz analytically in axisymmetric coordinates
 - Numerical check (3D GPE simulation of N-soliton with rotation)
 - Compare predicted jet properties with observed AGN jets
-**Submission gating:** P2 v9 stable; significant new physics work required first
 
 ---
 
@@ -270,7 +283,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 **Open work to reach SCIENTIFICALLY COMPLETE:**
 - Derive electron g-2 to leading order (or acknowledge limitation explicitly)
 - Connect coupling constant to fine-structure α
-**Submission gating:** P5 stable; possibly P-foundations first
 
 ---
 
@@ -295,7 +307,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Drop FRB-as-clock test; pivot to multiply-imaged repeating FRBs (strong-lensing time delays)
 - Verify Cassini relation rigorously
 - Strengthen local-invariance derivation
-**Submission gating:** P1 v13 stable
 
 ---
 
@@ -317,7 +328,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Direction A pivot per discussion
 - New title and abstract
 - Maybe combine with P8 to form a stronger combined EM paper
-**Submission gating:** P5 stable
 
 ---
 
@@ -340,7 +350,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Drop Sec 3 OR rewrite to be honest about what it derives
 - Drop Sec 6.6 entirely
 - Trim FQHE section to a single paragraph
-**Submission gating:** P5 stable; lowest priority
 
 ---
 
@@ -363,7 +372,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Verify the η=1 derivation is consistent with P5's m_eff~m_P (the condensate particle is Planck mass; soliton mass m may be different)
 - Tighten charge section or remove
 - Update notation to match P1/P2/P5 conventions
-**Submission gating:** P1, P5 stable
 
 ---
 
@@ -384,7 +392,6 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Survey current Bohmian literature
 - Identify what's *new* in this program vs Holland 1993
 - Explicit ontological commitments and their consequences
-**Submission gating:** Three or more "core" papers (P1, P2, P5) published
 
 ---
 
@@ -396,18 +403,54 @@ Move from one tier to the next is irreversible: a paper doesn't go from "submitt
 - Does the derivation actually go through? (β requires second-order treatment, harder than γ)
 - Mercury perihelion precession comes out right?
 - Lunar laser ranging bound |β−1| < 10⁻⁴ satisfied?
-**Submission gating:** P1, P2 published; β derivation must be reviewed by Claude before submission
 
 ---
 
-### P-rotation — Global condensate rotation and CMB anomalies
-   **Status:** Concept only
-   **Substantive content:** Global vacuum vorticity from condensate dynamics; predicted CMB signatures (aligned multipoles, dipole tension); comparison to "axis of evil" literature
-   **Substantive open questions:**
-   - Does the framework predict a specific rotation rate?
-   - Can it match Planck's bound ω/H_0 < 10^-9?
-   - Does it explain the radio-vs-CMB dipole tension?
-   **Submission gating:** P1, P5, P-foundations published; serious literature review of CMB anomalies required
+### P-PPN-2PN — Preferred-frame and conservation-law PPN parameters at 2PN
+
+**Status:** Concept only; motivated by Qeios K2 review (preferred-frame question on P1)
+**Substantive content:**
+At 1PN, the framework reproduces Schwarzschild geometry exactly in PG coordinates, so all PPN parameters take their GR values automatically by coordinate equivalence (γ=β=1, α₁=α₂=α₃=0, ξ=0, ζ₁=…=ζ₄=0). This is the result claimed in P1's K2 paragraph.
+
+The framework, however, has structure beyond the bare metric: the order parameter ψ, its phase, the local sound speed c_s(ρ), and the matter-substrate coupling. These could in principle contribute corrections to PPN parameters at 2PN or higher orders — corrections that would distinguish the framework from GR even within the weak-field solar-system regime. This paper would compute those corrections explicitly.
+
+**Substantive open questions:**
+- Do ψ-phase frame dependences generate non-zero α₁, α₂, α₃ at O((v/c)²)?
+- The tight bound is |α₂| < 2×10⁻⁹ from solar alignment tests. The solar system moves at v ≈ 370 km/s relative to the CMB rest frame, giving (v/c)² ≈ 1.5×10⁻⁶. Any framework-specific α₂ correction at this order is ruled out by ~760×. The paper must either show no such correction exists, or identify a structural reason why it is suppressed below the bound.
+- Conservation-law parameters ζ_i are bounded at the 10⁻²⁰ level by pulsar timing. Does the framework's collective N-soliton dynamics conserve total momentum exactly, or is there a small framework-specific violation?
+- Whitehead parameter ξ: bounded at ξ < 10⁻³. Does the framework's preferred rest frame structure generate non-zero ξ at the level of galactic-scale anisotropies?
+
+**Dependency:**
+- Requires P1, P2, P5 stable
+- Likely requires P-foundations or P-β to settle the formal 2PN expansion machinery
+- Likely follows publication of P1's response to the Qeios K2 question
+
+**Submission target:** Foundations of Physics
+
+---
+
+### P-WEP — Composition-dependent matter-condensate coupling and MICROSCOPE-precision equivalence-principle bounds
+
+**Status:** Concept only; motivated by Qeios K3 review (WEP universality question on P1)
+**Substantive content:**
+At leading order, the framework predicts universal free fall: all matter consists of vortex-Gausson topological defects of the same underlying condensate, so the gravitational coupling is set by the universal PG acoustic metric, not by composition-dependent interactions. This is the result claimed in P1's K3 paragraph and is consistent with MICROSCOPE's bound η₁₂ = (-1.5 ± 2.7)×10⁻¹⁵.
+
+The leading-order claim, however, does not quantify the composition-dependent corrections that could in principle arise from internal structure of macroscopic test bodies. Different materials differ in electromagnetic binding energy, nuclear binding energy, spin-orbit coupling, and other internal-structure contributions. A theory in which gravitation arises from coupling to a substrate must demonstrate that these internal-structure differences do not generate observable equivalence-principle violations above the MICROSCOPE limit. This paper would deliver the explicit composition-dependent calculation.
+
+**Substantive open questions:**
+- Express the Gausson soliton's gravitational mass as m_g = E_v/c² (the topological-energy identity from the P-inertia program). What composition-dependent corrections enter at the level of E_v?
+- Electromagnetic binding contributes ~10⁻³ to nuclear mass for heavy elements, varying across the periodic table. Does the framework predict a *universal* coupling of this binding to the acoustic metric, or a composition-dependent one?
+- Nuclear binding (the strong-force contribution to mass) differs systematically between light and heavy nuclei. Does the framework's coupling treat strong-bound mass identically to electromagnetic-bound mass, or are there small relative shifts?
+- MICROSCOPE compared platinum-rhodium and titanium-vanadium test masses. Can the framework derive η_PtRh-TiV explicitly, and bound it against the experimental limit?
+- Are there spin-orbit, magnetic-moment, or polarization-dependent terms in the matter-substrate coupling that would show up in second-generation equivalence-principle experiments?
+
+**Dependency:**
+- Requires P1 published (universal-coupling claim at leading order)
+- Requires P-inertia (m = E_v/c² identification) stable
+- Likely requires Paper 8 (gauged log-KG) for the electromagnetic-binding analysis
+- Likely follows publication of P1's response to the Qeios K3 question
+
+**Submission target:** Foundations of Physics
 
 ---
 
