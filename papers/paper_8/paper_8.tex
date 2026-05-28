@@ -26,37 +26,7 @@ Logarithmic Superfluid Vacuum}
 
 \begin{abstract}
 \noindent
-The relativistic logarithmic Klein-Gordon equation
-for the vacuum condensate possesses a global $U(1)$
-phase symmetry. We show that promoting this to a
-local gauge symmetry---the minimal coupling
-$\partial_\mu S \to \partial_\mu S - eA_\mu$---produces
-Maxwell's equations as the Euler-Lagrange equations
-for the gauge field $A_\mu$, with the condensate
-current $J^\nu = (e\meff/\heff^2)\,\rho\,u^\nu$
-as source. The Madelung decomposition of the gauged
-equation yields the acoustic metric equations
-(emergent gravity) and Maxwell's equations (emergent
-electromagnetism) simultaneously from a single
-Lagrangian. Gravity is sourced by the soliton energy
-density (mass); electromagnetism is sourced by the
-topological winding number of vortex-Gausson defects,
-which quantizes electric charge as $Q = ne$ with
-$n \in \mathbb{Z}$. Both fields propagate at the
-sound speed $c$ on the same acoustic metric,
-automatically ensuring $c_{\mathrm{grav}} =
-c_{\mathrm{EM}} = c$ as observed. The London
-penetration depth of the condensate determines the
-electromagnetic screening length; in the electrically
-neutral vacuum background, it diverges, permitting
-free propagation of electromagnetic waves. Near
-vortex cores, the screening becomes significant,
-producing the Coulomb field as a condensate boundary
-effect. The framework unifies gravity and
-electromagnetism as two aspects of the same
-condensate dynamics---the acoustic metric and the
-gauge connection---while preserving their distinct
-physical origins: mass versus topology.
+The relativistic logarithmic Klein-Gordon equation for the vacuum condensate possesses a global $U(1)$ phase symmetry. We show that promoting this to a local gauge symmetry---the minimal coupling $\partial_\mu S \to \partial_\mu S - eA_\mu$---produces Maxwell's equations as the Euler-Lagrange equations for the gauge field $A_\mu$, with the condensate current $J^\nu = (e\meff/\heff^2)\,\rho\,u^\nu$ as source. The Madelung decomposition of the gauged equation yields the acoustic metric equations (emergent gravity) and Maxwell's equations (emergent electromagnetism) simultaneously from a single Lagrangian. Gravity is sourced by the soliton energy density (mass); electromagnetism is sourced by the topological winding number of vortex-Gausson defects, which quantizes electric charge as $Q = ne$ with $n \in \mathbb{Z}$. Both fields propagate at the sound speed $c$ on the same acoustic metric, automatically ensuring $c_{\mathrm{grav}} = c_{\mathrm{EM}} = c$ as observed. The London penetration depth of the condensate determines the electromagnetic screening length; in the electrically neutral vacuum background, it diverges, permitting free propagation of electromagnetic waves. Near vortex cores, the screening becomes significant, producing the Coulomb field as a condensate boundary effect. Gravity and electromagnetism thereby emerge from a common origin in the same condensate Lagrangian---the acoustic metric and the gauge connection---while preserving their distinct physical sources: mass versus topological charge.
 \end{abstract}
 
 
@@ -65,53 +35,23 @@ physical origins: mass versus topology.
 \label{sec:intro}
 % ====================================================================
 
-In previous work, we showed that the Madelung
-decomposition of the relativistic logarithmic
-Klein-Gordon equation produces an acoustic metric
-equivalent to the Schwarzschild geometry in the
-weak-field limit, yielding the PPN parameter
-$\gamma = 1$ and an emergent gravitational constant
-$\Geff = \eta c^2/(4\pi\rho_0)$. The vacuum
-condensate's density $\rho$ and flow velocity
-$u_\mu = \partial_\mu S/\meff$ generate the
-gravitational field; topological defects
+The logarithmic nonlinearity in the Klein-Gordon equation was originally introduced in nonlinear quantum theory~\cite{bialynicki_birula_1979} and developed as a model for the superfluid vacuum~\cite{zloshchastiev_2011,zloshchastiev_2020,zloshchastiev_2023}. The acoustic-metric formalism through which long-wavelength excitations of a condensate experience an emergent Lorentzian geometry was established in the analogue-gravity programme~\cite{unruh_1981,visser_1998,volovik_2003}.
+
+In previous work, we showed that the Madelung decomposition of the relativistic logarithmic Klein-Gordon equation produces an acoustic metric equivalent to the Schwarzschild geometry in the weak-field limit, yielding the PPN parameter $\gamma = 1$~\cite{kulangiev_2026a,unruh_1981,visser_1998} and an emergent gravitational constant $\Geff \sim c^2/(\xi^2\rho_0)$~\cite{kulangiev_2026b,kulangiev_2026e}, with $\xi$ the condensate healing length identified with the Planck length and $\rho_0$ at the Planck density. The vacuum condensate's density $\rho$ and flow velocity $u_\mu = \partial_\mu S/\meff$ generate the gravitational field; topological defects
 (vortex-Gaussons) play the role of massive particles.
 
-This framework has a conspicuous unused structure.
-The logarithmic wave equation
+This framework has a conspicuous unused structure. The logarithmic wave equation
 \begin{equation}
     \Box\psi + \mu^2\psi
-    - b\,\psi\,\ln\!\left(\frac{|\psi|^2}{\rho_0}\right)
+    - b\,\psi\,\ln\!\left(\frac{|\psi|^2}{\rho_c}\right)
     = 0
 \label{eq:log_kg}
 \end{equation}
-is invariant under the global phase rotation
-$\psi \to \psi\,e^{i\alpha}$ for constant $\alpha$.
-This $U(1)$ symmetry is associated, via Noether's
-theorem, with the conservation of the condensate
-particle number (the continuity
-equation $\partial_\mu(\rho\,\partial^\mu S) = 0$).
+is invariant under the global phase rotation $\psi \to \psi\,e^{i\alpha}$ for constant $\alpha$. This $U(1)$ symmetry is associated, via Noether's theorem, with the conservation of the condensate particle number (the continuity equation $\partial_\mu(\rho\,\partial^\mu S) = 0$).
 
-In the Standard Model, the fundamental interactions
-arise from \emph{gauging} internal symmetries:
-promoting global invariances to local ones and
-introducing gauge fields to maintain covariance.
-Electromagnetism itself originates from gauging the
-$U(1)$ phase symmetry of the electron
-field~\cite{weinberg_1995}.
+In the Standard Model, the fundamental interactions arise from \emph{gauging} internal symmetries: promoting global invariances to local ones and introducing gauge fields to maintain covariance. Electromagnetism itself originates from gauging the $U(1)$ phase symmetry of the electron field~\cite{weinberg_1995}.
 
-In this paper, we apply the same principle to the
-vacuum condensate. Promoting the global $U(1)$ of
-Eq.~(\ref{eq:log_kg}) to a local symmetry requires
-the introduction of a gauge field $A_\mu$ and the
-minimal coupling $\partial_\mu \to D_\mu =
-\partial_\mu - i(e/\hbar)A_\mu$. We show that the
-Euler-Lagrange equations for $A_\mu$ are precisely
-Maxwell's equations, with the condensate current as
-source. Together with the acoustic metric (gravity),
-this produces a unified description of two
-fundamental interactions from a single condensate
-Lagrangian.
+In this paper, we apply the same principle to the vacuum condensate. Promoting the global $U(1)$ of Eq.~(\ref{eq:log_kg}) to a local symmetry requires the introduction of a gauge field $A_\mu$ and the minimal coupling $\partial_\mu \to D_\mu = \partial_\mu - i(e/\hbar)A_\mu$. We show that the Euler-Lagrange equations for $A_\mu$ are precisely Maxwell's equations, with the condensate current as source. Together with the acoustic metric (gravity), this exhibits two fundamental interactions emerging from a single condensate Lagrangian through distinct mechanisms.
 
 
 % ====================================================================
@@ -124,11 +64,11 @@ condensate is:
 \begin{equation}
     \mathcal{L}_0 = (\partial_\mu\psi^*)(\partial^\mu\psi)
     - \mu^2|\psi|^2
-    + b\,|\psi|^2\ln\!\left(\frac{|\psi|^2}{\rho_0}\right)\,.
+    + b\,|\psi|^2\ln\!\left(\frac{|\psi|^2}{\rho_c}\right)\,,
 \label{eq:L0}
 \end{equation}
-This is invariant under $\psi \to \psi\,e^{i\alpha}$
-for constant $\alpha$.
+where $\rho_c$ is the characteristic density of the logarithmic potential. The background density $\rho_0$ is defined by the stationarity condition $V'(\rho_0) = 0$, which gives $\rho_c = e\rho_0$.
+This is invariant under $\psi \to \psi\,e^{i\alpha}$ for constant $\alpha$.
 
 Promoting to local gauge invariance
 $\psi \to \psi\,e^{i\alpha(x)}$ requires replacing
@@ -138,7 +78,7 @@ kinetic term. The gauged Lagrangian is:
 \begin{equation}
     \boxed{\;\mathcal{L} = (D_\mu\psi)^*(D^\mu\psi)
     - \mu^2|\psi|^2
-    + b\,|\psi|^2\ln\!\left(\frac{|\psi|^2}{\rho_0}\right)
+    + b\,|\psi|^2\ln\!\left(\frac{|\psi|^2}{\rho_c}\right)
     - \frac{1}{4}F_{\mu\nu}F^{\mu\nu}\;}
 \label{eq:L_gauged}
 \end{equation}
@@ -198,7 +138,7 @@ Madelung equations:
 \emph{Hamilton-Jacobi:}
 \begin{equation}
     \frac{\meff^2}{\heff^2}\,u_\mu u^\mu
-    = \mu^2 - b\,\ln\!\left(\frac{\rho}{\rho_0}\right)
+    = \mu^2 - b\,\ln\!\left(\frac{\rho}{\rho_c}\right)
     + Q[\rho]\,,
 \label{eq:hj_gauged}
 \end{equation}
@@ -341,30 +281,11 @@ equations~(\ref{eq:maxwell}) reduce to:
     \qquad\text{(in Lorenz gauge)}\,,
 \label{eq:em_wave}
 \end{equation}
-where $\Box = \partial_t^2/c^2 - \nabla^2$ and
-$c = c_s(\rho_0)$ is the sound speed at the
-background density. Electromagnetic waves propagate
-at the speed of sound in the condensate.
+where $\Box = \partial_t^2/c^2 - \nabla^2$ and $c = c_s(\rho_0)$ is the sound speed at the background density. Electromagnetic waves propagate at the speed of sound in the condensate.
 
-This provides a unified explanation: the speed of
-light is the speed of sound because the photon is
-a gauge excitation propagating on the same condensate
-whose acoustic properties define $c$. The identity
-$c_{\mathrm{EM}} = c_{\mathrm{grav}} = c_{\mathrm{sound}}$
-is not a coincidence but a structural consequence
-of both fields emerging from the same substrate.
+This provides a unified explanation: the speed of light is the speed of sound because the photon is a gauge excitation propagating on the same condensate whose acoustic properties define $c$. The identity $c_{\mathrm{EM}} = c_{\mathrm{grav}} = c_{\mathrm{sound}}$ is not a coincidence but a structural consequence of both fields emerging from the same substrate.
 
-Near a gravitating mass, the acoustic metric
-modifies the effective spacetime seen by all
-excitations equally. Electromagnetic waves are
-deflected, redshifted, and time-delayed by the
-Painlev\'{e}-Gullstrand flow, reproducing the
-standard general relativistic predictions. The
-Shapiro time delay, the gravitational redshift, and
-the bending of light are automatically consistent
-with $\gamma = 1$ because the photon (gauge
-excitation) and the phonon (density excitation)
-share the same acoustic metric.
+Near a gravitating mass, the acoustic metric modifies the effective spacetime seen by all excitations equally. Electromagnetic waves are deflected, redshifted, and time-delayed by the Painlev\'{e}-Gullstrand flow, reproducing the standard general relativistic predictions. The Shapiro time delay, the gravitational redshift, and the bending of light are automatically consistent with $\gamma = 1$ because the photon (gauge excitation) and the phonon (density excitation) share the same acoustic metric. The same Bogoliubov-like dispersion relation $\omega^2 = c^2 k^2[1 + (k\xi)^2]$ derived in the gravitational sector~\cite{kulangiev_2026a} applies to the gauge sector here, with the leading dispersive correction at $(k\xi)^2 \sim (k\ell_P)^2$ suppressed below $10^{-50}$ for all electromagnetic frequencies accessible to experiment.
 
 
 % ====================================================================
@@ -425,32 +346,19 @@ free vacuum (where $A_\mu$ propagates).
 
 
 % ====================================================================
-\section{Unified Picture: Gravity and Electromagnetism}
-\label{sec:unified}
+\section{Common Origin of Gravity and Electromagnetism in the Condensate}
+\label{sec:common_origin}
 % ====================================================================
 
-The gauged logarithmic condensate produces two
-emergent interactions from a single Lagrangian:
+The gauged logarithmic condensate produces two emergent interactions from a single Lagrangian:
 
-\emph{Gravity} arises from the acoustic metric
-$g_{\mu\nu}(\rho, u)$. Its source is the soliton
-energy density (mass). Its field equation is the
-Bernoulli relation and its consequence, the
-Painlev\'{e}-Gullstrand acoustic metric equivalent
-to Schwarzschild. Its coupling constant is
-$G = \eta c^2/(4\pi\rho_0)$.
+\emph{Gravity} arises from the acoustic metric $g_{\mu\nu}(\rho, u)$. Its source is the soliton energy density (mass). Its field equation is the Bernoulli relation and its consequence, the Painlev\'{e}-Gullstrand acoustic metric equivalent to Schwarzschild. Its coupling constant is $\Geff \sim c^2/(\xi^2\rho_0)$ with $\xi \sim \ell_P$ and $\rho_0$ at the Planck density~\cite{kulangiev_2026b,kulangiev_2026e}.
 
-\emph{Electromagnetism} arises from the gauge field
-$A_\mu$ required by local $U(1)$ invariance. Its
-source is the topological winding number (charge).
-Its field equation is Maxwell's
-$\partial_\mu F^{\mu\nu} = J^\nu$. Its coupling
-constant is $e$.
+\emph{Electromagnetism} arises from the gauge field $A_\mu$ required by local $U(1)$ invariance. Its source is the topological winding number (charge). Its field equation is Maxwell's $\partial_\mu F^{\mu\nu} = J^\nu$. Its coupling constant is $e$.
 
-The two interactions are coupled through the
-condensate:
+The two interactions are coupled through the condensate:
 \begin{itemize}
-\item Charged particles (vortex-Gaussons) create
+\item Charged particles (vortex-Gaussons) create 
   both gravitational (acoustic metric) and
   electromagnetic (gauge) fields simultaneously.
 \item The electromagnetic field modifies the
@@ -535,69 +443,9 @@ treats gravity as external.
 
 \subsection{Limitations}
 
-The framework produces only a $U(1)$ gauge field.
-The Standard Model requires $SU(3) \times SU(2)
-\times U(1)$. Extending to non-Abelian gauge groups
-would require a multi-component order parameter
-(e.g., a spinor or matrix-valued condensate), which
-is beyond the scope of the present single-component
-model.
+The framework produces only a $U(1)$ gauge field. The Standard Model requires $SU(3) \times SU(2) \times U(1)$. Extending to non-Abelian gauge groups would require a multi-component order parameter (e.g., a spinor or matrix-valued condensate), which is beyond the scope of the present single-component model.
 
-The identification of electric charge with vortex
-winding number predicts that all charged particles
-have integer multiples of $e$. This is consistent
-with observation (quarks carry fractional charges,
-but they are confined, and all observable states
-carry integer charges). However, deriving quark
-confinement from the condensate would require the
-$SU(3)$ extension mentioned above.
-
-\subsection{Speculative application: planetary magnetic fields}
-
-The axial outflow derived in the gravitational
-sector~\cite{kulangiev_2026b} has a potential
-electromagnetic consequence within the present
-framework. The outflow along the rotation axis
-creates a preferred direction that may align the
-vortex axes of embedded solitons. A population of
-$N$ vortex-Gaussons with correlated winding axes
-constitutes a net current loop. By Amp\`{e}re's
-law~(\ref{eq:ampere}), a current along an axis
-produces a dipole magnetic field. If this mechanism
-operates, the predicted scaling is:
-\begin{equation}
-    |\mathbf{B}_{\mathrm{dipole}}| \propto
-    \Omega\,M\,f_{\mathrm{liquid}}\,,
-\label{eq:B_scaling}
-\end{equation}
-where $\Omega$ is the rotation rate (setting the
-outflow strength), $M$ the body mass (setting the PG
-inflow strength), and $f_{\mathrm{liquid}}$ the
-fraction of the core that supports free vortex motion
-(liquid vs.\ solid).
-
-This qualitatively explains the observed pattern of
-planetary magnetic fields:
-\begin{center}
-\begin{tabular}{lcccl}
-\hline
-Body & $\Omega$ & Core & $B$ & Prediction \\
-\hline
-Jupiter & fast & metallic H & strongest & \checkmark \\
-Earth & moderate & liquid Fe & moderate & \checkmark \\
-Mercury & slow & partial liq. & weak & \checkmark \\
-Venus & very slow & liquid & $\approx 0$ & \checkmark \\
-Mars & moderate & solid & $\approx 0$ & \checkmark \\
-\hline
-\end{tabular}
-\end{center}
-Venus fails despite having a liquid core because its
-rotation rate is too slow to generate significant
-axial outflow. Mars fails despite moderate rotation
-because its core has solidified, preventing vortex
-alignment. A quantitative treatment requires coupling
-the vacuum flow equations to magnetohydrodynamic core
-models and is deferred to future work.
+The identification of electric charge with vortex winding number predicts that all charged particles have integer multiples of $e$. This is consistent with observation (quarks carry fractional charges, but they are confined, and all observable states carry integer charges). However, deriving quark confinement from the condensate would require the $SU(3)$ extension mentioned above.
 
 % ====================================================================
 \section{Conclusion}
@@ -627,12 +475,6 @@ integers. Both fields propagate at the sound speed
 $c$, explaining the identity
 $c_{\mathrm{EM}} = c_{\mathrm{grav}}$ as a
 structural consequence rather than a coincidence.
-The framework predicts that axial outflow of the
-Painlev\'{e}-Gullstrand flow aligns embedded
-vortex-Gaussons, producing dipole magnetic fields
-correlated with rotation rate and core
-state---qualitatively consistent with the observed
-pattern of planetary magnetism.
 
 The coupling constant $e$ (the fine structure
 constant) is not determined by the condensate
@@ -643,7 +485,6 @@ future work.
 
 
 % ====================================================================
-\newpage
 \section*{Acknowledgments}
 % ====================================================================
 
@@ -654,36 +495,42 @@ interpretations are the author's own.
 
 \begin{thebibliography}{20}
 
+\bibitem{kulangiev_2026a}
+B.~B.~Kulangiev,
+Conditions for Emergent Gravitational Light Bending from a Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper1}
+
 \bibitem{kulangiev_2026b}
 B.~B.~Kulangiev,
-Emergent Newtonian Gravity and the Gravitational
-Feynman-Onsager Relation in the Logarithmic Superfluid Vacuum,
+Emergent Newtonian Gravity and the Gravitational Feynman-Onsager Relation in the Logarithmic Superfluid Vacuum,
 Preprint (2026).
-\url{https://kulangiev.github.io#combined}
+\url{https://kulangiev.github.io#paper2}
+
+\bibitem{kulangiev_2026e}
+B.~B.~Kulangiev,
+Singularity Regularization and the Emergent Planck Scale in the Logarithmic Superfluid Vacuum,
+Preprint (2026).
+\url{https://kulangiev.github.io#paper5}
 
 \bibitem{zloshchastiev_2023}
 K.~G.~Zloshchastiev,
-Derivation of emergent spacetime metric, gravitational
-potential and speed of light in superfluid vacuum theory,
+Derivation of emergent spacetime metric, gravitational potential and speed of light in superfluid vacuum theory,
 Universe \textbf{9}, 234 (2023).
 
 \bibitem{zloshchastiev_2020}
 K.~G.~Zloshchastiev,
-An alternative to dark matter and dark energy:
-Scale-dependent gravity in superfluid vacuum theory,
+An alternative to dark matter and dark energy: Scale-dependent gravity in superfluid vacuum theory,
 Universe \textbf{6}, 180 (2020).
 
 \bibitem{zloshchastiev_2011}
 K.~G.~Zloshchastiev,
-Spontaneous symmetry breaking and mass generation as
-built-in phenomena in logarithmic nonlinear quantum
-theory,
+Spontaneous symmetry breaking and mass generation as built-in phenomena in logarithmic nonlinear quantum theory,
 Acta Phys.\ Polon.\ B \textbf{42}, 261 (2011).
 
 \bibitem{bialynicki_birula_1979}
 I.~Bia{\l}ynicki-Birula and J.~Mycielski,
-Gaussons: Solitons of the logarithmic Schr\"{o}dinger
-equation,
+Gaussons: Solitons of the logarithmic Schr\"{o}dinger equation,
 Phys.\ Scr.\ \textbf{20}, 539 (1979).
 
 \bibitem{weinberg_1995}
