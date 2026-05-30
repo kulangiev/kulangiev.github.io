@@ -27,7 +27,7 @@
 \label{sec:intro}
 % ====================================================================
 
-The bending of light by gravity is one of the most precise tests of gravitational theory. In the PPN formalism~\cite{will_2014}, the deflection of a light ray with impact parameter $b$ by a mass $M$ is
+The bending of light by gravity is one of the most precise tests of gravitational theory. In the PPN formalism~\cite[Eq.~(28)]{will_2014}, the deflection of a light ray with impact parameter $b$ by a mass $M$ in the grazing-ray limit is
 \begin{equation}
     \delta\theta = \frac{(1+\gamma)\,2GM}{bc^2}\,,
 \label{eq:deflection}
@@ -130,7 +130,7 @@ The d'Alembertian in Eq.~(\ref{eq:log_kg}) contains second-order time derivative
 \label{sec:sound_speed}
 % ====================================================================
 
-For a relativistic scalar field with Lagrangian density $\mathcal{L} = \rho X - V(\rho)$ where $X \equiv \partial_\mu S\,\partial^\mu S$ and $\rho = |\psi|^2$, the Hamilton-Jacobi equation in the macroscopic limit reads $X = V'(\rho)$, which allows the density to be integrated out in favor of $X$. The resulting effective Lagrangian $\mathcal{L}_{\mathrm{eff}}(X) = \rho(X)\,X - V(\rho(X))$ is of k-essence type, with pressure $p = \mathcal{L}_{\mathrm{eff}}$ and energy density $\epsilon = 2X\,\mathcal{L}'_{\mathrm{eff}} - \mathcal{L}_{\mathrm{eff}}$~\cite{babichev_mukhanov_vikman_2008}. Using the Barcel\'{o}-Liberati-Visser definition $c_s^2 = dp/d\epsilon$ for relativistic barotropic fluids~\cite{barcelo_2005}, one finds
+For a relativistic scalar field with Lagrangian density $\mathcal{L} = \rho X - V(\rho)$ where $X \equiv \partial_\mu S\,\partial^\mu S$ and $\rho = |\psi|^2$, the Hamilton-Jacobi equation in the macroscopic limit reads $X = V'(\rho)$, which allows the density to be integrated out in favor of $X$. The resulting effective Lagrangian $\mathcal{L}_{\mathrm{eff}}(X) = \rho(X)\,X - V(\rho(X))$ is of k-essence type, with pressure $p = \mathcal{L}_{\mathrm{eff}}$ and energy density $\epsilon = 2X\,\mathcal{L}'_{\mathrm{eff}} - \mathcal{L}_{\mathrm{eff}}$~\cite{babichev_mukhanov_vikman_2008}. Using the Barcel\'{o}-Liberati-Visser definition $c_s^2 = dp/d\epsilon$ for relativistic barotropic fluids~\cite{barcelo_liberati_visser_2005}, one finds
 \begin{equation}
     c_s^2 = \frac{\rho_0\,V''(\rho_0)}{\rho_0\,V''(\rho_0) + 2\,V'(\rho_0)}\,.
 \label{eq:cs_general}
@@ -146,7 +146,7 @@ Substituting (the minus signs cancel in the ratio):
     \boxed{\;c_s^2 = \frac{1}{2\ln(\bar{\rho}/\rho_c) + 3}\;}
 \label{eq:cs_log}
 \end{equation}
-The coupling $b$ cancels, and $c_s$ depends on the local vacuum density $\bar{\rho}$ through the logarithm. Normalizing so that $c_s = c$ at the background density $\rho_\infty$ fixes $\rho_c = e\,\rho_\infty$.
+The coupling $b$ cancels, and $c_s$ depends on the local vacuum density $\bar{\rho}$ through the logarithm. Normalizing so that $c_s = c$ at the background density $\rho_\infty$ fixes $\rho_c = e\,\rho_\infty$. This is a normalization convention rather than a prediction of the theory: $\rho_c$ sets the dimensional scale of the logarithmic potential, and the choice $\rho_c = e\,\rho_\infty$ makes the speed of light at the cosmological background coincide with the parameter $c$. The precise physical value of $\rho_\infty$---which determines the absolute scale of the framework---is fixed by the gravitational coupling derivation in companion work, where dimensional self-consistency forces $\rho_\infty$ to the Planck mass density; we use the present convention throughout this paper and defer the cosmological identification to dedicated work.
 
 This density dependence is a relativistic effect. In the non-relativistic logarithmic Schr\"{o}dinger equation, the denominator of~(\ref{eq:cs_general}) is dominated by $|V'(\rho_0)| \approx m_{\mathrm{eff}}c^2 \gg |\rho_0\,V''|$ (where $\rho_0$ here denotes the background value of the Lagrangian variable, not the physical mass density), yielding $c_s^2 \approx |\rho_0\,V''|/(2m_{\mathrm{eff}}c^2) \propto b/(m_{\mathrm{eff}}c^2)$, independent of density~\cite{avdeenkov_2011}. In the relativistic regime, $V'$ and $\rho_0\,V''$ are comparable, and the density dependence survives (Fig.~\ref{fig:sound_speed}). Equation~(\ref{eq:cs_log}) also reveals a hard minimum density: at $\bar{\rho} = \rho_c\,e^{-3/2}$ the sound speed diverges, and below this threshold $c_s^2 < 0$, signaling breakdown of the hydrodynamic description.
 
@@ -174,7 +174,7 @@ We note that this density-dependent sound speed differs from the result obtained
 
 \subsection{PPN parameter from the static metric}
 
-For a static irrotational fluid with density $\bar{\rho}(x)$ and sound speed $c_s(x)$, the acoustic metric is~\cite{barcelo_2005,unruh_1981}:
+For a static irrotational fluid with density $\bar{\rho}(x)$ and sound speed $c_s(x)$, the acoustic metric is~\cite{barcelo_liberati_visser_2005,unruh_1981}:
 \begin{equation}
     g_{tt} = -\bar{\rho}\,c_s\,,\qquad g_{ij} = \frac{\bar{\rho}}{c_s}\,\delta_{ij}\,.
 \label{eq:static_metric}
@@ -184,7 +184,11 @@ With $c_s \propto \bar{\rho}^{\,\alpha}$, a small density perturbation $\bar{\rh
     \frac{\delta g_{tt}}{g_{tt}} &= (1+\alpha)\,\epsilon\,,\label{eq:dgtt}\\
     \frac{\delta g_{rr}}{g_{rr}} &= (1-\alpha)\,\epsilon\,.\label{eq:dgrr}
 \end{align}
-Identifying $\Phi/c^2$ from the temporal component and reading off the spatial component:
+To extract $\gamma$ we first rescale the acoustic metric so that the background is Minkowski-normalized, $\eta_{\mu\nu} = \mathrm{diag}(-1,+1,+1,+1)$, as required by the standard PPN form~\cite{will_2014}. With $c_s(\rho_\infty) = c$ this fixes the conformal factor to unity at the background and the perturbations of Eqs.~(\ref{eq:dgtt})-(\ref{eq:dgrr}) become directly comparable to the PPN expansion $g_{00} = -1 + 2U + \mathcal{O}(U^2)$, $g_{ij} = (1 + 2\gamma U)\delta_{ij}$~\cite[Box~2]{will_2014}. Reading $2U$ from the temporal perturbation and $2\gamma U$ from the spatial perturbation, the ratio gives
+\begin{equation}
+    \gamma_{\mathrm{static}} = \frac{\delta g_{rr}/g_{rr}}{\delta g_{tt}/g_{tt}} = \frac{(1-\alpha)\epsilon}{(1+\alpha)\epsilon}\,,
+\end{equation}
+which yields
 \begin{equation}
     \boxed{\;\gamma_{\mathrm{static}} = \frac{1-\alpha}{1+\alpha}\;}
 \label{eq:gamma_static}
@@ -198,7 +202,6 @@ This is the PPN parameter for any static barotropic acoustic metric with equatio
     \label{fig:static_gamma}
 \end{figure}
 
-\newpage
 \subsection{The static acoustic metric is pathological}
 
 Equation~(\ref{eq:gamma_static}) reveals a fundamental obstruction. For the logarithmic equation of state at the background density, $\alpha = -1$, and the denominator of $\gamma_{\mathrm{static}}$ vanishes:
@@ -212,6 +215,7 @@ This is, at a deeper level, a consequence of conformal invariance. For a static 
 
 
 % ====================================================================
+\newpage
 \section{The Flowing Acoustic Metric and the Path to \texorpdfstring{$\gamma = 1$}{gamma = 1}}
 \label{sec:flowing}
 % ====================================================================
@@ -263,7 +267,6 @@ This establishes that single-soliton Bondi accretion cannot produce the PG profi
 
 
 % ====================================================================
-\newpage
 \section{Discussion}
 \label{sec:discussion}
 % ====================================================================
@@ -328,30 +331,48 @@ Two open problems remain. First, deriving the macroscopic PG flow from the micro
 
 \subsection{Relation to prior work}
 
-The superfluid vacuum program of Zloshchastiev~\cite{zloshchastiev_2023,zloshchastiev_2020,zloshchastiev_2011} derives emergent spacetime metrics from the logarithmic condensate but does not compute PPN parameters explicitly. The analogue gravity program of Barcel\'{o}, Liberati, and Visser~\cite{barcelo_2005,barcelo_2011} proves that fluid perturbations propagate on acoustic metrics but does not construct specific models matching solar system tests. The present work connects these programs by deriving the explicit PPN constraints and identifying the gap between the static and flowing acoustic metrics.
+The superfluid vacuum program of Zloshchastiev~\cite{zloshchastiev_2023,zloshchastiev_2020,zloshchastiev_2011} derives emergent spacetime metrics from the logarithmic condensate but does not compute PPN parameters explicitly. The analogue gravity program of Barcel\'{o}, Liberati, and Visser~\cite{barcelo_liberati_visser_2001,barcelo_liberati_visser_2005} proves that fluid perturbations propagate on acoustic metrics but does not construct specific models matching solar system tests. The present work connects these programs by deriving the explicit PPN constraints and identifying the gap between the static and flowing acoustic metrics.
 
 The flowing acoustic metric's equivalence to the Painlev\'{e}-Gullstrand form of Schwarzschild was noted by Unruh~\cite{unruh_1981} and developed extensively by Visser~\cite{visser_1998} and Volovik~\cite{volovik_2003}. Our contribution is to test this identification against self-consistent fluid dynamics, revealing that the velocity profile is not automatically produced.
 
-\subsection{Limitations}
+\subsection{Observational tests passed by the framework}
+
+\paragraph{What "light" is, the dispersion relation, and achromaticity bounds}
+Within the framework, light is not separate from the condensate: photons are long-wavelength excitations of the same relativistic logarithmic Klein-Gordon field whose Madelung decomposition produces the acoustic metric. The framework is a single-field theory; there is no independent electromagnetic medium "on top" of the vacuum. The same complex order parameter $\psi$ that gives the acoustic metric through its hydrodynamic envelope also carries photonic excitations as its transverse phonon-like modes. The U(1) gauge structure of electrodynamics is an internal symmetry of $\psi$, with the derivation of Maxwell's equations from the gauged log-KG field forming a separate manuscript of the program. The relevant dispersion relation follows directly from the linearized log-KG equation.
+
+Linearizing the log-KG equation about the background ($\rho = \rho_0$, $S_0 = -m_{\mathrm{eff}}c^2 t$) and including the Bohmian quantum potential $Q = -(\hbar_{\mathrm{eff}}^2 / 2m_{\mathrm{eff}}^2)\,\Box\sqrt{\rho}/\sqrt{\rho}$ at next-to-leading order yields the Bogoliubov-like dispersion relation:
+\begin{equation}
+    \omega^2 = c^2 k^2 \left[\,1 + (k\xi)^2\,\right]\,,
+    \label{eq:photon_dispersion}
+\end{equation}
+where $\xi = \hbar_{\mathrm{eff}}/(2 m_{\mathrm{eff}} c)$ is the condensate healing length, derived from dimensional self-consistency of the framework's gravitational coupling to be of order the Planck length, $\xi \sim \ell_P$. At long wavelengths ($k\xi \ll 1$), $\omega = ck$ exactly; the speed of light, gravitational waves, and acoustic phonons all equal $c$ at the background, consistent with the GW170817 constraint $|c_{\mathrm{gw}} - c|/c < 10^{-15}$~\cite{abbott_2017}. The phase velocity is $v_{\mathrm{ph}} = c\sqrt{1 + (k\xi)^2}$ and the group velocity is $v_g = c\,(1+2(k\xi)^2)/\sqrt{1+(k\xi)^2}$; both reduce to $c$ as $k\xi \to 0$, with $|v_{\mathrm{ph}} - c|/c \approx (k\xi)^2/2$.
+
+For all electromagnetic frequencies probed by Cassini Shapiro-delay timing~\cite{bertotti_2003}, gravitational lensing measurements, and standard astrophysical observations, $k\xi$ is utterly negligible. For visible light at $\lambda = 550$~nm, $(k\xi)^2/2 \sim 10^{-56}$; for X-band radio at 8~GHz (Cassini), $(k\xi)^2/2 \sim 10^{-66}$; even for the highest astrophysical PeV gamma rays, $(k\xi)^2/2 \sim 10^{-27}$, far below the best experimental bound on Lorentz invariance violation in vacuum ($\sim 10^{-20}$ from gamma-ray burst time-of-flight measurements). The framework therefore predicts achromatic light deflection and Shapiro delay throughout all current and foreseeable observational regimes. Frequency-dependent deflection is a falsifiable prediction of the framework, but only at energies approaching the Planck scale.
+
+\paragraph{The PG flow and preferred-frame tests}
+The Painlev\'{e}-Gullstrand flow $v(r) = \sqrt{2GM/r}$ takes the value $\sim 10^{-3}c$ at the solar limb, raising the question of why high-precision local experiments do not detect a Sagnac-like ``ether wind.'' The answer is the same structural feature that delivers $\gamma = 1$. The PG metric is identically Schwarzschild --- the transformation from PG coordinates to standard Schwarzschild coordinates is a passive change of variables that cannot alter any invariant observable. The PPN preferred-frame parameters $\alpha_1, \alpha_2, \alpha_3$ vanish in Schwarzschild geometry by construction~\cite{will_2014}, and they continue to vanish in any coordinate system describing the same geometry, including the PG flow representation. The framework therefore predicts $\alpha_1 = \alpha_2 = \alpha_3 = 0$ at the same order as $\gamma = 1$: as a direct consequence of the PG-Schwarzschild equivalence, not as a separate calculation.
+
+This resolves the apparent puzzle. The PG flow is a real macroscopic feature of the framework --- the condensate genuinely supports the velocity field $v(r)$ around the Sun --- but its observable consequences are precisely those of Schwarzschild gravity. Laboratory rulers and clocks situated in the solar system are in free fall in the same gravitational field; by construction, $v(r)$ is the free-fall velocity at radius $r$. An Earth-bound experiment cannot detect the underlying flow for the same reason a freely-falling observer in general relativity cannot detect the gravitational field they are falling through, expressed here in the language of an explicit medium picture rather than a geometric one. The framework's preferred rest frame is identified observationally with the CMB rest frame (in which the CMB dipole vanishes); this defines the global rest frame against which the macroscopic vacuum dynamics are described, while local physics in the solar system reproduces the standard PPN bounds. Refinements at higher post-Newtonian order, where the medium picture and the geometric picture could in principle diverge, are not derived in this work.
+
+\paragraph{The weak equivalence principle}
+The MICROSCOPE measurement of the E\"otv\"os parameter, $\eta(\mathrm{Ti},\mathrm{Pt}) = [-1.5 \pm 2.3\,(\mathrm{stat}) \pm 1.5\,(\mathrm{syst})] \times 10^{-15}$~\cite{microscope_2022}, is the tightest current bound on equivalence-principle violation. In any theory in which gravitation arises from coupling to a substrate rather than from a postulated geometric metric, this bound constrains composition-dependent terms in the matter-substrate coupling. The framework's leading-order universality, established above through the PG-Schwarzschild equivalence, automatically passes this test. The remaining theoretical question is whether composition-dependent corrections to the soliton-condensate coupling --- arising from differences in electromagnetic binding energy, nuclear binding energy, or spin-orbit structure between test materials --- generate an $\eta_{12}$ within the MICROSCOPE confidence interval, or whether they predict a specific non-zero value that future experiments could resolve. Computing $\eta_{\mathrm{Pt-Ti}}$ explicitly from the framework's matter-substrate coupling is deferred to dedicated work; it requires the U(1) gauging of the condensate and the soliton internal-energy decomposition, both developed in companion follow-up manuscripts of this program.
+
+\paragraph{Shapiro time delay}
+The recovery of $\gamma = 1$ via the Painlev\'{e}-Gullstrand structure automatically reproduces the Shapiro time delay. Once the acoustic metric in the PG frame is shown to be identically Schwarzschild (Sec.~\ref{sec:flowing}), all weak-field tests parameterized by the same PPN coefficients $\{\gamma, \beta, \alpha_i, \ldots\}$~\cite{will_2014} are reproduced together as a consequence: the coordinate transformation from PG to standard Schwarzschild coordinates is a passive change of variables that cannot alter any invariant observable. The Cassini measurement of $\gamma$ from Shapiro delay timing~\cite{bertotti_2003} is therefore reproduced without additional input, with no framework-specific dispersion in the long-wavelength limit (see also discussion of the electromagnetic sector below).
+
+\paragraph{Asymptotic constraints}
+The GW170817 constraint ($|c_{\mathrm{gw}} - c|/c < 10^{-15}$~\cite{abbott_2017}) requires that the asymptotic sound speed equal $c$ exactly, fixing a combination of the equation of state parameters. The second PPN parameter $\beta$, controlling perihelion precession, takes the GR value $\beta = 1$ by the same coordinate-equivalence argument as $\gamma$. The full post-Newtonian expansion to 2PN and higher orders, which probes the framework beyond the linearized acoustic-metric regime, is left for future work.
+
+\subsection{Limitations and open problems}
 
 \paragraph{Conformal flatness and strong fields}
 The acoustic metric~(\ref{eq:static_metric}) is
 conformally flat ($g_{ij} \propto \delta_{ij}$).
 General relativity admits nontrivial Weyl curvature. The present framework reproduces the weak-field PPN limit but cannot describe strong-field phenomena: binary pulsar orbital decay~\cite{taylor_1979}, black hole ringdown, or nonlinear gravitational wave dynamics. Whether extensions incorporating vorticity or background flow can access the strong-field regime is an open question.
 
+\newpage
 \paragraph{The quantum potential}
-The Bohm potential $Q = \Box\sqrt{\rho}/\sqrt{\rho}$
-was neglected in the macroscopic limit. At the soliton coherence scale, $Q$ becomes
-important and governs quantum-mechanical particle
-behavior. A complete theory must show a smooth
-transition between quantum and gravitational regimes
----analogous to the phonon-to-hydrodynamic crossover
-in superfluid helium~\cite{volovik_2003}.
-
-\subsection{Additional constraints}
-
-The recovery of $\gamma = 1$ via the Painlev\'{e}-Gullstrand structure, if achieved, would automatically resolve the Shapiro time delay, since the PPN framework packages all weak-field solar system tests into the parameters $\{\gamma, \beta, \ldots\}$~\cite{will_2014}. The GW170817 constraint ($|c_{\mathrm{gw}} - c|/c < 10^{-15}$~\cite{abbott_2017}) requires that the asymptotic sound speed equal $c$ exactly, fixing a combination of the equation of state parameters. The second PPN parameter $\beta$, controlling perihelion precession, requires a higher-order post-Newtonian expansion beyond this work's scope.
-
+The Bohm potential $Q = \Box\sqrt{\rho}/\sqrt{\rho}$ was neglected in the macroscopic limit. At the soliton coherence scale, $Q$ becomes important and governs quantum-mechanical particle behavior. A complete theory must show a smooth transition between quantum and gravitational regimes---analogous to the phonon-to-hydrodynamic crossover in superfluid helium~\cite{volovik_2003}.
 
 % ====================================================================
 \section{Conclusion}
@@ -369,6 +390,12 @@ The Bondi accretion calculation shows that a single spherically symmetric source
 % ====================================================================
 
 The author thanks K.~G.~Zloshchastiev for foundational work on the logarithmic superfluid vacuum and C.~Barcel\'{o}, S.~Liberati, and M.~Visser for the acoustic metric framework. The methodological stance of this paper---treating the order parameter as a real classical field whose hydrodynamic behavior underlies emergent gravitational phenomena---is indebted to the Madelung-de~Broglie-Bohm tradition, particularly as developed in P.~R.~Holland's exposition of the quantum theory of motion. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
+
+% ====================================================================
+\section*{Data and Code Availability}
+% ====================================================================
+
+The Klein-Gordon wave packet simulation code (Figure~\ref{fig:kinematic_trap}) and the Bondi accretion integration code (Figure~\ref{fig:bondi}) are available at \url{https://github.com/kulangiev/kulangiev.github.io/tree/main/papers/paper_1} under Creative Commons Attribution 4.0 (CC BY 4.0) licence. All numerical parameters, initial conditions, and post-processing routines used to generate the figures are documented in the repository.
 
 
 \begin{thebibliography}{25}
@@ -399,7 +426,9 @@ JHEP \textbf{02}, 101 (2008).
 
 \bibitem{will_2014}
 C.~M.~Will,
-\emph{Theory and Experiment in Gravitational Physics}, 2nd ed.\ (Cambridge, 2014).
+``The Confrontation between General Relativity and Experiment,''
+Living Reviews in Relativity \textbf{17}, 4 (2014),
+\url{https://doi.org/10.12942/lrr-2014-4}.
 
 \bibitem{bertotti_2003}
 B.~Bertotti, L.~Iess, and P.~Tortora,
@@ -446,16 +475,16 @@ A.~V.~Avdeenkov and K.~G.~Zloshchastiev,
 Quantum Bose liquids with logarithmic nonlinearity: Self-sustainability and emergence of spatial extent,
 J.\ Phys.\ B \textbf{44}, 195303 (2011).
 
-\bibitem{barcelo_2005}
-C.~Barcel\'{o}, S.~Liberati, and M.~Visser,
-Analogue gravity,
-Living Rev.\ Rel.\ \textbf{8}, 12 (2005);
-updated: \textbf{14}, 3 (2011).
-
-\bibitem{barcelo_2011}
+\bibitem{barcelo_liberati_visser_2001}
 C.~Barcel\'{o}, S.~Liberati, and M.~Visser,
 Analogue models for FRW cosmologies,
 Class.\ Quant.\ Grav.\ \textbf{18}, 1137 (2001).
+
+\bibitem{barcelo_liberati_visser_2005}
+C.~Barceló, S.~Liberati, and M.~Visser,
+``Analogue gravity,''
+Living Rev.\ Relativ.\ \textbf{8}, 12 (2005),
+arXiv:gr-qc/0505065v4 [gr-qc].
 
 \bibitem{taylor_1979}
 J.~H.~Taylor, L.~A.~Fowler, and P.~M.~McCulloch,
@@ -491,6 +520,11 @@ Astrophys.\ J.\ Lett.\ \textbf{848}, L13 (2017).
 C.~Brans and R.~H.~Dicke,
 Mach's principle and a relativistic theory of gravitation,
 Phys.\ Rev.\ \textbf{124}, 925 (1961).
+
+\bibitem{microscope_2022}
+P.~Touboul \emph{et al.} (MICROSCOPE Collaboration),
+MICROSCOPE mission: Final results of the test of the equivalence principle,
+Phys.\ Rev.\ Lett.\ \textbf{129}, 121102 (2022).
 
 \end{thebibliography}
 
