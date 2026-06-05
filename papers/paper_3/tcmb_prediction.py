@@ -25,8 +25,8 @@ c = 2.99792458e8                # m/s
 G = 6.67430e-11                 # m^3 kg^-1 s^-2
 k_B = 1.380649e-23              # J/K
 alpha_CODATA = 7.2973525693e-3  # fine-structure constant
-T_FIRAS = 2.7255                # K, Fixsen 2009
-T_FIRAS_err = 0.0006            # K
+T_FIRAS = 2.72548               # K, Fixsen 2009 combined determination
+T_FIRAS_err = 0.00057           # K, Fixsen 2009 combined determination
 H0_global = 68.15               # km/s/Mpc, framework prediction
 H0_planck = 67.36               # km/s/Mpc, Planck 2018
 H0_sh0es = 73.04                # km/s/Mpc, SH0ES 2022
@@ -82,7 +82,7 @@ ax.plot(H0_range, T_curve, color='#0072B2', linewidth=2.2,
 
 # FIRAS measurement band
 ax.axhspan(T_FIRAS - 5*T_FIRAS_err, T_FIRAS + 5*T_FIRAS_err,
-           color='#D55E00', alpha=0.18, label=r'FIRAS $T_{\mathrm{CMB}} = 2.7255$ K ($\pm 5\sigma$)')
+           color='#D55E00', alpha=0.18, label=r'FIRAS $T_{\mathrm{CMB}} = 2.72548$ K ($\pm 5\sigma$)')
 ax.axhline(T_FIRAS, color='#D55E00', linewidth=1.0, alpha=0.6)
 
 # Mark H_0 values
@@ -122,7 +122,7 @@ T_zoom_resid_ppm = (T_zoom - T_FIRAS) / T_FIRAS * 1e6
 
 ax2.plot(H0_zoom, T_zoom_resid_ppm, color='#0072B2', linewidth=2.2)
 ax2.axhline(0, color='#D55E00', linewidth=1.2, alpha=0.7,
-            label=r'FIRAS $T_{\mathrm{CMB}} = 2.7255$ K (zero line)')
+            label=r'FIRAS $T_{\mathrm{CMB}} = 2.72548$ K (zero line)')
 
 # FIRAS uncertainty band (ppm)
 firas_band_ppm = T_FIRAS_err / T_FIRAS * 1e6

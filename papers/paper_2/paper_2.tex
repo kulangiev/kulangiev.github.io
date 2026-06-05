@@ -57,7 +57,7 @@ The central open problem identified in~\cite{kulangiev_2026} was the derivation 
 
 \subsection{Microscopic and macroscopic scales}
 
-The vacuum condensate is described by a complex order parameter $\psi(x,t)$ satisfying the relativistic logarithmic wave equation~\cite{zloshchastiev_2023}:
+The vacuum condensate is described by a complex order parameter $\psi(x,t)$ satisfying the relativistic logarithmic Klein-Gordon equation~\cite{rosen_1969,bartkowski_gorka_2008}, the relativistic counterpart of the logarithmic Schr\"{o}dinger equation~\cite{bialynicki_birula_1979}:
 \begin{equation}
     \Box\psi + \mu^2\psi - b\,\psi\,\ln\!\left(\frac{|\psi|^2}{\rho_0}\right) = 0\,,
 \label{eq:log_kg}
@@ -106,7 +106,7 @@ where $\mathcal{S}(r) = n(r)\cdot\Gamma_{\mathrm{sink}}$ is the sink rate from s
 \label{sec:self_consistency}
 % ====================================================================
 
-In the superfluid vacuum framework, the gravitational potential is not an externally specified quantity. It \emph{is} the acoustic metric: phonons (including photons) propagate on the effective spacetime defined by $\rhob$ and $\vb$, and the curvature of this spacetime is what observers interpret as gravity. This imposes a self-consistency requirement.
+In the superfluid vacuum framework, the gravitational potential is not an externally specified quantity. It \emph{is} the acoustic metric: phonons (including photons) propagate on the effective geometry defined by the condensate's density $\rhob$ and flow velocity $\vb$, and what observers interpret as gravity is the response of these excitations to the condensate's spatial structure. Physical spacetime remains flat; the apparent ``curvature'' is an emergent property of how perturbations propagate through the underlying fluid. This imposes a self-consistency requirement.
 
 \subsection{The acoustic metric potential}
 
@@ -381,7 +381,7 @@ The choice of mechanism is deferred to future work. All four are consistent with
 
 \subsection{The vacuum density and the cosmological constant problem}
 
-The predicted vacuum mass density $\rho_0 \sim m_P/\lP^3 \approx 5 \times 10^{96}$~kg/m$^3$ (Eq.~\ref{eq:planck_scale}) is the natural Planck-scale density for a relativistic quantum field. The corresponding bulk modulus $K = \rho_0 c^2 \sim 10^{113}$~Pa quantifies the vacuum's stiffness: gravity is weak because the substrate resists deformation enormously, requiring macroscopic source masses to produce measurable spacetime curvature.
+The predicted vacuum mass density $\rho_0 \sim m_P/\lP^3 \approx 5 \times 10^{96}$~kg/m$^3$ (Eq.~\ref{eq:planck_scale}) is the natural Planck-scale density for a relativistic quantum field. The corresponding bulk modulus $K = \rho_0 c^2 \sim 10^{113}$~Pa quantifies the vacuum's stiffness: gravity is weak because the substrate resists deformation enormously, requiring macroscopic source masses to produce measurable perturbations of the condensate.
 
 The energy density of the background condensate, $\rho_0 c^2 \sim 10^{113}$~J/m$^3$, is comparable to the QFT zero-point estimate of the cosmological constant. In the present framework, however, this background energy is \emph{not} directly observable: gravitational effects are sourced by perturbations $\delta\rho/\rho_0 \sim U$ around the background, not by the background density itself. The observed dark energy density ($\sim 10^{-9}$~J/m$^3$) is therefore not in conflict with $\rho_0 c^2 \sim 10^{113}$~J/m$^3$; the question shifts from ``why is the vacuum energy so small'' to ``why is the relevant cosmological perturbation so small,'' a distinction that deserves separate investigation.
 
@@ -433,7 +433,7 @@ The apparent continuity constraint of the macroscopic PG inflow remains an open 
 % ====================================================================
 \section*{Acknowledgments}
 
-The author thanks K.~G.~Zloshchastiev for foundational work on the logarithmic superfluid vacuum, C.~Barcel\'{o}, S.~Liberati, and M.~Visser for the acoustic metric framework, and G.~E.~Volovik for the two-fluid perspective. The methodological stance of this paper---treating the order parameter as a real classical field whose hydrodynamic behavior underlies emergent gravitational phenomena---is indebted to the Madelung-de~Broglie-Bohm tradition, particularly as developed in P.~R.~Holland's exposition of the quantum theory of motion. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
+The author thanks C.~Barcel\'{o}, S.~Liberati, and M.~Visser for the acoustic metric framework. The methodological stance of this paper---treating the order parameter as a real classical field whose hydrodynamic behavior underlies emergent gravitational phenomena---is indebted to the Madelung-de~Broglie-Bohm tradition, particularly as developed in P.~R.~Holland's exposition of the quantum theory of motion. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
 
 
 \begin{thebibliography}{25}
@@ -450,15 +450,20 @@ Singularity Regularization and the Emergent Planck Scale in the Logarithmic Supe
 Preprint (2026).
 \url{https://kulangiev.github.io#paper5}
 
-\bibitem{zloshchastiev_2023}
-K.~G.~Zloshchastiev,
-Derivation of emergent spacetime metric, gravitational potential and speed of light in superfluid vacuum theory,
-Universe \textbf{9}, 234 (2023).
+\bibitem{rosen_1969}
+G.~Rosen,
+``Dilatation covariance and exact solutions in local relativistic field theories,''
+Phys.\ Rev.\ \textbf{183}, 1186 (1969).
 
 \bibitem{bialynicki_birula_1979}
 I.~Bia\l{}ynicki-Birula and J.~Mycielski,
 Gaussons: Solitons of the logarithmic Schr\"{o}dinger equation,
 Phys.\ Scr.\ \textbf{20}, 539 (1979).
+
+\bibitem{bartkowski_gorka_2008}
+K.~Bartkowski and P.~G\'{o}rka,
+``One-dimensional Klein-Gordon equation with logarithmic nonlinearities,''
+J.\ Phys.\ A: Math.\ Theor.\ \textbf{41}, 355201 (2008).
 
 \bibitem{avdeenkov_2011}
 A.~V.~Avdeenkov and K.~G.~Zloshchastiev,

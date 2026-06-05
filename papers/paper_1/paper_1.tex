@@ -36,7 +36,7 @@ where $\gamma$ encodes the ratio of spatial to temporal curvature in the weak-fi
 
 Purely scalar theories generically fail this test. Nordstr\"{o}m's conformally flat theory gives $\gamma = -1$~\cite{nordstrom_1913}. A real scalar field with standard kinetic term gives $\gamma = 0$~\cite{will_2014}---Einstein's 1911 result~\cite{einstein_1911}, using only time dilation without spatial curvature. This half-deflection led to the conclusion that gravity requires a rank-2 tensor field.
 
-In this paper, we examine whether a superfluid vacuum model---specifically, a complex scalar field with logarithmic self-interaction analyzed in the Madelung hydrodynamic representation~\cite{zloshchastiev_2023,zloshchastiev_2020}---can overcome this constraint. We find that the Madelung formulation introduces two structural ingredients absent in the wave equation form: (i)~a density-dependent sound speed, and (ii)~a macroscopic flow velocity. Both are needed for $\gamma = 1$. We derive the precise conditions required, and show via self-consistent computation that these conditions are not automatically satisfied, identifying the central open problem for superfluid vacuum gravity.
+In this paper, we examine whether a superfluid vacuum model---specifically, a complex scalar field with logarithmic self-interaction~\cite{rosen_1969,bialynicki_birula_1979,bartkowski_gorka_2008} analyzed in the Madelung hydrodynamic representation~\cite{madelung_1927,bohm_1952,holland_1993}---can overcome this constraint. We find that the Madelung formulation introduces two structural ingredients absent in the wave equation form: (i)~a density-dependent sound speed, and (ii)~a macroscopic flow velocity. Both are needed for $\gamma = 1$. We derive the precise conditions required, and show via self-consistent computation that these conditions are not automatically satisfied, identifying the central open problem for superfluid vacuum gravity.
 
 
 % ====================================================================
@@ -87,12 +87,12 @@ We take a deliberately classical-field stance toward Eq.~(\ref{eq:log_kg}) below
 
 \subsection{The logarithmic superfluid}
 
-We model the vacuum as a complex order parameter $\psi(x,t)$ evolving under~\cite{zloshchastiev_2023,zloshchastiev_2020}:
+We model the vacuum as a complex order parameter $\psi(x,t)$ evolving under the relativistic logarithmic Klein-Gordon equation~\cite{rosen_1969,bartkowski_gorka_2008}, the relativistic counterpart of the logarithmic Schr\"{o}dinger equation~\cite{bialynicki_birula_1979}:
 \begin{equation}
     \Box\psi + \mu^2\psi - b\,\psi\,\ln\!\left(\frac{|\psi|^2}{\rho_0}\right) = 0\,.
 \label{eq:log_kg}
 \end{equation}
-The logarithmic nonlinearity produces Gaussian-localized solitons (``Gaussons'')~\cite{bialynicki_birula_1979,avdeenkov_2011} and preserves the Landau roton-maxon spectrum~\cite{zloshchastiev_2012}.
+The logarithmic nonlinearity produces Gaussian-localized solitons (``Gaussons'')~\cite{bialynicki_birula_1979,avdeenkov_2011}.
 
 \paragraph{Units of the order parameter}
 A clarification on dimensions. In the relativistic k-essence Lagrangian $\mathcal{L} = \rho\,X - V(\rho)$, with $X = \partial_\mu S\,\partial^\mu S$ and $S$ having dimensions of action, the variable $\rho = |\psi|^2$ does not have units of mass density [kg/m$^3$]. Demanding $[\mathcal{L}] = [\text{energy}/\text{volume}]$ together with $[X] = [\text{momentum}^2]$ forces $[\rho] = [(\text{energy}\cdot\text{volume})^{-1}]$. The Lagrangian variable $\rho$ is therefore an inverse-energy-volume quantity; the physical mass density of the condensate, which is what enters the gravitational source term and what one would measure as kg/m$^3$, is a \emph{distinct} quantity computed from the time-time component of the stress-energy tensor:
@@ -389,7 +389,7 @@ The Bondi accretion calculation shows that a single spherically symmetric source
 \section*{Acknowledgments}
 % ====================================================================
 
-The author thanks K.~G.~Zloshchastiev for foundational work on the logarithmic superfluid vacuum and C.~Barcel\'{o}, S.~Liberati, and M.~Visser for the acoustic metric framework. The methodological stance of this paper---treating the order parameter as a real classical field whose hydrodynamic behavior underlies emergent gravitational phenomena---is indebted to the Madelung-de~Broglie-Bohm tradition, particularly as developed in P.~R.~Holland's exposition of the quantum theory of motion. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
+The author thanks C.~Barcel\'{o}, S.~Liberati, and M.~Visser for the acoustic metric framework. The methodological stance of this paper---treating the order parameter as a real classical field whose hydrodynamic behavior underlies emergent gravitational phenomena---is indebted to the Madelung-de~Broglie-Bohm tradition, particularly as developed in P.~R.~Holland's exposition of the quantum theory of motion. Claude (Anthropic) and Gemini (Google) were used as editorial and computational tools during manuscript preparation. All scientific content, equations, and interpretations are the author's own.
 
 % ====================================================================
 \section*{Data and Code Availability}
@@ -460,10 +460,15 @@ K.~G.~Zloshchastiev,
 Spontaneous symmetry breaking and mass generation as built-in phenomena in logarithmic nonlinear quantum theory,
 Acta Phys.\ Polon.\ B \textbf{42}, 261 (2011).
 
-\bibitem{zloshchastiev_2012}
-K.~G.~Zloshchastiev,
-Volume element structure and roton-maxon-phonon excitations in superfluid helium beyond the Gross-Pitaevskii approximation,
-Eur.\ Phys.\ J.\ B \textbf{85}, 273 (2012).
+\bibitem{rosen_1969}
+G.~Rosen,
+``Dilatation covariance and exact solutions in local relativistic field theories,''
+Phys.\ Rev.\ \textbf{183}, 1186 (1969).
+
+\bibitem{bartkowski_gorka_2008}
+K.~Bartkowski and P.~G\'{o}rka,
+``One-dimensional Klein-Gordon equation with logarithmic nonlinearities,''
+J.\ Phys.\ A: Math.\ Theor.\ \textbf{41}, 355201 (2008).
 
 \bibitem{bialynicki_birula_1979}
 I.~Bia\l{}ynicki-Birula and J.~Mycielski,
