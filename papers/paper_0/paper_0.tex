@@ -12,27 +12,28 @@
 
 \begin{document}
 
-\title{An Approximate Numerical Relation Between the CMB Photon Density Parameter and the Fine Structure Constant}
+\title{An Empirical Constraint on the Hubble Constant from the Relation \texorpdfstring{$\Omega_\gamma = \alpha^2$}{Omega-gamma = alpha^2}}
 
 \author{B.~B.~Kulangiev\\\small{Haifa, Israel}}
-\date{April 2026}
+\date{May 2026}
 \maketitle
 
 \begin{abstract}
-\noindent We report an approximate numerical relation between two independently measured quantities of distinct physical origin: the photon density parameter of the Cosmic Microwave Background, $\Omega_\gamma$, and the square of the fine structure constant, $\alpha^2$. The physical photon density $\Omega_\gamma h^2 = 2.473\times 10^{-5}$ is uniquely fixed by the FIRAS temperature measurement and fundamental constants, independent of $H_0$, while $\alpha^2 h^2$ carries an explicit $h$ dependence. Imposing equality $\Omega_\gamma = \alpha^2$ therefore yields a sharp prediction for the Hubble constant, $H_0 = 68.15 \pm 0.03~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, where the uncertainty is dominated by the FIRAS temperature error. The predicted value is consistent with the Planck 2018 determination (TT,TE,EE+lowE+lensing, $H_0 = 67.36 \pm 0.54\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$) at $1.5\sigma$, lies between early- and late-universe determinations, and is in $4.7\sigma$ tension with the SH0ES distance ladder. We state the observation, quantify its sensitivity to the inferred Hubble constant, and discuss arguments for and against physical significance. We make no theoretical claim here; we present the empirical relation in its simplest form and identify the future measurements that will decide whether it reflects underlying physics or numerical coincidence.
+\noindent We examine the identity $\Omega_\gamma = \alpha^2$ relating two independently measured dimensionless quantities of distinct physical origin: the CMB photon density parameter and the squared fine structure constant. Because the photon density parameter depends on the Hubble constant while $\alpha^2$ does not, imposing this identity as an exact constraint maps the photon temperature onto a single value of the Hubble constant, $H_0 = 68.15~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, with a $\pm 0.03~\mathrm{km\,s^{-1}\,Mpc^{-1}}$ uncertainty propagated from the FIRAS temperature. This error bar reflects how sharply the temperature fixes $H_0$ once the identity is assumed exact; it is not a measure of confidence in the identity itself. The predicted value is consistent with the Planck 2018 determination (TT,TE,EE+lowE+lensing, $H_0 = 67.36 \pm 0.54\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$) at $1.5\sigma$, lies between early-universe and intermediate-distance determinations, and is in $4.7\sigma$ tension with the SH0ES distance-ladder value. We make no theoretical claim regarding the origin of the identity; we treat it as an empirical hypothesis predicting a definite $H_0$, quantify the prediction's sensitivity to input parameters, discuss interpretive considerations including the look-elsewhere effect, and identify the gravitational-wave-standard-siren and strong-lensing measurements that will confirm or exclude the prediction within the decade.
 \end{abstract}
 
 % ====================================================================
 \section{Introduction}
 \label{sec:intro}
 % ====================================================================
-The Cosmic Microwave Background (CMB) temperature $T_{\mathrm{CMB}} = 2.72548 \pm 0.00057$~K is among the most precisely measured quantities in cosmology~\cite{fixsen_2009}. In the standard $\Lambda$CDM framework this temperature is determined by the early-universe thermal history (specifically the baryon-to-photon ratio $\eta$ set by baryogenesis), with no fundamental principle in the Standard Model or General Relativity that would predict $\eta$ or $T_{\mathrm{CMB}}$ at the percent level from first principles.
+The Cosmic Microwave Background (CMB) temperature $T_{\mathrm{CMB}} = 2.72548 \pm 0.00057$~K is among the most precisely measured quantities in cosmology~\cite{fixsen_2009}. In the standard $\Lambda$CDM reading this temperature is interpreted as a relic of the early-universe thermal history (set by the baryon-to-photon ratio $\eta$ from baryogenesis), with no fundamental principle in the Standard Model or General Relativity that would predict $\eta$ or $T_{\mathrm{CMB}}$ at the percent level from first principles.
 
 The fine structure constant, defined (in SI) as $\alpha = e^2/(4\pi\epsilon_0\hbar c) \approx 1/137.036$, quantifies the strength of the electromagnetic interaction. Like $T_{\mathrm{CMB}}$, it has no accepted derivation from more fundamental principles.
 
-In this note we point out an approximate numerical relation between these two quantities: the present-day CMB photon density parameter $\Omega_\gamma$ is approximately equal to $\alpha^2$. We present the arithmetic, test its sensitivity to cosmological input, invert the relation to obtain a definite prediction for the Hubble constant, and discuss both arguments for physical significance and arguments against.
+In this note we examine the identity $\Omega_\gamma = \alpha^2$ relating these two quantities. We present the arithmetic, test its sensitivity to cosmological input, derive the Hubble constant predicted by the identity, and discuss its interpretation --- geometric motivation, the question of whether the CMB temperature is a relic or a present-epoch quantity, and arguments for and against physical significance.
 
 % ====================================================================
+\newpage
 \section{Statement of the Relation}
 \label{sec:relation}
 % ====================================================================
@@ -49,7 +50,7 @@ The critical density of the universe is
 \end{equation}
 The photon density parameter is $\Omega_\gamma \equiv u_{\mathrm{CMB}}/(\rho_c\,c^2)$. The empirical observation is
 \begin{equation}
-    \boxed{\;\Omega_\gamma \approx \alpha^2\;}
+    \boxed{\;\Omega_\gamma = \alpha^2\;}
 \label{eq:main_relation}
 \end{equation}
 Equivalently, solving for the temperature,
@@ -72,7 +73,7 @@ In contrast, the right-hand side of Eq.~(\ref{eq:main_relation}) multiplied by $
     \alpha^2\,h^2 \;=\; 2.416\times 10^{-5}\,,\qquad \text{(using Planck $h = 0.6736$)},
 \label{eq:alpha2_h2}
 \end{equation}
-retains an explicit dependence on $h$. The equality $\Omega_\gamma h^2 \approx \alpha^2 h^2$ is therefore not an identity but a constraint on $h$: it predicts a specific numerical value for the Hubble constant, derived in Sec.~\ref{sec:numerical}. The $\sim 2$\% mismatch between the two sides at the Planck value of $h$ is what makes the relation an \emph{approximate} coincidence rather than an exact one.
+retains an explicit dependence on $h$. The identity $\Omega_\gamma h^2 = \alpha^2 h^2$ is therefore a constraint on $h$: it predicts a specific numerical value for the Hubble constant, derived in Sec.~\ref{sec:numerical}.
 
 % ====================================================================
 \newpage
@@ -83,11 +84,11 @@ retains an explicit dependence on $h$. The equality $\Omega_\gamma h^2 \approx \
 \subsection{Forward calculation}
 \label{sec:forward}
 
-Using the Planck 2018 best-estimate cosmological parameters~\cite{planck_2018} (TT,TE,EE+lowE+lensing combination, $H_0 = 67.36\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$) and CODATA 2018 fundamental constants, Table~\ref{tab:forward} summarizes the test of Eq. (\ref{eq:stefan}) and the inferred Hubble constant.
+Using the Planck 2018 best-estimate cosmological parameters~\cite{planck_2018} (TT,TE,EE+lowE+lensing combination, $H_0 = 67.36\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$) and CODATA 2018 fundamental constants, Table~\ref{tab:forward} summarizes the test of the identity~(\ref{eq:main_relation}) and the inferred Hubble constant.
 
 \begin{table}[H]
 \centering
-\caption{Numerical test of $\Omega_\gamma \approx \alpha^2$ using observed quantities.}
+\caption{Numerical test of $\Omega_\gamma = \alpha^2$ using observed quantities.}
 \label{tab:forward}
 \begin{tabular}{lc}
 \toprule
@@ -105,11 +106,19 @@ $H_0$ implied by exact equality & $68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ \\
 \subsection{Inverse prediction: determining \texorpdfstring{$H_0$}{H0}}
 \label{sec:inverse}
 
-If Eq.~(\ref{eq:main_relation}) is taken to hold exactly, it can be inverted to predict the Hubble constant from $T_{\mathrm{CMB}}$ and $\alpha$:
+Combining the Stefan--Boltzmann law~(\ref{eq:stefan}) with the critical density~(\ref{eq:rho_c}), the photon density parameter as an explicit function of the Hubble constant is
+\begin{equation}
+    \Omega_\gamma(H_0) \;\equiv\; \frac{u_{\mathrm{CMB}}}{\rho_c\,c^2}
+    \;=\; \frac{8\pi^3 G\,k_B^4}{45\,\hbar^3 c^5}\,\frac{T_{\mathrm{CMB}}^4}{H_0^2}\,,
+\label{eq:Omega_of_H0}
+\end{equation}
+which makes the $\Omega_\gamma \propto H_0^{-2}$ scaling manifest. Imposing the identity~(\ref{eq:main_relation}), $\Omega_\gamma(H_0) = \alpha^2$, and solving for $H_0$ yields a closed-form expression in terms of $T_{\mathrm{CMB}}$, $\alpha$, and fundamental constants alone:
 \begin{equation}
     H_0 \;=\; \frac{T_{\mathrm{CMB}}^2}{\alpha}\,\sqrt{\frac{8\pi^3 G\,k_B^4}{45\,\hbar^3 c^5}}\,.
 \label{eq:H0_predicted}
 \end{equation}
+No measured value of $H_0$ enters the right-hand side: the value is extracted from the photon temperature and the electromagnetic coupling only.
+
 Substituting $T_{\mathrm{CMB}} = 2.72548$~K and $\alpha = 1/137.036$ yields
 \begin{equation}
     H_0^{\mathrm{pred}} \;=\; 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}\,.
@@ -143,7 +152,7 @@ SH0ES (Cepheids)~\cite{riess_2022} & $73.04 \pm 1.04$ & $4.7\sigma$ \\
 \subsection{Sensitivity to \texorpdfstring{$H_0$}{H0}}
 \label{sec:sensitivity}
 
-Since $\Omega_\gamma \propto H_0^{-2}$ (at fixed $T_{\mathrm{CMB}}$), the relation is sensitive to the assumed Hubble constant. The match is exact for $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ and degrades smoothly away from this value (Table~\ref{tab:sensitivity}).
+Since $\Omega_\gamma \propto H_0^{-2}$ (at fixed $T_{\mathrm{CMB}}$), the relation is sensitive to the assumed Hubble constant. The relation holds exactly for $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ and degrades smoothly away from this value (Table~\ref{tab:sensitivity}).
 
 \begin{table}[H]
 \centering
@@ -170,38 +179,65 @@ $H_0$ (km/s/Mpc) & $\Omega_\gamma / \alpha^2$ & Deviation \\
 \label{sec:discussion}
 % ====================================================================
 
-\subsection{Nature of the relation}
+\subsection{Character of the relation}
 \label{sec:nature}
 
-Equation~(\ref{eq:main_relation}) connects a cosmological quantity ($\Omega_\gamma$, determined by $T_{\mathrm{CMB}}$ and $H_0$) with an atomic quantity ($\alpha$, determined by the elementary charge, Planck's constant, and the speed of light). In standard $\Lambda$CDM cosmology there is no known mechanism to tie these quantities together: $T_{\mathrm{CMB}}$ is set by the baryon-to-photon ratio $\eta$ and the thermal history of the universe, while $\alpha$ is a fundamental coupling of quantum electrodynamics.
+Equation~(\ref{eq:main_relation}) connects a cosmological quantity ($\Omega_\gamma$, determined by $T_{\mathrm{CMB}}$ and $H_0$) with an atomic quantity ($\alpha$, determined by the elementary charge, Planck's constant, and the speed of light). No known mechanism in the Standard Model or general relativity ties these quantities together; in the standard $\Lambda$CDM reading, $T_{\mathrm{CMB}}$ is interpreted as a relic of the early-universe thermal history (with $\eta$ from baryogenesis), while $\alpha$ is a fundamental coupling of quantum electrodynamics.
 
-The relation is not of the Dirac large-number type. Those typically arise from ratios of Planck-scale and Hubble-scale quantities, producing numbers of order $10^{60}$. Here $\alpha \approx 1/137$ is of order $10^{-2}$ and the coincidence involves $\alpha^2 \approx 5.3 \times 10^{-5}$ matching $\Omega_\gamma \approx 5.4 \times 10^{-5}$. Both are small but not astronomically so, and neither is a Planck-to-Hubble ratio.
+The identity is not of the Dirac large-number type. Those typically arise from ratios of Planck-scale and Hubble-scale quantities, producing numbers of order $10^{60}$. Here $\alpha \approx 1/137$ is of order $10^{-2}$, and the relation equates $\alpha^2 \approx 5.3 \times 10^{-5}$ to $\Omega_\gamma$. Both quantities are small but not astronomically so, and neither is a Planck-to-Hubble ratio.
 
-A natural objection is that $\Omega_\gamma$ evolves with redshift --- at matter--radiation equality, $\Omega_\gamma \sim 0.5$, nothing like $\alpha^2$ --- so the match at $z=0$ could be an accident of the present epoch. This is correct as stated: the density \emph{parameter} is time-dependent. The physical photon density $\Omega_\gamma h^2$, on the other hand, is a fixed number set by the thermal history and determined uniquely by $T_{\mathrm{CMB}}$. It is this fixed quantity that the relation equates, via Eq.~(\ref{eq:Omega_gamma_h2}), with $\alpha^2 h^2$ --- which in turn predicts the present-day $h$ (Sec.~\ref{sec:inverse}).
+The identity $\Omega_\gamma = \alpha^2$ as stated is a relation among quantities determined by present-day observation: $\Omega_\gamma$ from the measured $T_{\mathrm{CMB}}$ and the cosmological parameters, $\alpha$ from atomic physics. The physical combination $\Omega_\gamma h^2$ is set by $T_{\mathrm{CMB}}$ alone, independent of $H_0$, and the identity equates this combination, via Eq.~(\ref{eq:Omega_gamma_h2}), with $\alpha^2 h^2$ --- thereby predicting the present-day $h$ (Sec.~\ref{sec:inverse}).
+
+Whether the relation holds also at earlier epochs is a separate question whose answer depends on the underlying cosmological model. We do not address this question here; we examine the identity as stated and treat its predictive content for $H_0$ as the testable consequence.
+
+\subsection{Geometric and physical motivation}
+\label{sec:geometric}
+
+If the identity reflects underlying physics, two interpretive readings are suggestive. First, $\Omega_\gamma$ is the fraction of cosmic energy density carried by photons, while $\alpha = e^2/(4\pi\epsilon_0\hbar c)$ is the dimensionless coupling that controls how strongly photons interact with electric charge. The relation $\Omega_\gamma = \alpha^2$ then equates the \emph{abundance} of photons in the cosmic energy budget to the \emph{squared coupling strength} of the photon sector. Read this way, the identity expresses a correspondence between the macroscopic photon content of the universe and the microscopic coupling that governs photon-matter interaction.
+
+Second, both quantities are dimensionless ratios constructed from independent inputs: $\Omega_\gamma$ from thermal-radiation energy density relative to the cosmic critical density (set by $H_0$ and $G$), and $\alpha^2$ from the electromagnetic coupling. Their equality, if real, would constitute a relation between gravitational and electromagnetic scales not anticipated by the Standard Model or by general relativity alone.
+
+These readings are interpretive, not derivations: the identity itself is empirical, and no specific mechanism is required for the prediction $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ to be tested. We note them as candidate motivations for why the relation might reflect underlying physics rather than coincidence.
+
+
+\subsection{CMB temperature as a present-epoch quantity}
+\label{sec:present_epoch}
+
+The identity $\Omega_\gamma = \alpha^2$ involves the present-day value of $\Omega_\gamma$ and is silent about earlier epochs --- the relation at $z \gtrsim 0$ depends on the cosmological model, while at $z = 0$ it reduces to a constraint among the present-epoch observables $T_{\mathrm{CMB}}$, $\alpha$, and $H_0$. Its status therefore hinges on the interpretation of $T_{\mathrm{CMB}}$ itself.
+
+The standard reading is that $T_{\mathrm{CMB}}$ is a fading relic of the early universe, set by thermal-history parameters such as the baryon-to-photon ratio and the post-annihilation photon-to-neutrino temperature ratio. Under this reading, the identity at $z=0$ is a coincidence of timing: the time-evolving $\Omega_\gamma$ happens to coincide with $\alpha^2$ at the present epoch, and would not have held at recombination ($\Omega_\gamma \sim 0.5$) or at most other times.
+
+An alternative reading is that $T_{\mathrm{CMB}}$ reflects a present-epoch property of the cosmic vacuum --- for instance, an equilibrium condition between the radiation sector and underlying physics that fixes $T_{\mathrm{CMB}}$ as a structural quantity rather than as a relic temperature. Under this reading, the identity is structural, and $T_{\mathrm{CMB}}$ is determined now (by the present configuration of fundamental constants) rather than then (by initial conditions of the early universe). Any framework in which the CMB is a stationary or quasi-stationary equilibrium quantity, rather than a fading relic, would naturally predict relations between $\Omega_\gamma$ and other coupling constants.
+
+We do not attempt to discriminate between these readings here. The empirical content of the identity --- the prediction $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ --- is independent of which interpretation is correct, and the prediction will be tested by improved $H_0$ measurements regardless of the underlying mechanism.
+
+
+\subsection{A possible standard-cosmology pathway}
+\label{sec:bbn_pathway}
+
+Within the standard $\Lambda$CDM reading, one possible physical pathway for the identity is the following. The photon density at early times is fixed by thermal equilibrium at temperature $T_\gamma$, and the subsequent ratio of photon and neutrino temperatures is set by $e^+e^-$ annihilation~\cite{kolb_turner_1990}. The $e^+e^-$ annihilation cross section is proportional to $\alpha^2$. The baryon-to-photon ratio $\eta \approx 6 \times 10^{-10}$ is set by baryogenesis and the subsequent thermal history~\cite{steigman_2007}. Whether these dependencies combine to produce $\Omega_\gamma = \alpha^2$ as an exact result within standard Big Bang nucleosynthesis is an open theoretical question; we note the pathway without claiming a derivation. This pathway is offered as one possibility within $\Lambda$CDM cosmology; alternative interpretations are discussed in Sec.~\ref{sec:present_epoch}.
+
 
 \subsection{Arguments for physical significance}
 \label{sec:arguments_for}
 
-Several features argue against pure coincidence. First, the match holds with sub-percent precision at the implied $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$, and to 2.4\% at Planck's $H_0 = 67.36$, despite the two quantities having completely independent observational origins. Second, the predicted $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ falls between the Planck and TRGB values~\cite{freedman_2021} and well below the SH0ES determination~\cite{riess_2022}, raising the possibility that it captures the true global expansion rate more accurately than either endpoint of the $H_0$ tension.
-
-A possible physical pathway, at the qualitative level, is the following. The photon density at early times is fixed by thermal equilibrium at temperature $T_\gamma$, and the subsequent ratio of photon and neutrino temperatures is set by $e^+e^-$ annihilation~\cite{kolb_turner_1990}. The $e^+e^-$ annihilation cross section is proportional to $\alpha^2$. The baryon-to-photon ratio $\eta \approx 6 \times 10^{-10}$ is set by baryogenesis and the subsequent thermal history~\cite{steigman_2007}. Whether these dependencies combine to produce $\Omega_\gamma = \alpha^2$ as an exact result within standard Big Bang nucleosynthesis is an open theoretical question; we note the pathway without claiming a derivation.
-
-More generally, any model in which the CMB temperature reflects a present-day thermodynamic equilibrium property rather than a relic initial condition would, by construction, predict relations between $\Omega_\gamma$ and other coupling constants in the underlying theory.
+Several features argue against pure coincidence. First, the predicted $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ lies $1.5\sigma$ from the Planck 2018 determination despite the prediction using only observational inputs independent of any Planck cosmology fit (the FIRAS temperature and CODATA $\alpha$). Second, the predicted value falls between the Planck and TRGB determinations~\cite{freedman_2021} and well below the SH0ES determination~\cite{riess_2022}, raising the possibility that it captures the true global expansion rate more accurately than either endpoint of the $H_0$ tension.
 
 The predicted value $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ may also be reconciled with higher local measurements through the observed KBC void. Galaxy number counts across multiple wavelengths indicate that the Local Group resides near the centre of a Gpc-scale underdensity with density contrast $\sim 46\%$~\cite{keenan_2013, whitbourn_2016}. Gravitationally driven outflows from this void add peculiar velocities to the Hubble flow, inflating locally measured $H_0$ values relative to the true background rate. Modeling by Haslbauer, Banik \& Kroupa~\cite{haslbauer_2020} indicates that a $\sim 20$\% local underdensity, evolved with enhanced structure growth, can boost the apparent local $H_0$ from a Planck-consistent background value of $\sim 67$--$68$ to $\sim 72$--$73\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$. Mazurenko \emph{et al.}~\cite{mazurenko_2025} further demonstrate that the observed decline of $H_0(z)$ toward the Planck value at high redshift is consistent with void-outflow models. Two caveats should be stated: (i) the enhanced structure growth used in~\cite{haslbauer_2020} and~\cite{mazurenko_2025} is obtained within Milgromian dynamics (MOND), not standard $\Lambda$CDM; and (ii) the existence of a $\sim 46$\% Gpc-scale void is itself in $\sim 6\sigma$ tension with $\Lambda$CDM structure formation~\cite{haslbauer_2020}. The void-outflow reconciliation with Eq.~(\ref{eq:main_relation}) is therefore possible but framework-dependent.
+
 
 \subsection{Arguments against physical significance}
 \label{sec:arguments_against}
 
 The principal objection is the look-elsewhere effect. Given the many dimensionless constants in physics ($\alpha$, $\alpha_s$, $\sin^2\theta_W$, $\eta$, the Yukawa couplings) and the several cosmological density parameters ($\Omega_b$, $\Omega_c$, $\Omega_\gamma$, $\Omega_\Lambda$, $\Omega_m$), the number of pairwise combinations with various integer and half-integer powers is easily of order $10^2$. A coincidence at the few-percent level among $\sim 100$ trials has a non-negligible probability of occurring by chance, even if (as here) exact equality is recovered at the implied $H_0$. A rigorous statistical treatment would require specifying the prior over possible relations; we do not attempt this here.
 
-The relation is also a definite constraint on $H_0$. The $2.4$\% match at Planck $H_0$ becomes a $13$\% mismatch at SH0ES $H_0$. If a future consensus converges on an $H_0$ significantly different from $68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$, the relation is falsified. This is a strength rather than a weakness: the claim is testable. But it also means that the relation's viability is tied to the outcome of the Hubble tension.
+The relation is also a definite constraint on $H_0$. The $2.4$\% deviation at Planck's $H_0$ becomes a $13$\% deviation at SH0ES's $H_0$. If a future consensus converges on an $H_0$ significantly different from $68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$, the relation is falsified. This is a strength rather than a weakness: the claim is testable. But it also means that the relation's viability is tied to the outcome of the Hubble tension.
 
 
 \subsection{Falsifiability and future tests}
 \label{sec:falsifiability}
 
-The relation makes a sharp, testable prediction: $H_0 = 68.15 \pm 0.03\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$, where the uncertainty is set by the FIRAS temperature measurement alone. The systematic uncertainty in any test is set by the precision of the independent $H_0$ determination against which the prediction is compared. Upcoming measurements from gravitational-wave standard sirens~\cite{ligo_standard_siren}, strong-lensing time delays~\cite{tdcosmo}, and further refinements of the distance ladder will sharpen the comparison within the next several years.
+The relation makes a definite, testable prediction: $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$. The accompanying $\pm 0.03\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ propagates the FIRAS temperature error through Eq.~(\ref{eq:H0_predicted}) and reflects how sharply $T_{\mathrm{CMB}}$ fixes $H_0$ under the identity, not confidence that the identity holds. The systematic uncertainty in any test is set by the precision of the independent $H_0$ determination against which the prediction is compared. Upcoming measurements from gravitational-wave standard sirens~\cite{ligo_standard_siren}, strong-lensing time delays~\cite{tdcosmo}, and further refinements of the distance ladder will sharpen the comparison within the next several years.
 
 A second consistency check is available. The relation $\Omega_\gamma = \alpha^2$ is specific to the photon sector by construction, since $\Omega_\gamma$ is determined by $T_{\mathrm{CMB}}$ alone. The total radiation density $\Omega_r$ includes a neutrino contribution proportional to $N_{\mathrm{eff}}$, and $\Omega_r/\Omega_\gamma$ is set by the photon-neutrino temperature ratio established at electron-positron annihilation. If a future measurement of $\Omega_r$ were found to bear a similarly clean relation to $\alpha$, this would suggest a thermal-history origin involving both species; the photon-only relation studied here would then be a constituent of a broader pattern. Continued agreement of $\Omega_\gamma = \alpha^2$ without a corresponding $\Omega_r$ relation would point instead to physics specific to the photon sector.
 
@@ -210,7 +246,7 @@ A second consistency check is available. The relation $\Omega_\gamma = \alpha^2$
 \label{sec:conclusion}
 % ====================================================================
 
-We have identified an approximate numerical relation $\Omega_\gamma \approx \alpha^2$ connecting the CMB photon density parameter to the square of the fine structure constant. The relation holds with sub-percent precision at $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ and to 2.4\% at the Planck $H_0$. Inverted, it predicts a Hubble constant of $H_0 = 68.15 \pm 0.03\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$, consistent with Planck at $1.5\sigma$ and in $4.7\sigma$ tension with the local SH0ES determination. We present the observation as an empirical relation, not as a derivation from first principles. Whether it reflects an unrecognized constraint from primordial thermodynamics, a feature of underlying physics, or a numerical accident awaits both theoretical investigation and convergence of independent $H_0$ measurements. Two questions are open. First, can the relation be derived from any specific physical mechanism, in $\Lambda$CDM or in extensions thereof? Second, will the predicted $H_0 = 68.15~\mathrm{km\,s^{-1}\,Mpc^{-1}}$ be confirmed or excluded by gravitational-wave standard sirens, strong-lensing time delays, and refined distance ladders, all expected to reach percent-level precision within the decade?
+We have examined the identity $\Omega_\gamma = \alpha^2$ connecting the CMB photon density parameter to the square of the fine structure constant. Combined with the FIRAS temperature measurement and the CODATA value of $\alpha$, the identity predicts a Hubble constant $H_0 = 68.15\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ (Sec.~\ref{sec:inverse}), consistent with Planck at $1.5\sigma$ and in $4.7\sigma$ tension with the local SH0ES determination. We present the observation as an empirical relation, not as a derivation from first principles. Whether it reflects an unrecognized constraint from primordial thermodynamics, a feature of underlying physics, or a numerical accident awaits both theoretical investigation and convergence of independent $H_0$ measurements. Two questions are open. First, can the relation be derived from any specific physical mechanism, in $\Lambda$CDM or in extensions thereof? Second, will the predicted $H_0 = 68.15~\mathrm{km\,s^{-1}\,Mpc^{-1}}$ be confirmed or excluded by gravitational-wave standard sirens, strong-lensing time delays, and refined distance ladders, all expected to reach percent-level precision within the decade?
 
 % ====================================================================
 \section*{Acknowledgments}
