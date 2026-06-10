@@ -85,7 +85,7 @@ We introduce a coarse-graining scale $\ell$ satisfying $\xi \ll \ell \ll r$ and 
 \end{align}
 where $n(r)$ is the number density of solitons. The macroscopic condensate density $\rhob$ is conceptually distinct from the particle mass density $\rho_{\mathrm{mass}}$: the former describes the vacuum substrate, the latter describes the matter embedded within it.
 
-
+\newpage
 \subsection{Coarse-grained equations}
 
 After coarse-graining, the condensate obeys the steady-state Euler equations:
@@ -157,18 +157,28 @@ where $U = \Geff M/(c_s^2 r)$ is the dimensionless potential. This gives $\Phief
 
 The Bernoulli equation verifies self-consistency: with $\vb^2 = 2|\Phieff|$ and $\Phieff = -\Geff M/r < 0$, we have $\tfrac{1}{2}\vb^2 + \Phieff = |\Phieff| - |\Phieff| = 0$, which is satisfied identically. The PG flow closes the self-consistency loop for \emph{any} barotropic equation of state, because the Painlev\'{e}-Gullstrand acoustic metric is identically the Schwarzschild metric in rain coordinates~\cite{visser_1998,volovik_2003}.
 
-\subsection{Density correction from the PG flow}
 
-The first-order density correction in the PG solution is found from the full Bernoulli equation:
+\subsection{Density correction and its decoupling at \texorpdfstring{$\alpha=-1$}{alpha=-1}}
+\label{sec:density_decoupling}
+
+The PG flow does perturb the condensate density. The fluid's own Bernoulli relation---the linearized Hamilton-Jacobi equation with \emph{no} externally inserted potential (Sec.~\ref{sec:bernoulli})---reads $\tfrac{1}{2}\vb^2 + \tilde{c}_s^2\,\epsilon = 0$, giving a genuine first-order depletion
 \begin{equation}
-    \tfrac{1}{2}\vb^2 + c_s^2\epsilon + \Phieff = 0\,.
+    \epsilon \equiv \frac{\delta\rhob}{\rho_0} = -\frac{\vb^2}{2\tilde{c}_s^2} = -2U \neq 0\,,
+\label{eq:epsilon_depletion}
 \end{equation}
-With $\vb^2 = 2|\Phieff| = 2U c_s^2$ and $\Phieff = -Uc_s^2$:
+where $\tilde{c}_s^2 = \heff^2 b_R/(2\meff^2) = c^2/2$ is the stiffness of the Hamilton-Jacobi flow-density relation, fixed exactly by the Gausson invariant $b_R\sigma^2=1$ with $\sigma=\xi$~\cite{kulangiev_2026e}, and $U = \Geff M/(c^2 r) > 0$. The density does not vanish around a gravitating mass; it is depleted at $O(U)$.
+
+What vanishes is the \emph{gravitational effect} of this depletion. Expanding the temporal metric component $g_{TT} = -(\rhob/c_s)(c_s^2 - \vb^2)$ to first order with $c_s \propto \rhob^{\,\alpha}$ separates a density channel from a flow channel:
 \begin{equation}
-    U c_s^2 + c_s^2\epsilon - U c_s^2 = 0 \quad\Longrightarrow\quad \epsilon = 0\,.
-\label{eq:epsilon_zero}
+    \frac{\delta g_{TT}}{g_{TT}^{(0)}} = (1+\alpha)\,\epsilon \;-\; \frac{\vb^2}{c_s^2}\,.
+\label{eq:gtt_two_channel}
 \end{equation}
-The density perturbation vanishes at first order. Second-order corrections are $O(U^2) \sim (GM/(c^2 r))^2 \sim 10^{-12}$ at the solar limb---negligible for all solar system tests. The PG flow is therefore ``invisible'' to the density field: the vacuum around a gravitating mass is flowing inward, but its density remains uniform to extraordinary precision.
+At the background density the logarithmic equation of state gives $\alpha = -1$, so the density coefficient $(1+\alpha)$ vanishes identically and the depletion drops out of $g_{TT}$ regardless of its magnitude. After Minkowski normalization the temporal component is sourced by the flow alone,
+\begin{equation}
+    \Phieff\big|_{\alpha=-1} = -\tfrac{1}{2}\vb^2\,,
+\label{eq:phi_eff_flow}
+\end{equation}
+so the Newtonian potential, light bending, and clock rates carry no first-order trace of $\epsilon$. This is the temporal-component counterpart of the static pole (Eq.~\ref{eq:gamma_pathology}): at $\alpha = -1$ the density channel cannot carry the metric, so the flow must. The $O(U)$ depletion is real but gravitationally invisible to first order; second-order corrections are $O(U^2) \sim 10^{-12}$ at the solar limb, negligible for all solar system tests.
 
 
 % ====================================================================
@@ -176,27 +186,36 @@ The density perturbation vanishes at first order. Second-order corrections are $
 \label{sec:bernoulli}
 % ====================================================================
 
-The PG requirement can be derived independently from the Hamilton-Jacobi equation of the logarithmic fluid. In the macroscopic limit (neglecting the quantum potential), Eq.~(\ref{eq:log_kg}) in the Madelung form gives~\cite{kulangiev_2026}:
+The Hamilton-Jacobi equation of the logarithmic fluid fixes the velocity profile---but through the flow, not through a density well. We stress that this equation contains \emph{no} externally inserted gravitational potential: in the emergent picture the potential is read off the acoustic metric, not added to the fluid's equation of motion.
+
+\subsection{The genuine Bernoulli depletion}
+
+Linearizing Eq.~(\ref{eq:log_kg}) in the Madelung representation about the background (rest-mass phase $\partial_t S = -\meff c^2$), with the mostly-plus signature fixed by the d'Alembertian and $b > 0$~\cite{kulangiev_2026}:
 \begin{equation}
     \ln\!\left(\frac{\rho(r)}{\rho_\infty}\right) = -\frac{\meff^2}{b\heff^2}\,|\mathbf{v}(r)|^2\,.
 \label{eq:bernoulli_log}
 \end{equation}
-In the weak-field limit ($\rho \approx \rho_\infty - \delta\rho$), this becomes the Bernoulli density relation:
+The minus sign is forced: $|\mathbf{v}|^2$ enters through the spatial (positive) part of the metric and $b>0$ is the condition for the Gausson solitons to exist, so $\ln(\rho/\rho_\infty)<0$. This is a genuine depletion,
 \begin{equation}
-    \boxed{\;\frac{\delta\rho}{\rho_\infty} = \frac{\meff^2}{b\heff^2}\,v^2\;\;}
+    \boxed{\;\frac{\delta\rho}{\rho_\infty} = \frac{\meff^2}{b\heff^2}\,v^2 > 0\,,\qquad \delta\rho \equiv \rho_\infty - \rho\;}
 \label{eq:bernoulli_relation}
 \end{equation}
-The density depletion is strictly proportional to the square of the local flow velocity. This is the rigorous form of the standard Bernoulli principle applied to the logarithmic superfluid.
+agreeing with the metric-derived depletion of Sec.~\ref{sec:density_decoupling}, now with the prefactor fixed exactly: the Gausson invariant $b_R\sigma^2=1$~\cite{kulangiev_2026e} together with the core-radius identification $\sigma=\xi$ gives $\meff^2/(b\heff^2) = 1/(2\tilde{c}_s^2)$ with $\tilde{c}_s^2 = c^2/2$, so $\delta\rho/\rho_\infty = v^2/c^2 = 2U$ with no residual $O(1)$ freedom.
 
-The argument then proceeds by elimination:
-\begin{enumerate}
-    \item Newtonian gravity requires a force $F \propto 1/r^2$, hence a potential $\Phi \propto 1/r$, hence a density well $\delta\rho \propto 1/r$ (from the Poisson equation).
-    \item The Bernoulli relation~(\ref{eq:bernoulli_relation}) requires $\delta\rho \propto v^2$.
-    \item Combining: $v^2 \propto 1/r$, i.e., $v(r) = \sqrt{2\Geff M/r}$.
-\end{enumerate}
-This recovers the Painlev\'{e}-Gullstrand profile from purely hydrodynamic reasoning, without invoking the acoustic metric. It confirms that the PG condition is not an artifact of the metric formalism but a necessary consequence of the logarithmic equation of state combined with the Newtonian force law.
+\subsection{Why the density well does not source gravity}
 
-Conversely, a standard vortex circulation ($v_\theta \propto 1/r$) would produce $\delta\rho \propto 1/r^2$, giving $F \propto 1/r^3$---too steep for Newtonian gravity. A dipole field ($v \propto 1/r^2$) gives $\delta\rho \propto 1/r^4$ and $F \propto 1/r^5$---even steeper. Only the PG profile yields the correct $1/r^2$ force law.
+It is tempting to close the argument by Poisson's equation: a Newtonian potential $\Phi \propto 1/r$ would imply a density well $\delta\rho \propto 1/r$, which with Eq.~(\ref{eq:bernoulli_relation}) gives $v^2 \propto 1/r$. This route is \emph{not} valid here. As shown in Sec.~\ref{sec:density_decoupling}, at the background exponent $\alpha = -1$ the density perturbation decouples from the temporal metric: the depletion is real but produces no first-order potential, and there is no ``$\Phi \propto -\delta\rho$'' identification for the Poisson step to act on. The density well comes along for the ride; it does not drive the geometry.
+
+\subsection{The flow-sourced profile}
+
+The potential is carried by the flow. At $\alpha=-1$ the flow-sourced potential is $\Phieff = -\tfrac{1}{2}v^2$ (Eq.~\ref{eq:phi_eff_flow}), and the fluid's equation of motion $\tfrac12 v^2 + \Phieff = 0$ is then satisfied identically---the self-consistency identity that makes PG valid for any barotropic equation of state. The radial profile is fixed by requiring the flow to reproduce the Newtonian potential of a mass $M$, with $\Geff$ derived independently in Sec.~\ref{sec:G_eff}:
+\begin{equation}
+    \Phieff(r) = -\frac{\Geff M}{r}
+    \quad\Longrightarrow\quad
+    v(r) = \sqrt{\frac{2\Geff M}{r}}\,.
+\label{eq:pg_from_flow}
+\end{equation}
+Because $\Phieff \propto v^2$, a $1/r$ potential admits only $v^2 \propto 1/r$: the Painlev\'{e}-Gullstrand profile is the unique flow that can carry a Newtonian potential, and the derivation never invokes the density well that the $\alpha=-1$ pole renders gravitationally inert. The alternatives are excluded directly: a rigid circulation $v_\theta \propto 1/r$ gives $\Phieff \propto 1/r^2$ (force $\propto 1/r^3$), and a dipole flow $v \propto 1/r^2$ gives $\Phieff \propto 1/r^4$---both too steep.
 
 
 % ====================================================================
@@ -300,27 +319,13 @@ This result establishes that a \emph{single} vortex-Gausson cannot produce the P
 
 The preceding subsections verify the soliton building block. We now verify the collective result: that the PG inflow $v = \sqrt{2\Geff M/r}$ with $\rho \approx \rho_0$ is a self-consistent and dynamically stable solution of the coarse-grained Euler equations with the relativistic logarithmic equation of state.
 
-We solve the one-dimensional spherical Euler equations
-(continuity and momentum) on a radial grid of 4096 points ($r \in [5, 400]$) with the relativistic logarithmic sound speed $c_s^2 = c^2/[2\ln(\rho/\rho_c) + 3]$ (Paper~1~\cite{kulangiev_2026}), a gravitational source $\Phi = -GM/r$, and a distributed sink $\mathcal{S}(r) = \rho_0\,|\nabla\cdot\mathbf{v}_{\mathrm{PG}}|$ balancing the PG flow divergence (Sec.~\ref{sec:continuity}). Time integration uses a third-order TVD Runge-Kutta scheme with CFL number 0.25.
+We solve the one-dimensional spherical Euler equations (continuity and momentum) on a radial grid of 4096 points ($r \in [5, 400]$) with the relativistic logarithmic sound speed $c_s^2 = c^2/[2\ln(\rho/\rho_c) + 3]$ (Paper~1~\cite{kulangiev_2026}), a gravitational source $\Phi = -GM/r$, and a distributed sink $\mathcal{S}(r) = \rho_0\,|\nabla\cdot\mathbf{v}_{\mathrm{PG}}|$ balancing the PG flow divergence (Sec.~\ref{sec:continuity}). Time integration uses a third-order TVD Runge-Kutta scheme with CFL number 0.25.
 
-Two cases are evolved for $2 \times 10^5$ time steps
-($T \approx 4822$ in units of $r_{\mathrm{min}}/c_s$):
+Two cases are evolved for $2 \times 10^5$ time steps ($T \approx 4822$ in units of $r_{\mathrm{min}}/c_s$):
 
-\emph{Case~1:} Exact PG initial conditions
-($\rho = \rho_0$, $v = \sqrt{2GM/r}$). The density
-deviation remains bounded by $|\delta\rho/\rho_0| < 10^{-5}$
-and the velocity error stays below $10^{-3}\%$ throughout,
-confirming $\epsilon_1 = 0$ (Eq.~\ref{eq:epsilon_zero})
-numerically to the precision of the spatial discretization. The measured velocity power law is $v \propto r^{-0.500}$ to three significant figures.
+\emph{Case~1:} Exact PG initial conditions ($\rho = \rho_0$, $v = \sqrt{2GM/r}$). The density deviation remains bounded by $|\delta\rho/\rho_0| < 10^{-5}$ and the velocity error stays below $10^{-3}\%$ throughout. The measured velocity power law is $v \propto r^{-0.500}$ to three significant figures. This simulation imposes an external potential $\Phi = -GM/r$ in the momentum equation rather than letting the metric emerge self-consistently; it therefore tests the dynamical stability of the PG configuration, and is consistent with---but does not by itself establish---the gravitational decoupling of the density channel derived in Sec.~\ref{sec:density_decoupling}.
 
-\emph{Case~2:} A 20\% sinusoidal velocity perturbation
-is imposed on the PG profile. The perturbation decays
-monotonically with the velocity error decreasing from
-12.8\% to 0.02\% over $T \approx 4220$ in units of
-$r_{\mathrm{min}}/c_s$, and the power law slope
-recovering to $-0.500$. The final density excursion
-$|\delta\rho/\rho_0| \approx 4 \times 10^{-5}$ and final velocity error of $0.02\%$ are both consistent with relaxation toward the PG configuration. This
-demonstrates that the PG flow is not merely a stationary point but a \emph{dynamical attractor}: perturbations are expelled, and the system relaxes to the PG configuration. 
+\emph{Case~2:} A 20\% sinusoidal velocity perturbation is imposed on the PG profile. The perturbation decays monotonically with the velocity error decreasing from 12.8\% to 0.02\% over $T \approx 4220$ in units of $r_{\mathrm{min}}/c_s$, and the power law slope recovering to $-0.500$. The final density excursion $|\delta\rho/\rho_0| \approx 4 \times 10^{-5}$ and final velocity error of $0.02\%$ are both consistent with relaxation toward the PG configuration. This demonstrates that the PG flow is not merely a stationary point but a \emph{dynamical attractor}: perturbations are expelled, and the system relaxes to the PG configuration. 
 
 We note that the PG attractor behavior demonstrated here is generic to any barotropic EOS that asymptotes to $c_s \to c$ at the background; the simulation thus verifies the dynamical stability of the PG configuration and the correct functioning of the distributed sink mechanism, but is not a specific test of the relativistic logarithmic equation of state. Tests sensitive to the EOS at higher orders in $\delta\rho/\rho_0$ are deferred to future work.
 
@@ -328,12 +333,7 @@ We note that the PG attractor behavior demonstrated here is generic to any barot
 \centering
 \includegraphics[width=\textwidth]{pg_distributed_sink.png}
 \caption{\emph{Top row, left to right:} density deviation and velocity error versus time for exact PG (blue) and 20\% velocity perturbation (green); final density profile.
-\emph{Bottom row:} final velocity profile compared with
-$v_{\mathrm{PG}} = \sqrt{2GM/r}$ (dashed red); velocity
-power law with measured slopes; velocity ratio
-$v/v_{\mathrm{PG}}$. Both cases converge to
-$v \propto r^{-0.500}$ with $\rho/\rho_0 = 1$ to within
-$10^{-4}$.}
+\emph{Bottom row:} final velocity profile compared with $v_{\mathrm{PG}} = \sqrt{2GM/r}$ (dashed red); velocity power law with measured slopes; velocity ratio $v/v_{\mathrm{PG}}$. Both cases converge to $v \propto r^{-0.500}$ with $\rho/\rho_0 = 1$ to within $10^{-4}$.}
 \label{fig:pg_numerical}
 \end{figure}
 
@@ -423,9 +423,7 @@ $v^2 \propto 1/r$.
 
 (3) The emergent gravitational constant $\Geff \sim c^2/(\xi^2\rho_0)$ is universal. Combined with the soliton healing-length structure and the natural condensate packing density, self-consistency fixes $\xi \sim \lP$ and $\rho_0 \sim m_P/\lP^3$ (Planck scale).
 
-(4) The first-order density correction from the PG flow
-vanishes identically ($\epsilon_1 = 0$), ensuring that
-the vacuum around a gravitating mass is indistinguishable from free vacuum at the $10^{-12}$ level.
+(4) The first-order density depletion from the PG flow, $\epsilon = -U$, decouples from the temporal metric at the background exponent $\alpha = -1$, so the vacuum around a gravitating mass is gravitationally indistinguishable from free vacuum at the $10^{-12}$ level even though its density is perturbed at $O(U)$.
 
 The apparent continuity constraint of the macroscopic PG inflow remains an open problem. Among the candidate mechanisms discussed in Sec.~\ref{sec:continuity}, the geometric-redirection option---where rotation defines a polar axis and the radial inflow is balanced by axial outflow at large angles from the equatorial plane---is mathematically attractive but requires a proper axisymmetric analysis beyond the present scope. The formal derivation of the macroscopic PG flow as a collective Bernoulli response of $N$ microscopic vortex-Gaussons to the mean-field gravitational potential---the gravitational analogue of the Feynman-Onsager relation in rotating superfluids---is left to future work.
 
