@@ -41,7 +41,7 @@ The Penrose-Hawking singularity theorems~\cite{penrose_1965,hawking_1970} establ
 
 In quantum gravity approaches, the Planck length $\lP = \sqrt{\hbar G/c^3} \approx 1.616 \times 10^{-35}$~m is typically introduced as a fundamental discreteness scale or minimum length, either through dimensional analysis or through specific mechanisms such as loop quantization~\cite{rovelli_2004, ashtekar_2006} or string theory~\cite{polchinski_1998}. However, the physical origin of $\lP$ as a minimum length remains unclear: why should spacetime have a minimum resolution, and why at precisely this scale~\cite{garay_1995}?
 
-In a companion paper~\cite{kulangiev_2026a}, we developed a superfluid vacuum model based on the relativistic logarithmic Klein-Gordon equation, deriving emergent gravitational light bending with PPN parameter $\gamma = 1$. The framework treats the vacuum as a complex order parameter $\psi(x,t)$ whose Madelung decomposition $\psi = \sqrt{\rho}\,e^{iS/\heff}$ produces hydrodynamic equations with a density-dependent sound speed and a macroscopic flow velocity. Throughout that paper, the quantum potential (Bohm potential)~\cite{bohm_1952} $Q = \Box\sqrt{\rho}/\sqrt{\rho}$ was neglected in the macroscopic limit, valid at length scales much larger than the condensate's coherence scale.
+In a companion paper~\cite{kulangiev_2026a}, we developed a superfluid vacuum model based on the relativistic logarithmic Klein-Gordon equation~\cite{rosen_1969, bartkowski_gorka_2008}, deriving emergent gravitational light bending with PPN parameter $\gamma = 1$. The framework treats the vacuum as a complex order parameter $\psi(x,t)$ whose Madelung decomposition $\psi = \sqrt{\rho}\,e^{iS/\heff}$ produces hydrodynamic equations with a density-dependent sound speed and a macroscopic flow velocity. Throughout that paper, the quantum potential (Bohm potential)~\cite{bohm_1952} $Q = \Box\sqrt{\rho}/\sqrt{\rho}$ was neglected in the macroscopic limit, valid at length scales much larger than the condensate's coherence scale.
 
 In this paper, we restore $Q$ and show that it provides a natural singularity regularization mechanism. The healing length $\xi = \heff/(\meff c)$ of the condensate---the scale at which $Q$ balances the logarithmic interaction---sets a minimum spatial resolution. We then show that self-consistency of the framework, requiring the dimensionally-correct gravitational coupling $G \sim c^2/(\xi^2 \rho_0)$ to match the observed Newton's constant when combined with the healing-length structure of the soliton and the natural condensate packing density $n_0 \sim 1/\xi^3$, uniquely fixes $\xi = \lP$, the Planck length.
 
@@ -115,7 +115,7 @@ If $\rho \to \rho_{\max}$ as $r \to 0$ (a regularized core), then $Q \to Q_0 = \
 \label{sec:gausson}
 % ====================================================================
 
-The ground-state soliton of the logarithmic wave equation is the Gausson---a Gaussian-localized solution discovered by Bia{\l}ynicki-Birula and Mycielski~\cite{bialynicki_birula_1979}. For the three-dimensional stationary equation with the logarithmic potential, the density profile is:
+The ground-state soliton of the logarithmic wave equation is the Gausson---a Gaussian-localized solution discovered by Bia{\l}ynicki-Birula and Mycielski~\cite{bialynicki_birula_1976, bialynicki_birula_1979}. For the three-dimensional stationary equation with the logarithmic potential, the density profile is:
 \begin{equation}
     \rho(r) = \rho_{\max}\,
     \exp\!\left(-\frac{r^2}{\sigma^2}\right)\,,
@@ -149,7 +149,7 @@ The quantum potential at the Gausson center evaluates to:
     = \frac{3\,\meff\,c^2}{2}\,,
 \label{eq:Q_center}
 \end{equation}
-which is of order the rest energy $\meff c^2$. The associated curvature scale is $Q(0)/\heff^2 \sim 1/\xi^2$. This is the maximum curvature the acoustic metric can sustain: the Kretschmann scalar~\cite{kretschmann_1917} of the acoustic metric is bounded by $K \lesssim 1/\xi^4$.
+which is of order the rest energy $\meff c^2$. The associated curvature scale is $Q(0)/\heff^2 \sim 1/\xi^2$. This is the maximum curvature the acoustic metric can sustain: the Kretschmann scalar of the acoustic metric is bounded by $K \lesssim 1/\xi^4$.
 
 % ====================================================================
 \section{Derivation of the Healing Length from Known Parameters}
@@ -170,7 +170,7 @@ up to a dimensionless prefactor of order unity. The length scale $\xi$ in the de
 
 \subsection{The Gausson energy}
 
-The Gausson rest energy is given by the Bia{\l}ynicki-Birula--Mycielski energy functional~\cite{bialynicki_birula_1979} of the logarithmic Schr\"{o}dinger equation. For a Gaussian density profile $\rho(r) = n_0\,e^{-r^2/\sigma^2}$ of width $\sigma = \xi = \heff/(\meff c)$, the quantum-pressure contribution to the energy is, at the order of magnitude,
+The Gausson rest energy is given by the Bia{\l}ynicki-Birula--Mycielski energy functional~\cite{bialynicki_birula_1976, bialynicki_birula_1979} of the logarithmic Schr\"{o}dinger equation. For a Gaussian density profile $\rho(r) = n_0\,e^{-r^2/\sigma^2}$ of width $\sigma = \xi = \heff/(\meff c)$, the quantum-pressure contribution to the energy is, at the order of magnitude,
 \begin{equation}
     E_v \sim \int Q\,\rho\,d^3x
     \sim \frac{\heff^2}{\meff\,\xi^2}\cdot\xi^3\,n_0
@@ -730,10 +730,26 @@ Claude (Anthropic) and Gemini (Google) were used as editorial and computational 
 
 \begin{thebibliography}{25}
 
-\bibitem{kretschmann_1917}
-E.~Kretschmann,
-\"Uber den physikalischen Sinn der Relativit\"{a}tspostulate, A.\ Einsteins neue und seine urspr\"{u}ngliche Relativit\"{a}tstheorie,
-Ann.\ Phys.\ (Leipzig) \textbf{358}, 575 (1917).
+\bibitem{rosen_1969}
+G.~Rosen,
+Dilatation covariance and exact solutions in local relativistic field theories,
+Phys.\ Rev.\ \textbf{183}, 1186 (1969).
+
+\bibitem{bartkowski_gorka_2008}
+K.~Bartkowski and P.~G\'{o}rka,
+One-dimensional Klein--Gordon equation with logarithmic nonlinearities,
+J.\ Phys.\ A \textbf{41}, 355201 (2008).
+
+\bibitem{bialynicki_birula_1976}
+I.~Bia{\l}ynicki-Birula and J.~Mycielski,
+Nonlinear wave mechanics,
+Ann.\ Phys.\ (N.Y.)\ \textbf{100}, 62 (1976).
+
+\bibitem{bialynicki_birula_1979}
+I.~Bia{\l}ynicki-Birula and J.~Mycielski,
+Gaussons: Solitons of the logarithmic Schr\"{o}dinger
+equation,
+Phys.\ Scr.\ \textbf{20}, 539 (1979).
 
 \bibitem{madelung_1927}
 E.~Madelung,
@@ -793,12 +809,6 @@ Preprint (2026).
 \bibitem{volovik_2003}
 G.~E.~Volovik,
 \emph{The Universe in a Helium Droplet} (Oxford, 2003).
-
-\bibitem{bialynicki_birula_1979}
-I.~Bia{\l}ynicki-Birula and J.~Mycielski,
-Gaussons: Solitons of the logarithmic Schr\"{o}dinger
-equation,
-Phys.\ Scr.\ \textbf{20}, 539 (1979).
 
 \bibitem{landau_1947}
 L.~D.~Landau,

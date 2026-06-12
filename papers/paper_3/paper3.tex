@@ -38,7 +38,7 @@ We derive the cosmological consequences of modeling the vacuum as a relativistic
 
 Three open problems in cosmology motivate this work. First, the cosmological constant problem: why the vacuum energy density driving the accelerated expansion of the universe takes the value it does, and why its equation of state is $w = -1$. Second, the Hubble tension: the persistent $\sim 5\sigma$ discrepancy between the Hubble constant inferred from the early-universe Cosmic Microwave Background (CMB) ($H_0 = 67.36 \pm 0.54$~km\,s$^{-1}$\,Mpc$^{-1}$~\cite{planck_2020}) and the late-universe distance ladder ($H_0 = 73.04 \pm 1.04$~km\,s$^{-1}$\,Mpc$^{-1}$~\cite{riess_2022}). Third, the nature of the CMB temperature: whether $\Tcmb = 2.72548 \pm 0.00057$~K~\cite{fixsen_2009} is a freely set initial condition or a quantity determined by fundamental physics.
 
-In companion papers~\cite{kulangiev_2026a,kulangiev_2026b}, we developed a superfluid vacuum model based on the relativistic logarithmic Klein-Gordon equation, showing that the Painlev\'{e}-Gullstrand (PG) inflow $v = \sqrt{2\Geff M/r}$ is the unique self-consistent weak-field solution of the acoustic metric equations, yielding the Parameterized Post-Newtonian (PPN) parameter $\gamma = 1$ and the emergent gravitational coupling $\Geff \sim c^2/(\xi^2\rho_0)$. Separately, an approximate numerical relation $\Omega_\gamma \approx \alpha^2$ was reported~\cite{kulangiev_2026o}, predicting $H_0 = 68.15$~km\,s$^{-1}$\,Mpc$^{-1}$.
+In companion papers~\cite{kulangiev_2026a,kulangiev_2026b}, we developed a superfluid vacuum model based on the relativistic logarithmic Klein-Gordon equation, showing that the Painlev\'{e}-Gullstrand (PG) inflow $v = \sqrt{2\Geff M/r}$ is the unique self-consistent weak-field solution of the acoustic metric equations, yielding the Parameterized Post-Newtonian (PPN) parameter $\gamma = 1$ and the emergent gravitational coupling $\Geff \sim c^2/(\xi^2\rho_0)$. Separately, an empirical relation $\Omega_\gamma \approx \alpha^2$ was reported~\cite{kulangiev_2026o}, predicting $H_0 = 68.15$~km\,s$^{-1}$\,Mpc$^{-1}$.
 
 In this paper, we show that combining these results yields cosmological consequences addressing all three problems. The logarithmic equation of state produces $w = -1$ from first principles. The emergent $\Geff$ and the $\Omega_\gamma = \alpha^2$ relation together imply a self-consistency equation linking $\alpha$, $H_0$, $\rho_0$, and $\Tcmb$. Spatial variations of $\rho_0$ provide a physical mechanism for the Hubble tension, and the CMB peak structure is shown to be exactly invariant under these variations.
 
@@ -71,6 +71,7 @@ where $\xi$ is the healing length of the condensate. Self-consistency with the o
 
 
 % ====================================================================
+\newpage
 \section{Dark Energy from the Logarithmic Equation of State}
 \label{sec:dark_energy}
 % ====================================================================
@@ -82,7 +83,12 @@ For the logarithmic potential $V(\rho) = -b\,\rho\,\ln(\rho/\rho_c)$, the macros
     P = \rho\,\frac{\partial V}{\partial\rho} - V = -b\,\rho_0\,.
 \label{eq:pressure}
 \end{equation}
-With $b$ normalized so that $c_s = c$ at the background density, this gives $P = -\rho_0 c^2$, i.e.\ an equation of state parameter $w = P/(\rho_0 c^2) = -1$. This is not imposed as a free parameter; it follows directly from the logarithmic self-interaction that defines the superfluid vacuum.
+The energy density is the time-time component of the stress-energy tensor, the k-essence counterpart of the pressure~(\ref{eq:pressure}): $\epsilon = \rho_{\mathrm{mass}}c^2 = \rho\,V'(\rho) + V(\rho)$~\cite{kulangiev_2026b}. The equation of state is the ratio $w = P/\epsilon$, formed with the mass density rather than the Lagrangian variable $\rho_0$ of Eq.~(\ref{eq:pressure}). In this ratio, $b$ cancels. The background condition $\rho_c = e\rho_0$---the same condition that normalizes $c_s = c$ and gives $\alpha = -1$---is precisely the extremum condition $V'(\rho_0) = 0$ of the logarithmic potential, at which $P = -V(\rho_0)$ and $\epsilon = +V(\rho_0)$. Hence
+\begin{equation}
+    \boxed{\;w = \frac{P}{\epsilon} = \frac{\rho_0 V'(\rho_0) - V(\rho_0)}{\rho_0 V'(\rho_0) + V(\rho_0)} = -1\;}
+\label{eq:w_exact}
+\end{equation}
+exactly and independently of $b$: $w = -1$ is a consequence of the vacuum sitting at the extremum of its self-interaction potential---the same point at which $c_s = c$ and $\alpha = -1$. As a check, the radiation potential $V = \tfrac12 g\rho^2$ gives $P = \tfrac12 g\rho^2$, $\epsilon = \tfrac32 g\rho^2$, and $w = \tfrac13$.
 
 \subsection{Thermodynamic stability of the vacuum density}
 
@@ -94,6 +100,7 @@ The thermodynamic stability above is a property of the equation of state alone a
 
 
 % ====================================================================
+\newpage
 \section{The Vacuum Self-Consistency Equation}
 \label{sec:self_consistency}
 % ====================================================================
@@ -170,7 +177,7 @@ The mechanism by which a vacuum density perturbation produces an inflated locall
 
 \subsection{The global anchor}
 
-The $\Omega_\gamma = \alpha^2$ relation~\cite{kulangiev_2026o} predicts $H_0 = 68.15 \pm 0.15$~km\,s$^{-1}$\,Mpc$^{-1}$ as the \emph{global} value---the expansion rate of the undisturbed vacuum far from any void. The Planck measurement ($67.36 \pm 0.54$) is closest to this value because the CMB averages over the entire sky, probing the global vacuum. The SH0ES measurement ($73.04 \pm 1.04$) reflects the local void environment. In this picture, the Hubble tension is not a crisis requiring new physics but an environmental effect: the two measurements \emph{should} differ, and their discrepancy is the observational signature of a vacuum thermodynamic fluctuation.
+The $\Omega_\gamma = \alpha^2$ relation~\cite{kulangiev_2026o} predicts $H_0 = 68.15 \pm 0.03$~km\,s$^{-1}$\,Mpc$^{-1}$ as the \emph{global} value---the expansion rate of the undisturbed vacuum far from any void. The quoted uncertainty is the FIRAS temperature error propagated through the relation and reflects the sharpness with which $T_{\mathrm{CMB}}$ fixes $H_0$ once the identity is assumed exact, not a confidence interval on the identity itself~\cite{kulangiev_2026o}. The Planck measurement ($67.36 \pm 0.54$) is closest to this value because the CMB averages over the entire sky, probing the global vacuum. The SH0ES measurement ($73.04 \pm 1.04$) reflects the local void environment. In this picture, the Hubble tension is not a crisis requiring new physics but an environmental effect: the two measurements \emph{should} differ, and their discrepancy is the observational signature of a vacuum thermodynamic fluctuation.
 
 
 % ====================================================================
@@ -203,7 +210,7 @@ The CMB peak positions are exactly invariant under the superfluid vacuum transfo
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\columnwidth]{cmb_invariance_plot.pdf}
+\includegraphics[width=\columnwidth]{cmb_invariance_plot.pdf}
 \caption{\emph{Top:} CMB temperature power spectrum computed with CAMB~\cite{camb} for three cases with identical physical densities ($\omega_b = 0.0224$, $\omega_c = 0.120$): the global vacuum
 ($H_0 = 68.15$~km\,s$^{-1}$\,Mpc$^{-1}$, solid blue), the local void in standard $\Lambda$CDM ($H_0 = 73.04$, dashed orange), and the superfluid vacuum with $c_s$ rescaling ($H_0 = 73.04$, dotted green). The superfluid spectrum is obtained by rescaling the
 multipole axis by $\theta_{*,\mathrm{local}}/\theta_{*,\mathrm{global}}$,
@@ -327,7 +334,7 @@ The framework makes several testable predictions:
 
 \paragraph{Spatial variation of $\Lambda$} Unlike standard $\Lambda$CDM, the effective cosmological constant varies spatially as $\Lambda \propto c_s^4$. A $3.6\%$ vacuum underdensity produces $\sim 16\%$ variation in $\Lambda$. This is testable by comparing expansion rate measurements in void vs.\ wall environments.
 
-\paragraph{$H_0 = 68.15 \pm 0.15$ as the global value} Standard sirens (LIGO/Virgo/KAGRA), strong lensing time delays (TDCOSMO), and tip-of-the-red-giant-branch calibrations should converge on this value when averaged over sufficiently large volumes.
+\paragraph{$H_0 = 68.15 \pm 0.03$ as the global value} Standard sirens (LIGO/Virgo/KAGRA), strong lensing time delays (TDCOSMO), and tip-of-the-red-giant-branch calibrations should converge on this value when averaged over sufficiently large volumes.
 
 \paragraph{No temporal variation of $G$} The thermodynamic stability of $\rho_0$ ensures $dG/dt = 0$ at the background level, consistent with current bounds $|\dot{G}/G| < 10^{-13}$~yr$^{-1}$~\cite{will_2014}.
 
@@ -364,8 +371,9 @@ The methodological stance of this paper---treating the order parameter as a real
 
 \bibitem{kulangiev_2026o}
 B.~B.~Kulangiev,
-An approximate numerical relation between the CMB photon density parameter and the fine structure constant,
-Preprint (2026). \url{https://kulangiev.github.io/#paper0}
+An Empirical Constraint on the Hubble Constant from the Relation $\Omega_\gamma = \alpha^2$,
+Preprint (2026).
+\url{https://kulangiev.github.io/#paper0}
 
 \bibitem{kulangiev_2026a}
 B.~B.~Kulangiev,

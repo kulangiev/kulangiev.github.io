@@ -143,10 +143,11 @@ For the relativistic logarithmic equation of state at the background density, $\
     \gamma_{\mathrm{static}} \to \infty\quad\text{at}\quad \alpha = -1\,.
 \label{eq:gamma_pathology}
 \end{equation}
-The static acoustic metric is mathematically pathological: the spatial metric perturbation diverges relative to the temporal one, and no finite weak-field expansion around the static background exists. Physically, the pole signals that the static configuration is not a stable background for perturbations of the density alone. Any consistent treatment must therefore introduce additional dynamical content beyond the static density channel; this is the role of the macroscopic flow developed in Sec.~\ref{sec:self_consistency} below.
+The static acoustic metric is mathematically pathological: the spatial metric perturbation diverges relative to the temporal one, and no finite weak-field expansion around the static background exists. Physically, the pole signals that the static configuration is not a stable background for perturbations of the density alone. Any consistent treatment must therefore introduce additional dynamical content beyond the static density channel; this is the role of the macroscopic flow developed in Sec.~\ref{sec:solution_b}.
 
 
-\subsection{Solution B: Painlev\'{e}-Gullstrand flow \texorpdfstring{($\vb = \sqrt{2\Phieff}$, $\rhob \approx \rho_0$)}{(v = sqrt(2*Phi\_eff), rho approx rho\_0)}}
+\subsection{Solution B: Painlev\'{e}-Gullstrand flow \texorpdfstring{($\vb = \sqrt{2|\Phieff|}$, $\rhob \approx \rho_0$)}{(v = sqrt(2|Phi\_eff|), rho approx rho\_0)}}
+\label{sec:solution_b}
 
 With $\vb^2 = 2|\Phieff|$ and $\rhob = \rho_0$:
 \begin{align}
@@ -325,13 +326,13 @@ Two cases are evolved for $2 \times 10^5$ time steps ($T \approx 4822$ in units 
 
 \emph{Case~1:} Exact PG initial conditions ($\rho = \rho_0$, $v = \sqrt{2GM/r}$). The density deviation remains bounded by $|\delta\rho/\rho_0| < 10^{-5}$ and the velocity error stays below $10^{-3}\%$ throughout. The measured velocity power law is $v \propto r^{-0.500}$ to three significant figures. This simulation imposes an external potential $\Phi = -GM/r$ in the momentum equation rather than letting the metric emerge self-consistently; it therefore tests the dynamical stability of the PG configuration, and is consistent with---but does not by itself establish---the gravitational decoupling of the density channel derived in Sec.~\ref{sec:density_decoupling}.
 
-\emph{Case~2:} A 20\% sinusoidal velocity perturbation is imposed on the PG profile. The perturbation decays monotonically with the velocity error decreasing from 12.8\% to 0.02\% over $T \approx 4220$ in units of $r_{\mathrm{min}}/c_s$, and the power law slope recovering to $-0.500$. The final density excursion $|\delta\rho/\rho_0| \approx 4 \times 10^{-5}$ and final velocity error of $0.02\%$ are both consistent with relaxation toward the PG configuration. This demonstrates that the PG flow is not merely a stationary point but a \emph{dynamical attractor}: perturbations are expelled, and the system relaxes to the PG configuration. 
+\emph{Case~2:} A 20\% sinusoidal velocity perturbation is imposed on the PG profile. The perturbation relaxes non-monotonically---the mean density deviation transiently rises to $\sim 1\%$ near $T \approx 200$ before decaying---with the velocity error decreasing from 12.8\% to $\approx 0.02\%$ over $T \approx 4220$ in units of $r_{\mathrm{min}}/c_s$, and the power-law slope recovering to $-0.500$. The final density excursion $|\delta\rho/\rho_0| \approx 4 \times 10^{-5}$ and final velocity error of $0.02\%$ are both consistent with relaxation toward the PG configuration. This demonstrates that the PG flow is not merely a stationary point but a \emph{dynamical attractor}: perturbations are expelled, and the system relaxes to the PG configuration. 
 
 We note that the PG attractor behavior demonstrated here is generic to any barotropic EOS that asymptotes to $c_s \to c$ at the background; the simulation thus verifies the dynamical stability of the PG configuration and the correct functioning of the distributed sink mechanism, but is not a specific test of the relativistic logarithmic equation of state. Tests sensitive to the EOS at higher orders in $\delta\rho/\rho_0$ are deferred to future work.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{pg_distributed_sink.png}
+\includegraphics[width=\textwidth]{pg_distributed_sink.pdf}
 \caption{\emph{Top row, left to right:} density deviation and velocity error versus time for exact PG (blue) and 20\% velocity perturbation (green); final density profile.
 \emph{Bottom row:} final velocity profile compared with $v_{\mathrm{PG}} = \sqrt{2GM/r}$ (dashed red); velocity power law with measured slopes; velocity ratio $v/v_{\mathrm{PG}}$. Both cases converge to $v \propto r^{-0.500}$ with $\rho/\rho_0 = 1$ to within $10^{-4}$.}
 \label{fig:pg_numerical}
@@ -392,7 +393,12 @@ The requirement that $\rho_0$ remain approximately constant across cosmic time i
     P = \rho\,\frac{\partial V}{\partial\rho} - V = -b\,\rho_0\,.
 \label{eq:pressure}
 \end{equation}
-With $b$ normalized so that $c_s = c$ at the background density, this gives $P \approx -\rho_0 c^2$, i.e.\ an equation of state parameter $w = P/(\rho_0 c^2) = -1$. Through the first law of thermodynamics, the expansion of cosmic volume performs work against this tension, and the cosmological density parameter scales as $\rho \propto a^{-3(1+w)} = a^0 = \text{const}$. The mechanism by which this is realized---whether through open-system condensate accretion, intrinsic potential-minimum stability, or another mechanism---is beyond the scope of the present analysis and is developed elsewhere.
+The equation of state is the ratio of this pressure to the energy density $\epsilon = \rho_{\mathrm{mass}}c^2 = \rho V'(\rho) + V(\rho)$~(Eq.~\ref{eq:rho_mass_def}), formed with the mass density rather than the Lagrangian variable $\rho_0$. In this ratio, $b$ cancels. The background condition $\rho_c = e\rho_0$---the same one that fixes $c_s = c$ and $\alpha = -1$---is the extremum condition $V'(\rho_0) = 0$, at which $P = -V(\rho_0)$ and $\epsilon = +V(\rho_0)$:
+\begin{equation}
+    \boxed{\;w = \frac{P}{\epsilon} = \frac{\rho_0 V'(\rho_0) - V(\rho_0)}{\rho_0 V'(\rho_0) + V(\rho_0)} = -1\;}
+\label{eq:w_exact}
+\end{equation}
+exactly and independently of $b$. The value $w = -1$ is a consequence of the vacuum sitting at the extremum of its self-interaction potential, not of any tuning. Through the first law of thermodynamics, the expansion of cosmic volume performs work against this tension, and the cosmological density parameter scales as $\rho \propto a^{-3(1+w)} = a^0 = \text{const}$. The mechanism by which this is realized---whether through open-system condensate accretion, intrinsic potential-minimum stability, or another mechanism---is beyond the scope of the present analysis and is developed elsewhere.
 
 \subsection{Predictions and tests}
 
@@ -408,6 +414,7 @@ The framework makes several testable predictions:
 
 
 % ====================================================================
+\newpage
 \section{Conclusion}
 \label{sec:conclusion}
 % ====================================================================
@@ -423,7 +430,7 @@ $v^2 \propto 1/r$.
 
 (3) The emergent gravitational constant $\Geff \sim c^2/(\xi^2\rho_0)$ is universal. Combined with the soliton healing-length structure and the natural condensate packing density, self-consistency fixes $\xi \sim \lP$ and $\rho_0 \sim m_P/\lP^3$ (Planck scale).
 
-(4) The first-order density depletion from the PG flow, $\epsilon = -U$, decouples from the temporal metric at the background exponent $\alpha = -1$, so the vacuum around a gravitating mass is gravitationally indistinguishable from free vacuum at the $10^{-12}$ level even though its density is perturbed at $O(U)$.
+(4) The first-order density depletion from the PG flow, $\epsilon = -2U$, decouples from the temporal metric at the background exponent $\alpha = -1$, so the vacuum around a gravitating mass is gravitationally indistinguishable from free vacuum at the $10^{-12}$ level even though its density is perturbed at $O(U)$.
 
 The apparent continuity constraint of the macroscopic PG inflow remains an open problem. Among the candidate mechanisms discussed in Sec.~\ref{sec:continuity}, the geometric-redirection option---where rotation defines a polar axis and the radial inflow is balanced by axial outflow at large angles from the equatorial plane---is mathematically attractive but requires a proper axisymmetric analysis beyond the present scope. The formal derivation of the macroscopic PG flow as a collective Bernoulli response of $N$ microscopic vortex-Gaussons to the mean-field gravitational potential---the gravitational analogue of the Feynman-Onsager relation in rotating superfluids---is left to future work.
 

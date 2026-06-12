@@ -1,9 +1,21 @@
 """
-PG Flow Self-Consistency: Publication Version
-===============================================
-Two-case verification:
-  Case 1: Exact PG → confirms epsilon_1 = 0
-  Case 2: 20% velocity perturbation → confirms PG is an attractor
+PG Flow Stability / Attractor Test: Publication Version
+=======================================================
+Tests the dynamical stability of the Painleve-Gullstrand (PG) velocity
+profile under the 1D spherical Euler equations of the logarithmic fluid,
+with Newtonian gravity g = -GM/r^2 imposed externally and a distributed
+sink S = -rho_0 (div v_PG) that holds the background density uniform.
+
+  Case 1: Exact PG -> PG + sink is a STATIONARY solution (density stays
+                      at rho_0; this uniformity is imposed by the sink,
+                      not a depletion result).
+  Case 2: 20% velocity perturbation (mean ~12.8%) -> PG is a dynamical
+                      ATTRACTOR.
+
+NOTE: 'eps' below is the deviation from the IMPOSED rho_0, held near zero
+by the sink. It is NOT the physical self-consistent depletion, which is
+eps = -2U and decouples from the temporal metric at alpha = -1 (paper
+Sec. 3.3). This script tests flow stability only, not the depletion.
 """
 
 import torch
@@ -51,7 +63,9 @@ v_PG = -torch.sqrt(2 * GM / r)
 rho_PG = rho_0 * torch.ones_like(r)
 g_grav = -GM / r**2
 
-# Distributed sink
+# Distributed sink: chosen to exactly cancel the PG mass-flux divergence
+# so the background density stays uniform at rho_0. Uniform rho is thus
+# IMPOSED here, not derived; the physical depletion eps=-2U is separate.
 div_v_PG = -(3.0/2.0) * torch.sqrt(2 * GM / r**3)
 S_distributed = -rho_0 * div_v_PG
 
@@ -106,7 +120,7 @@ cases = {
         'color': '#0072B2',
         'ls': '-',
     },
-    r'20% velocity perturbation': {
+    r'20% amplitude (12.8% mean)': {
         'rho': rho_PG.clone(),
         'v': v_PG * (1 + 0.20 * torch.sin(2 * np.pi * r / 50.0)),
         'color': '#009E73',
@@ -197,7 +211,7 @@ v_PG_np = v_PG.cpu().numpy()
 valid_np = (r_np > r_min + 10) & (r_np < r_max - 30)
 
 fig, axes = plt.subplots(2, 3, figsize=(16, 10))
-fig.suptitle('PG Flow Self-Consistency with Distributed Sink',
+fig.suptitle('PG Flow Stability under Imposed Gravity and Distributed Sink',
              fontsize=15, fontweight='bold')
 
 # --- 1: Density deviation vs time ---
@@ -336,8 +350,9 @@ for name, res in results.items():
 
 print(f"""
 RESULTS:
-  Case 1 proves: PG + distributed sink is a stable equilibrium
-                 (epsilon_1 = 0 to machine precision)
-  Case 2 proves: PG is a dynamical attractor
-                 (20% perturbation relaxes to <0.02% in ~4000 t)
+  Case 1: PG + distributed sink is a stationary solution
+          (density held at rho_0 to machine precision BY the sink --
+           a consistency/stability check, not a depletion result)
+  Case 2: PG is a dynamical attractor
+          (20% velocity perturbation, mean ~12.8%, relaxes to <0.02%)
 """)
